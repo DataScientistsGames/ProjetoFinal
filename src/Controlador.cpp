@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <csignal>
 #include "Controlador.hpp"
 #include "Comandos.hpp"
 #include "CSV.hpp"
@@ -66,6 +67,8 @@ void Controlador::cadastrarJogador()
         {
             nome_unico = false;
         }
+
+        linha = arquivo.lerLinhaArquivo();
     }
 
     // caso não tenha encontrado nenhum apelido semelhante
@@ -76,7 +79,6 @@ void Controlador::cadastrarJogador()
         adicionar_no_arquivo += ',';
         adicionar_no_arquivo.append(nome_jogador);
         adicionar_no_arquivo.append(",0,0\n");
-
         // agora a linha está formatada no estilo "apelido,nome sobrenome,0,0\n", pronto para adicionar no arquivo de jogadores
         arquivo.escreverArquivo(adicionar_no_arquivo);
     }
@@ -114,7 +116,7 @@ std::string Controlador::pegaPalavraLinha(std::string linha)
 {
     std::string palavra = "";
     int i = 0;
-    while (linha[i] != ' ')
+    while (linha[i] != ',')
     {
         palavra += linha[i];
         i++;

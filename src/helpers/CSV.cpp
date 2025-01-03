@@ -1,5 +1,6 @@
 #include "CSV.hpp"
 #include <iostream>
+#include <csignal>
 
 CSV::CSV(std::string caminho) : _arquivo(caminho, std::ios::in | std::ios::out | std::ios::app)
 {
@@ -9,7 +10,7 @@ CSV::CSV(std::string caminho) : _arquivo(caminho, std::ios::in | std::ios::out |
         this->~CSV();
     }
 
-    this->_arquivo.seekg(0, std::ios::beg);
+    this->_arquivo.seekp(0, std::ios::beg);
 }
 
 CSV::~CSV()
@@ -19,7 +20,9 @@ CSV::~CSV()
 
 void CSV::escreverArquivo(std::string entrada)
 {
-    this->_arquivo << entrada << std::endl;
+    this->_arquivo.clear();
+    this->_arquivo << entrada;
+    this->_arquivo.seekp(0, std::ios::beg);
 }
 
 std::string CSV::lerLinhaArquivo()
@@ -28,6 +31,7 @@ std::string CSV::lerLinhaArquivo()
     {
         std::string linha;
         std::getline(this->_arquivo, linha);
+        std::cout << linha << std::endl;
         return linha;
     }
     return "";
