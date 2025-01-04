@@ -2,7 +2,6 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <csignal>
 #include <vector>
 #include <algorithm>
 #include "Cadastrador.hpp"

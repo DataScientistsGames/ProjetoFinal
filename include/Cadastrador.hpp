@@ -5,7 +5,6 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include <csignal>
 #include "CSV.hpp"
 
 class Cadastrador

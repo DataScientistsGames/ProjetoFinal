@@ -1,8 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <string>
-#include <csignal>
 #include "Controlador.hpp"
 #include "Cadastrador.hpp"
 #include "Comandos.hpp"
