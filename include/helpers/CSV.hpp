@@ -7,6 +7,7 @@
 class CSV
 {
 private:
+    std::string _arquivo_nome;
     std::fstream _arquivo;
 
 public:
@@ -14,6 +15,7 @@ public:
     ~CSV();
 
     void escreverArquivo(std::string);
+    void apagarNoArquivo(std::string);
     std::string lerLinhaArquivo();
 };
 

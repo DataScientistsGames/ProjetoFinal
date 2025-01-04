@@ -15,8 +15,6 @@ public:
     void listarJogador();
     void executarPartida();
     void finalizarSistema();
-    std::string traduzCSV(std::string);
-    std::string pegaPalavraLinha(std::string);
 };
 
 #endif

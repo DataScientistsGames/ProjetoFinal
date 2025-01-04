@@ -32,5 +32,6 @@
 *.out
 *.app
 
+bin/*
 
 .vscode
