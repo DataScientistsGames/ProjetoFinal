@@ -89,29 +89,20 @@ void Controlador::removerJogador()
 
 void Controlador::listarJogador()
 {
-    /*
-    try
-    {
-        char metodo;
-        std::cout << "Digite o método pelo qual os jogadores serão listados, Apelido ou Nome (A|N): ";
-        std::cin >> metodo;
+    char metodo;
+    std::cout << "Digite o método pelo qual os jogadores serão listados, Apelido ou Nome (A|N): ";
+    std::cin >> metodo;
 
-        if (metodo == 'A' || metodo == 'N')
-        {
-            Cadastrador *listar = new Cadastrador;
-            listar->listarJogador(metodo);
-            delete(listar);
-        }
-        else
-        {
-            throw std::invalid_argument(metodo + " não é método comando válido!");
-        }
-    }
-    catch (const std::exception &e)
+    if (metodo == 'A' || metodo == 'N')
     {
-        std::cerr << e.what() << '\n';
+        Cadastrador *listar = new Cadastrador;
+        listar->listarJogador(metodo);
+        delete (listar);
     }
-    */
+    else
+    {
+        std::invalid_argument(metodo + " não é método comando válido!");
+    }
 }
 
 void Controlador::executarPartida()

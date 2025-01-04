@@ -217,7 +217,7 @@ void Cadastrador::traduzChaveCSV(std::string linha)
 
     i++;
     std::string derrotas_lig4 = "";
-    for (; linha[i] != ','; i++)
+    for (; i < linha.size(); i++)
     {
         derrotas_lig4 += linha[i];
     }
@@ -226,4 +226,5 @@ void Cadastrador::traduzChaveCSV(std::string linha)
     std::cout << "REVERSI - V: " << vitorias_reversi << " D: " << derrotas_reversi << std::endl;
     std::cout << "LIG4 - V: " << vitorias_lig4 << " D: " << derrotas_lig4 << std::endl;
     std::cout << "VELHA - V: " << vitorias_velha << " D: " << derrotas_velha << std::endl;
+    std::cout << std::endl;
 }

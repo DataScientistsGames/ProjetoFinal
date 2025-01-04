@@ -67,7 +67,6 @@ std::string CSV::lerLinhaArquivo()
     {
         std::string linha;
         std::getline(this->_arquivo, linha);
-        std::cout << linha << std::endl;
         return linha;
     }
     return "";
