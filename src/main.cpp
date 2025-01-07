@@ -29,21 +29,15 @@ int main()
 
     try
     {
-        while (true)
+        do
         {
             std::cout << "Digite um comando válido (ou 'FS' para encerrar): ";
             std::cin >> entrada;
-
-            if (entrada == "FS")
-            {
-                sistema.leitorComando(comando);
-                break;
-            }
+            std::cin.ignore();
 
             comando = stringParaComando(entrada);
-
             sistema.leitorComando(comando);
-        }
+        } while (comando != FS);
     }
     catch (const std::exception &e)
     {
