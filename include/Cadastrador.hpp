@@ -19,6 +19,7 @@ public:
 
     std::string adicionaChave(char, std::string);
     std::string pegaPalavraLinha(std::string);
+    std::string retornaLinhaJogador(std::string);
     bool existeJogador(std::string);
     void traduzChaveCSV(std::string);
 };

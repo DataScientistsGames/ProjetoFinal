@@ -99,6 +99,26 @@ std::string Cadastrador::pegaPalavraLinha(std::string linha)
     return palavra;
 }
 
+std::string Cadastrador::retornaLinhaJogador(std::string apelido_jogador)
+{
+    CSV arquivo("../src/data/jogadores.csv");
+
+    std::string linha = arquivo.lerLinhaArquivo(); // ignora a primeira linha (template)
+
+    while (!linha.empty())
+    {
+        std::string apelido = pegaPalavraLinha(linha);
+        if (apelido == apelido_jogador)
+        {
+            return linha;
+        }
+
+        linha = arquivo.lerLinhaArquivo();
+    }
+
+    return "";
+}
+
 bool Cadastrador::existeJogador(std::string apelido_jogador)
 {
     CSV arquivo("../src/data/jogadores.csv");
