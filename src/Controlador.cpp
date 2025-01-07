@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <limits>
 #include "Controlador.hpp"
 #include "Cadastrador.hpp"
 #include "Comandos.hpp"
@@ -71,6 +72,11 @@ void Controlador::removerJogador()
 
         std::cout << "Digite o apelido do jogador que deseja remover: ";
         std::cin >> apelido_jogador;
+        /*
+            caso alguem coloque o nome "Enzo Braz",
+            o "Braz" volta na entrada de comando no loop e gera erro
+        */
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         Cadastrador *remover = new Cadastrador;
 
@@ -109,4 +115,5 @@ void Controlador::executarPartida()
 
 void Controlador::finalizarSistema()
 {
+    std::cout << "Finalizando...";
 }
