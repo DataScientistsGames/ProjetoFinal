@@ -2,10 +2,16 @@
 #include <fstream>
 #include <string>
 #include <limits>
+#include <memory>
 #include "Controlador.hpp"
 #include "Cadastrador.hpp"
 #include "Comandos.hpp"
 #include "Jogador.hpp"
+#include "Tabuleiro.hpp"
+#include "Reversi.hpp"
+#include "Lig4.hpp"
+#include "Velha.hpp"
+#include "Partida.hpp"
 
 Controlador::Controlador() {}
 Controlador::~Controlador() {}
@@ -60,9 +66,8 @@ void Controlador::cadastrarJogador()
         }
         else
         {
-            Cadastrador *cadastrar = new Cadastrador;
+            std::unique_ptr<Cadastrador> cadastrar(new Cadastrador);
             resultado = cadastrar->cadastrarJogador(apelido_jogador, nome_jogador);
-            delete (cadastrar);
         }
 
         std::cout << resultado << std::endl;
@@ -87,12 +92,10 @@ void Controlador::removerJogador()
         */
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        Cadastrador *remover = new Cadastrador;
+        std::unique_ptr<Cadastrador> remover(new Cadastrador);
 
         std::string resultado = remover->removerJogador(apelido_jogador);
         std::cout << resultado << std::endl;
-
-        delete (remover);
     }
     catch (const std::exception &e)
     {
@@ -108,9 +111,8 @@ void Controlador::listarJogador()
 
     if (metodo == 'A' || metodo == 'N')
     {
-        Cadastrador *listar = new Cadastrador;
+        std::unique_ptr<Cadastrador> listar(new Cadastrador);
         listar->listarJogador(metodo);
-        delete (listar);
     }
     else
     {
@@ -121,37 +123,57 @@ void Controlador::listarJogador()
 void Controlador::executarPartida()
 {
     /*
-        Pegar partida
+        Pegar jogo
     */
-
-    //...
+    std::unique_ptr<Tabuleiro> tabuleiro(new Tabuleiro(1, 1));
+    char nome_jogo;
+    std::cin >> nome_jogo;
+    /*
+        switch (nome_jogo)
+        {
+        case 'R':
+            // tabuleiro = std::unique_ptr<Tabuleiro>(new Reversi());
+            break;
+        case 'L':
+            // tabuleiro = std::unique_ptr<Tabuleiro>(new Lig4());
+            break;
+        case 'V':
+            // tabuleiro = std::unique_ptr<Tabuleiro>(new Velha());
+            break;
+        default:
+            throw std::invalid_argument("ERRO: dados incorretos");
+            break;
+        }
+    */
 
     /*
         Pegar jogador
     */
-
-    std::string _apelido_primeiro, _apelido_segundo;
-    std::cin >> _apelido_primeiro >> _apelido_segundo;
+    std::string apelido_primeiro, apelido_segundo;
+    std::cin >> apelido_primeiro >> apelido_segundo;
 
     Cadastrador *retornar = new Cadastrador;
-    std::string _linha_primeiro, _linha_segundo;
+    std::string linha_primeiro, linha_segundo;
 
-    // pega ambos os jogadores no CSV
-    _linha_primeiro = retornar->retornaLinhaJogador(_apelido_primeiro);
-    _linha_segundo = retornar->retornaLinhaJogador(_apelido_segundo);
+    linha_primeiro = retornar->retornaLinhaJogador(apelido_primeiro);
+    linha_segundo = retornar->retornaLinhaJogador(apelido_segundo);
 
-    if (_linha_primeiro.empty() || _linha_segundo.empty())
+    delete retornar;
+
+    std::unique_ptr<Jogador> jogador_1;
+    std::unique_ptr<Jogador> jogador_2;
+
+    if (linha_primeiro.empty() || linha_segundo.empty())
     {
-        // ERRO: jogador inexistente
+        throw std::invalid_argument("ERRO: jogador não encontrado");
     }
     else
     {
-        Jogador *jogador_1 = new Jogador(_linha_primeiro, 0);
-        Jogador *jogador_2 = new Jogador(_linha_segundo, 1);
-
-        delete (jogador_1);
-        delete (jogador_2);
+        jogador_1 = std::unique_ptr<Jogador>(new Jogador(linha_primeiro, 0));
+        jogador_2 = std::unique_ptr<Jogador>(new Jogador(linha_segundo, 1));
     }
+
+    Partida partida(std::move(tabuleiro), std::move(jogador_1), std::move(jogador_2));
 }
 
 void Controlador::finalizarSistema()

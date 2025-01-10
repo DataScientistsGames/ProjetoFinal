@@ -4,7 +4,7 @@
 
 Jogador::Jogador(std::string linha, bool cor) : _cor_atual(cor)
 {
-    int i;
+    long unsigned int i;
     for (i = 0; linha[i] != ','; i++)
     {
         this->_apelido += linha[i];
@@ -46,7 +46,7 @@ Jogador::Jogador(std::string linha, bool cor) : _cor_atual(cor)
     {
         derrotas_reversi += linha[i];
     }
-    this->_derrotas_reversi == std::stoi(derrotas_reversi);
+    this->_derrotas_reversi = std::stoi(derrotas_reversi);
 
     i++;
     std::string vitorias_lig4 = "";
@@ -54,7 +54,7 @@ Jogador::Jogador(std::string linha, bool cor) : _cor_atual(cor)
     {
         vitorias_lig4 += linha[i];
     }
-    this->_vitorias_lig == std::stoi(vitorias_lig4);
+    this->_vitorias_lig = std::stoi(vitorias_lig4);
 
     i++;
     std::string derrotas_lig4 = "";
@@ -62,5 +62,16 @@ Jogador::Jogador(std::string linha, bool cor) : _cor_atual(cor)
     {
         derrotas_lig4 += linha[i];
     }
-    this->_derrotas_lig == std::stoi(derrotas_lig4);
+    this->_derrotas_lig = std::stoi(derrotas_lig4);
 }
+
+Jogador::~Jogador() {}
+
+std::string Jogador::getApelido() { return this->_apelido; }
+std::string Jogador::getNome() { return this->_nome; }
+int Jogador::getVitoriasV() { return this->_vitorias_velha; };
+int Jogador::getDerrotasV() { return this->_derrotas_velha; };
+int Jogador::getVitoriasR() { return this->_vitorias_reversi; };
+int Jogador::getDerrotasR() { return this->_derrotas_reversi; };
+int Jogador::getVitoriasL() { return this->_vitorias_lig; };
+int Jogador::getDerrotasL() { return this->_derrotas_lig; };

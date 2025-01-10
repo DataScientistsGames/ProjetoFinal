@@ -1,5 +1,5 @@
 #ifndef JOGADOR_H
-#define JOGADORA_H
+#define JOGADOR_H
 
 #include <iostream>
 #include "PosicaoCartesiana.hpp"
@@ -17,6 +17,15 @@ private:
 public:
     Jogador(std::string, bool);
     ~Jogador();
+
+    std::string getApelido();
+    std::string getNome();
+    int getVitoriasV();
+    int getDerrotasV();
+    int getVitoriasR();
+    int getDerrotasR();
+    int getVitoriasL();
+    int getDerrotasL();
 };
 
 #endif

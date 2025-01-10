@@ -2,7 +2,7 @@
 #include "Casa.hpp"
 #include <iostream>
 
-Tabuleiro::Tabuleiro(int x, int y)
+Tabuleiro::Tabuleiro(int x, int y) : _x(x), _y(y)
 {
     this->_board = new Casa *[x];
     for (int i = 0; i < x; ++i)
@@ -17,17 +17,49 @@ Tabuleiro::Tabuleiro(int x, int y)
 
 Tabuleiro::~Tabuleiro()
 {
-    for (const auto &linhas : this->_board)
-        delete[] linhas;
+    for (int i = 0; i < this->_x; i++)
+    {
+        delete[] (this->_board[i]);
+    }
     delete[] this->_board;
 }
 
+int Tabuleiro::finalizarJogo() { return 1; };
+
 void Tabuleiro::posicionarPeca(int x, int y, int num_jogador = 0)
 {
-    this->_board[x][y] = num_jogador;
+    this->_board[x][y] = stringParaCasa(num_jogador);
 }
 
-Casa Tabuleiro::localizarPeca(int, int)
+Casa Tabuleiro::localizarPeca(int x, int y)
 {
     return this->_board[x][y];
+}
+
+Casa Tabuleiro::stringParaCasa(const int num_jogador)
+{
+    switch (num_jogador)
+    {
+    case 1:
+        return JOGADOR_1;
+        break;
+
+    case 2:
+        return JOGADOR_2;
+        break;
+
+    default:
+        return VAZIO;
+        break;
+    }
+}
+
+PosicaoCartesiana Tabuleiro::calculaVies(int jogador)
+{
+    return PosicaoCartesiana(0, 0);
+}
+
+int Tabuleiro::getTipo()
+{
+    return this->_tipo;
 }

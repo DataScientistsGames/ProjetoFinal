@@ -21,7 +21,7 @@ std::string Cadastrador::removerJogador(std::string apelido_jogador)
         std::string linha = arquivo.lerLinhaArquivo();
         while (!linha.empty())
         {
-            bool contem = linha.find(apelido_jogador) != std::string::npos;
+            bool contem = linha.find(apelido_jogador) != std::string::npos; // corrigir erro do find
             if (contem)
             {
                 arquivo.apagarNoArquivo(linha);
@@ -179,7 +179,7 @@ std::string Cadastrador::adicionaChave(char metodo, std::string linha)
 
 void Cadastrador::traduzChaveCSV(std::string linha)
 {
-    int i;
+    long unsigned int i;
     // ignora o primeiro valor (chave)
     for (i = 0; linha[i] != ','; i++)
     {
