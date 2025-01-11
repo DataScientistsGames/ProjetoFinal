@@ -8,9 +8,10 @@
 class Reversi : public Tabuleiro
 {
 public:
-    Reversi(int, int);
+    Reversi();
     ~Reversi();
 
+    int finalizarJogo() override final;
     void posicionarPeca(int, int, int) override final;
     Casa localizarPeca(int, int) override final;
 };
