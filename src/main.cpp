@@ -1,7 +1,7 @@
 #include <iostream>
-#include "helpers/CoutComuns.cpp" // helper do embelezamento do cmd
 #include <string>
 #include <stdexcept>
+#include "CoutComuns.hpp" // helper do embelezamento do cmd
 #include "Controlador.hpp"
 #include "Comandos.hpp"
 
@@ -32,7 +32,7 @@ int main()
     {
         do
         {
-            displayComandos();
+            CoutComuns::displayComandos();
             std::cout << "Digite um comando válido: ";
             std::cin >> entrada;
             std::cin.ignore();

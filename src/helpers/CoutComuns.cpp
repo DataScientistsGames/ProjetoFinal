@@ -1,6 +1,7 @@
+#include "CoutComuns.hpp"
 #include <iostream>
 
-void displayComandos()
+void CoutComuns::displayComandos()
 {
     std::cout << "----------------[C O M A N D O S]----------------" << std::endl;
     std::cout << "  CJ <Apelido> <Nome> - Cadastrar Jogador" << std::endl;
@@ -11,14 +12,14 @@ void displayComandos()
     std::cout << "----------[DIGITE DA MANEIRA INFORMADA]----------" << std::endl;
 }
 
-void espereEnter()
+void CoutComuns::espereEnter()
 {
     std::cout << "Pressione Enter para continuar...";
     std::cin.ignore(); // Ignora o buffer restante
     std::cin.get();    // Aguarda Enter
 }
 
-void limparCmd()
+void CoutComuns::limparCmd()
 {
 #ifdef _WIN32
     system("cls"); // Comando para Windows

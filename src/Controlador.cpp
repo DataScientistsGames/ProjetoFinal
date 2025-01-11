@@ -1,10 +1,10 @@
 #include <iostream>
-#include "helpers/CoutComuns.cpp" // helper do embelezamento do cmd
 #include <fstream>
 #include <string>
 #include <limits>
 #include <memory>
 #include "Controlador.hpp"
+#include "CoutComuns.hpp" // helper do embelezamento do cmd
 #include "Cadastrador.hpp"
 #include "Comandos.hpp"
 #include "Jogador.hpp"
@@ -23,7 +23,7 @@ void Controlador::leitorComando(Comandos comando)
     {
     case CJ:
         this->cadastrarJogador();
-        espereEnter();
+        CoutComuns::espereEnter();
         break;
 
     case RJ:
@@ -32,13 +32,13 @@ void Controlador::leitorComando(Comandos comando)
 
     case LJ:
         this->listarJogador();
-        espereEnter();
-        limparCmd();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case EP:
         this->executarPartida();
-        espereEnter();
+        CoutComuns::espereEnter();
         break;
 
     case FS:

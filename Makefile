@@ -13,14 +13,17 @@ all: $(BIN_DIR)/sistema
 debug: CFLAGS += $(DEBUG_FLAGS)
 debug: sistema
 
-$(BUILD_DIR)/Controlador.o: $(INCLUDE_DIR)/Controlador.hpp $(INCLUDE_DIR)/Cadastrador.hpp $(INCLUDE_DIR)/Comandos.hpp $(INCLUDE_DIR)/Jogador.hpp $(INCLUDE_DIR)/Tabuleiro.hpp $(INCLUDE_DIR)/Reversi.hpp $(INCLUDE_DIR)/Lig4.hpp $(INCLUDE_DIR)/Velha.hpp $(INCLUDE_DIR)/Partida.hpp $(SRC_DIR)/Controlador.cpp | $(BUILD_DIR)
+$(BUILD_DIR)/Controlador.o: $(INCLUDE_DIR)/Controlador.hpp $(INCLUDE_DIR)/$(HELPERS_DIR)/CoutComuns.hpp $(INCLUDE_DIR)/Cadastrador.hpp $(INCLUDE_DIR)/Comandos.hpp $(INCLUDE_DIR)/Jogador.hpp $(INCLUDE_DIR)/Tabuleiro.hpp $(INCLUDE_DIR)/Reversi.hpp $(INCLUDE_DIR)/Lig4.hpp $(INCLUDE_DIR)/Velha.hpp $(INCLUDE_DIR)/Partida.hpp $(SRC_DIR)/Controlador.cpp | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/$(HELPERS_DIR) -c $(SRC_DIR)/Controlador.cpp -o $(BUILD_DIR)/Controlador.o
 
-$(BUILD_DIR)/main.o: $(INCLUDE_DIR)/Controlador.hpp $(INCLUDE_DIR)/Comandos.hpp  $(SRC_DIR)/main.cpp | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -c $(SRC_DIR)/main.cpp -o $(BUILD_DIR)/main.o
+$(BUILD_DIR)/main.o: $(INCLUDE_DIR)/$(HELPERS_DIR)/CoutComuns.hpp $(INCLUDE_DIR)/Controlador.hpp $(INCLUDE_DIR)/Comandos.hpp $(SRC_DIR)/main.cpp | $(BUILD_DIR)
+	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/$(HELPERS_DIR) -c $(SRC_DIR)/main.cpp -o $(BUILD_DIR)/main.o
 
 $(BUILD_DIR)/CSV.o: $(INCLUDE_DIR)/$(HELPERS_DIR)/CSV.hpp  $(SRC_DIR)/$(HELPERS_DIR)/CSV.cpp | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/$(HELPERS_DIR) -c $(SRC_DIR)/$(HELPERS_DIR)/CSV.cpp -o $(BUILD_DIR)/CSV.o
+
+$(BUILD_DIR)/CoutComuns.o: $(INCLUDE_DIR)/$(HELPERS_DIR)/CoutComuns.hpp  $(SRC_DIR)/$(HELPERS_DIR)/CoutComuns.cpp | $(BUILD_DIR)
+	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/$(HELPERS_DIR) -c $(SRC_DIR)/$(HELPERS_DIR)/CoutComuns.cpp -o $(BUILD_DIR)/CoutComuns.o
 
 $(BUILD_DIR)/Cadastrador.o: $(INCLUDE_DIR)/Cadastrador.hpp $(INCLUDE_DIR)/$(HELPERS_DIR)/CSV.hpp $(SRC_DIR)/Cadastrador.cpp | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -I$(INCLUDE_DIR)/$(HELPERS_DIR) -c $(SRC_DIR)/Cadastrador.cpp -o $(BUILD_DIR)/Cadastrador.o
@@ -46,8 +49,8 @@ $(BUILD_DIR)/Partida.o: $(INCLUDE_DIR)/Partida.hpp $(INCLUDE_DIR)/$(HELPERS_DIR)
 $(BUILD_DIR)/PosicaoCartesiana.o: $(INCLUDE_DIR)/PosicaoCartesiana.hpp $(SRC_DIR)/PosicaoCartesiana.cpp | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -I$(INCLUDE_DIR) -c $(SRC_DIR)/PosicaoCartesiana.cpp -o $(BUILD_DIR)/PosicaoCartesiana.o
 
-$(BIN_DIR)/sistema: $(BUILD_DIR)/main.o $(BUILD_DIR)/Controlador.o $(BUILD_DIR)/CSV.o $(BUILD_DIR)/Cadastrador.o $(BUILD_DIR)/Jogador.o $(BUILD_DIR)/Tabuleiro.o $(BUILD_DIR)/Reversi.o $(BUILD_DIR)/Lig4.o $(BUILD_DIR)/Velha.o $(BUILD_DIR)/Partida.o $(BUILD_DIR)/PosicaoCartesiana.o
-	$(CC) $(CFLAGS) $(BUILD_DIR)/main.o $(BUILD_DIR)/Controlador.o $(BUILD_DIR)/CSV.o $(BUILD_DIR)/Cadastrador.o $(BUILD_DIR)/Jogador.o $(BUILD_DIR)/Tabuleiro.o $(BUILD_DIR)/Reversi.o $(BUILD_DIR)/Lig4.o $(BUILD_DIR)/Velha.o $(BUILD_DIR)/Partida.o $(BUILD_DIR)/PosicaoCartesiana.o -o $(BIN_DIR)/sistema
+$(BIN_DIR)/sistema: $(BUILD_DIR)/main.o $(BUILD_DIR)/Controlador.o $(BUILD_DIR)/CSV.o $(BUILD_DIR)/CoutComuns.o $(BUILD_DIR)/Cadastrador.o $(BUILD_DIR)/Jogador.o $(BUILD_DIR)/Tabuleiro.o $(BUILD_DIR)/Reversi.o $(BUILD_DIR)/Lig4.o $(BUILD_DIR)/Velha.o $(BUILD_DIR)/Partida.o $(BUILD_DIR)/PosicaoCartesiana.o
+	$(CC) $(CFLAGS) $(BUILD_DIR)/main.o $(BUILD_DIR)/Controlador.o $(BUILD_DIR)/CSV.o $(BUILD_DIR)/CoutComuns.o $(BUILD_DIR)/Cadastrador.o $(BUILD_DIR)/Jogador.o $(BUILD_DIR)/Tabuleiro.o $(BUILD_DIR)/Reversi.o $(BUILD_DIR)/Lig4.o $(BUILD_DIR)/Velha.o $(BUILD_DIR)/Partida.o $(BUILD_DIR)/PosicaoCartesiana.o -o $(BIN_DIR)/sistema
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
