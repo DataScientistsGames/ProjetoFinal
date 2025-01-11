@@ -9,7 +9,7 @@ void CoutComuns::displayComandos()
     std::cout << "  LJ [A|N] - Listar Jogador por Apelido ou Nome" << std::endl;
     std::cout << "  EP [R|L|V] <Apelido Jogador 1> <Apelido Jogador 2> - Executar Partida de Reversi, Lig4 ou Jogo da Velha" << std::endl;
     std::cout << "  FS - Finalizar Sistema" << std::endl;
-    std::cout << "----------[DIGITE DA MANEIRA INFORMADA]----------" << std::endl;
+    std::cout << "-------------------------------------------------" << std::endl;
 }
 
 void CoutComuns::espereEnter()
