@@ -1,4 +1,5 @@
 #include <iostream>
+#include "helpers/CoutComuns.cpp" // helper do embelezamento do cmd
 #include <fstream>
 #include <string>
 #include <limits>
@@ -22,6 +23,7 @@ void Controlador::leitorComando(Comandos comando)
     {
     case CJ:
         this->cadastrarJogador();
+        espereEnter();
         break;
 
     case RJ:
@@ -30,10 +32,13 @@ void Controlador::leitorComando(Comandos comando)
 
     case LJ:
         this->listarJogador();
+        espereEnter();
+        limparCmd();
         break;
 
     case EP:
         this->executarPartida();
+        espereEnter();
         break;
 
     case FS:
@@ -54,10 +59,8 @@ void Controlador::cadastrarJogador()
         std::string nome_jogador;
         std::string apelido_jogador;
 
-        std::cout << "Digite um apelido: ";
         std::cin >> apelido_jogador;
         std::cin.ignore();
-        std::cout << "Digite seu nome: ";
         std::getline(std::cin, nome_jogador);
 
         if (apelido_jogador.find(',') != std::string::npos)

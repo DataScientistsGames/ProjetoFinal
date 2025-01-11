@@ -1,4 +1,5 @@
 #include <iostream>
+#include "helpers/CoutComuns.cpp" // helper do embelezamento do cmd
 #include <string>
 #include <stdexcept>
 #include "Controlador.hpp"
@@ -31,7 +32,8 @@ int main()
     {
         do
         {
-            std::cout << "Digite um comando válido (ou 'FS' para encerrar): ";
+            displayComandos();
+            std::cout << "Digite um comando válido: ";
             std::cin >> entrada;
             std::cin.ignore();
 
