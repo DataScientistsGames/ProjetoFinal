@@ -1,6 +1,7 @@
 #include "CSV.hpp"
 #include <iostream>
 #include <vector>
+#include <string>
 
 CSV::CSV(std::string caminho) : _arquivo(caminho, std::ios::in | std::ios::out), _arquivo_nome(caminho)
 {
