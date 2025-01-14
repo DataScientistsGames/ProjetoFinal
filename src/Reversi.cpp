@@ -19,3 +19,5 @@ void Reversi::posicionarPeca(int x, int y, int num_jogador)
         // TODO - implementar lógica para capturar e reverter as casas do adversario
     }
 }
+
+Casa Reversi::localizarPeca(int, int) {};

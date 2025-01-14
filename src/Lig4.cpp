@@ -25,3 +25,5 @@ void Lig4::posicionarPeca(int x, int y, int num_jogador)
         }
     }
 }
+
+Casa Lig4::localizarPeca(int, int) {};

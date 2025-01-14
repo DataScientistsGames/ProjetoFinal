@@ -17,6 +17,8 @@ public:
 
     void escreverArquivo(std::string);
     void apagarNoArquivo(std::string);
+    void atualizarNoArquivo(std::string, std::string);
+    std::string pegaApelidoLinha(std::string);
     std::string lerLinhaArquivo();
 };
 

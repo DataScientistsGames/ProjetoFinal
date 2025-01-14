@@ -42,3 +42,5 @@ void Velha::posicionarPeca(int x, int y, int num_jogador)
         Tabuleiro::posicionarPeca(x, y, num_jogador);
     }
 }
+
+Casa Velha::localizarPeca(int, int) {};

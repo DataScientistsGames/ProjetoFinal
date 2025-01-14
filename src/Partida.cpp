@@ -52,7 +52,6 @@ void Partida::finalizarPartida(int vencedor)
         std::cout << this->_player1->getApelido() << " foi o vencedor!" << std::endl;
         std::cout << this->_player2->getApelido() << " foi o derrotado." << std::endl;
         this->atualizaDadosJogador(std::move(this->_player1), std::move(this->_player2));
-        this->atualizaDadosPartida(std::move(this->_player1), std::move(this->_player2));
     }
 
     else
@@ -60,7 +59,6 @@ void Partida::finalizarPartida(int vencedor)
         std::cout << this->_player2->getApelido() << " foi o vencedor!" << std::endl;
         std::cout << this->_player1->getApelido() << " foi o derrotado." << std::endl;
         this->atualizaDadosJogador(std::move(this->_player2), std::move(this->_player1));
-        this->atualizaDadosPartida(std::move(this->_player2), std::move(this->_player1));
     }
 };
 
@@ -106,7 +104,6 @@ void Partida::atualizaDadosJogador(std::unique_ptr<Jogador> jogador_vencedor, st
     adicionar_vitoria.append(std::to_string(vitoriasL));
     adicionar_vitoria += ',';
     adicionar_vitoria.append(std::to_string(jogador_vencedor->getDerrotasL()));
-    adicionar_vitoria += '\n';
 
     // string derrota
     std::string adicionar_derrota = "";
@@ -125,41 +122,17 @@ void Partida::atualizaDadosJogador(std::unique_ptr<Jogador> jogador_vencedor, st
     adicionar_derrota.append(std::to_string(jogador_perdedor->getVitoriasL()));
     adicionar_derrota += ',';
     adicionar_derrota.append(std::to_string(derrotasL));
-    adicionar_derrota += '\n';
 
     CSV *arquivo_vitoria = new CSV("../src/data/jogadores.csv");
-
-    arquivo_vitoria->escreverArquivo(adicionar_vitoria);
-    std::string linha = arquivo_vitoria->lerLinhaArquivo();
-    while (!linha.empty())
-    {
-        bool contem = linha.find(jogador_vencedor->getApelido()) != std::string::npos; // corrigir erro do find
-        if (contem)
-        {
-            arquivo_vitoria->apagarNoArquivo(linha);
-            break;
-        }
-        linha = arquivo_vitoria->lerLinhaArquivo();
-    }
-
+    arquivo_vitoria->atualizarNoArquivo(jogador_vencedor->getApelido(), adicionar_vitoria);
     delete (arquivo_vitoria);
 
     CSV *arquivo_derrota = new CSV("../src/data/jogadores.csv");
-
-    arquivo_derrota->escreverArquivo(adicionar_derrota);
-    linha = arquivo_derrota->lerLinhaArquivo();
-    while (!linha.empty())
-    {
-        bool contem = linha.find(jogador_vencedor->getApelido()) != std::string::npos; // corrigir erro do find
-        if (contem)
-        {
-            arquivo_derrota->apagarNoArquivo(linha);
-            break;
-        }
-        linha = arquivo_derrota->lerLinhaArquivo();
-    }
-
+    arquivo_derrota->atualizarNoArquivo(jogador_perdedor->getApelido(), adicionar_derrota);
     delete (arquivo_derrota);
+
+    std::cout << "Dados jogador atualizados." << std::endl;
+    this->atualizaDadosPartida(std::move(jogador_vencedor), std::move(jogador_perdedor));
 };
 
 void Partida::atualizaDadosPartida(std::unique_ptr<Jogador> jogador_vencedor, std::unique_ptr<Jogador> jogador_perdedor)
@@ -176,19 +149,22 @@ void Partida::atualizaDadosPartida(std::unique_ptr<Jogador> jogador_vencedor, st
     adicionar_vitoria.append(std::to_string(vies_ganhador.getX()));
     adicionar_vitoria += ',';
     adicionar_vitoria.append(std::to_string(vies_ganhador.getY()));
+    adicionar_vitoria += '\n';
 
     arquivo_jogadores.escreverArquivo(adicionar_vitoria);
 
     PosicaoCartesiana vies_perdedor = this->_tabuleiro->calculaVies(2);
 
     std::string adicionar_derrota = "";
-    adicionar_derrota.append(jogador_vencedor->getApelido());
+    adicionar_derrota.append(jogador_perdedor->getApelido());
     adicionar_derrota += ',';
     adicionar_derrota.append("Derrotado");
     adicionar_derrota += ',';
     adicionar_derrota.append(std::to_string(vies_perdedor.getX()));
     adicionar_derrota += ',';
     adicionar_derrota.append(std::to_string(vies_perdedor.getY()));
+    adicionar_derrota += '\n';
 
     arquivo_jogadores.escreverArquivo(adicionar_derrota);
+    std::cout << "Dados partida atualizados." << std::endl;
 };

@@ -61,6 +61,55 @@ void CSV::apagarNoArquivo(std::string linha_remover)
     this->_arquivo.seekg(0, std::ios::beg);
 }
 
+void CSV::atualizarNoArquivo(std::string apelido_jogador, std::string novos_dados)
+{
+    this->_arquivo.clear();
+    this->_arquivo.seekg(0, std::ios::beg);
+    std::vector<std::string> linhas;
+    std::string linha;
+
+    while (std::getline(this->_arquivo, linha))
+    {
+        if (pegaApelidoLinha(linha) != apelido_jogador)
+        {
+            linhas.push_back(linha);
+        }
+        else
+        {
+            linhas.push_back(novos_dados);
+        }
+    }
+
+    this->_arquivo.close();
+    this->_arquivo.open(this->_arquivo_nome, std::ios::in | std::ios::out | std::ios::trunc);
+
+    if (!this->_arquivo.is_open())
+    {
+        throw std::runtime_error("Erro ao abrir o arquivo no modo truncado.");
+    }
+
+    for (const auto &linhaAtual : linhas)
+    {
+        this->_arquivo << linhaAtual << '\n';
+    }
+
+    this->_arquivo.flush();
+    this->_arquivo.clear();
+    this->_arquivo.seekg(0, std::ios::beg);
+}
+
+std::string CSV::pegaApelidoLinha(std::string linha)
+{
+    std::string apelido = "";
+    int i = 0;
+    while (linha[i] != ',')
+    {
+        apelido += linha[i];
+        i++;
+    }
+    return apelido;
+}
+
 std::string CSV::lerLinhaArquivo()
 {
     if (!this->_arquivo.eof())
