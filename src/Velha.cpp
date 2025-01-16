@@ -35,12 +35,13 @@ int Velha::finalizarJogo()
     return 0; // jogo continua
 }
 
-void Velha::posicionarPeca(int x, int y, int num_jogador)
+/*bool Velha::posicionarPeca(int x, int y, int num_jogador)
 {
     if (x >= 0 && x < 3 && y >= 0 && y < 3 && this->_board[x][y] == VAZIO)
     {
         Tabuleiro::posicionarPeca(x, y, num_jogador);
+        return true;
     }
-}
 
-Casa Velha::localizarPeca(int, int) {};
+    return false;
+}*/

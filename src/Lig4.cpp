@@ -11,19 +11,11 @@ int Lig4::finalizarJogo()
     return 0; // jogo continua
 }
 
-void Lig4::posicionarPeca(int x, int y, int num_jogador)
+bool Lig4::posicionarPeca(int x, int y, int num_jogador)
 {
-    if (x >= 0 && x < 6 && y >= 0 && y < 7)
+    for (int i = 5; i >= 0; --i)
     {
-        for (int i = 5; i >= 0; --i)
-        {
-            if (_board[i][y] == VAZIO)
-            {
-                Tabuleiro::posicionarPeca(i, y, num_jogador);
-                break;
-            }
-        }
+        return Tabuleiro::posicionarPeca(i, y, num_jogador);
     }
-}
 
-Casa Lig4::localizarPeca(int, int) {};
+}
