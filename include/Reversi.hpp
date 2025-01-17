@@ -12,7 +12,8 @@ public:
     ~Reversi();
 
     int finalizarJogo() override final;
-    bool posicionarPeca(int, int, int) override final;
+    void posicionarPeca(int, int, int) override final; // acho que n precisa de override e final junto, só override já funciona
+    void imprimeBordaVertical() override final;        // parece que 'override final' é redundante
     Casa localizarPeca(int, int) override final;
 };
 

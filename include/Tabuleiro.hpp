@@ -1,6 +1,9 @@
 #ifndef TABULEIRO_H
 #define TABULEIRO_H
 
+#define CHAR_BORDA_COLUNA '|'
+#define CHAR_BORDA_LINHA '-'
+
 #include <iostream>
 #include "Casa.hpp"
 #include "PosicaoCartesiana.hpp"
@@ -12,9 +15,10 @@ protected:
     int _x;
     int _y;
     int _tipo; // 0 - velha, 1 - reversi, 2 - lig4
+    char _charsPecas[3];
 
 public:
-    Tabuleiro(int, int);
+    Tabuleiro(int, int, char = 'O', char = '@');
     ~Tabuleiro();
 
     bool virtual posicionarPeca(int, int, int);
@@ -23,6 +27,8 @@ public:
     Casa stringParaCasa(const int);
     PosicaoCartesiana calculaVies(int);
     int getTipo();
+    void virtual imprimeBordaVertical();
+    void imprimeTabuleiro();
 };
 
 #endif

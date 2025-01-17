@@ -20,4 +20,12 @@ bool Reversi::posicionarPeca(int x, int y, int num_jogador)
     }
 }
 
-Casa Reversi::localizarPeca(int, int) {};
+void Reversi::imprimeBordaVertical()
+{
+    for (int i = 0; i < this->_x; i++) // acho que desse jeito fica mais bonito, pois parece que a peça cai na coluna mesmo
+    {
+        std::cout << "    ";
+    }
+
+    std::cout << " " << std::endl;
+}
