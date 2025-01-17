@@ -12,6 +12,7 @@ public:
     ~Velha();
 
     int finalizarJogo() override final;
+    void imprimeTabuleiro() override final;
 };
 
 #endif

@@ -88,7 +88,7 @@ void Tabuleiro::imprimeTabuleiro()
     std::cout << '\t';
     for (int i = 0; i < this->_x; i++)
     {
-        std::cout << "    " << i << '\t';
+        std::cout << "    " << i+1 << '\t';
     }
     std::cout << std::endl;
 
@@ -96,7 +96,7 @@ void Tabuleiro::imprimeTabuleiro()
 
     for (int i = 0; i < this->_y; i++)
     {
-        std::cout << i << '\t';
+        std::cout << i+1 << '\t';
         std::cout << CHAR_BORDA_COLUNA;
         for (int j = 0; j < this->_x; j++)
         {

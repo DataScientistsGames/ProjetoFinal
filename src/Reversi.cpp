@@ -237,3 +237,9 @@ bool Reversi::posicionarPeca(int x, int y, int num_jogador)
     // valida a jogada e posicionar = true
     return jogadaValida(x, y, (Casa)num_jogador, true);
 }
+
+void Reversi::imprimeTabuleiro()
+{
+    Tabuleiro::imprimeTabuleiro();
+    std::cout << "Formato de jogada: <Coluna> <Linha>" << std::endl;
+}

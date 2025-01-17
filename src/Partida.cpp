@@ -41,20 +41,34 @@ void Partida::leitorJogada(int num_jogador)
 {
     bool valido = false;
     bool jogada_possivel = true;
-    int linha, coluna;
+    int linha = 0, coluna;
     while (!valido)
     {
         this->_tabuleiro->imprimeTabuleiro();
         jogada_possivel = this->_tabuleiro->temJogadaValida(this->_tabuleiro->stringParaCasa(num_jogador));
+
         if (!jogada_possivel)
         {
             std::cout << "Infelizmente o jogador " << num_jogador << " não tem jogadas possíveis." << std::endl;
             CoutComuns::espereEnter();
             break;
         }
+
         std::cout << "Jogador " << num_jogador << "! É a sua vez:";
-        std::cin >> linha >> coluna;
-        valido = this->_tabuleiro->posicionarPeca(linha, coluna, num_jogador);
+
+        if(this->_tabuleiro->getTipo() == 2) 
+        {
+            std::cin >> coluna;
+            coluna--;
+        }
+        else
+        {
+            std::cin >> coluna >> linha;
+            coluna--;
+            linha--;
+        }
+
+        valido = this->_tabuleiro->posicionarPeca(coluna, linha, num_jogador);
         if (!valido)
             std::cout << "Jogada inválida" << std::endl;
     }

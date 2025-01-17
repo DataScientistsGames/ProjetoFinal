@@ -65,9 +65,14 @@ int Lig4::finalizarJogo()
 
 bool Lig4::posicionarPeca(int x, int y, int num_jogador)
 {
-    for (int i = 5; i >= 0; --i)
+    if (x < 0 || x > 5) 
+        return false;
+
+    for (int i = 6; i >= 0; --i)
     {
-        return Tabuleiro::posicionarPeca(i, y, num_jogador);
+        if(this->_board[x][i] == VAZIO){
+            return Tabuleiro::posicionarPeca(x, i, num_jogador);
+        }
     }
 }
 
@@ -79,4 +84,10 @@ void Lig4::imprimeBordaVertical()
     }
 
     std::cout << " " << std::endl;
+}
+
+void Lig4::imprimeTabuleiro()
+{
+    Tabuleiro::imprimeTabuleiro();
+    std::cout << "Formato de jogada: <Coluna>" << std::endl;
 }

@@ -46,3 +46,9 @@ int Velha::finalizarJogo()
 
     return 3; // empate
 }
+
+void Velha::imprimeTabuleiro()
+{
+    Tabuleiro::imprimeTabuleiro();
+    std::cout << "Formato de jogada: <Coluna> <Linha>" << std::endl;
+}

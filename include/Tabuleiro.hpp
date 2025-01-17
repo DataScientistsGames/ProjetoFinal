@@ -28,7 +28,7 @@ public:
     PosicaoCartesiana calculaVies(int);
     int getTipo();
     void virtual imprimeBordaVertical();
-    void imprimeTabuleiro();
+    void virtual imprimeTabuleiro();
     bool virtual temJogadaValida(Casa);
 };
 
