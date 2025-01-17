@@ -68,7 +68,7 @@ void Tabuleiro::imprimeBordaVertical()
 {
     for (int i = 0; i < ((this->_x * 4) + 1); i++) // Multiplica x por 4 porque toda casa impressa vem junto com um '#' e dois espaços. Soma 1 porque existe uma parede de '#'s antes de cada linha.
     {
-        std::cout << CHAR_BORDA;
+        std::cout << CHAR_BORDA_LINHA;
     }
 
     std::cout << std::endl;
@@ -77,15 +77,15 @@ void Tabuleiro::imprimeBordaVertical()
 void Tabuleiro::imprimeTabuleiro()
 {
     imprimeBordaVertical();
-    std::cout << CHAR_BORDA;
+    std::cout << CHAR_BORDA_COLUNA;
 
-    for (int i = 0; i < this->_y; i++) 
+    for (int i = 0; i < this->_y; i++)
     {
-        for (int j = 0; j < this->_x; j++) 
+        for (int j = 0; j < this->_x; j++)
         {
-            int pecaAtual = this->localizarPeca(j , i);
+            int pecaAtual = this->localizarPeca(j, i);
 
-            std::cout << ' ' << this->_charsPecas[pecaAtual] << ' ' << CHAR_BORDA;
+            std::cout << ' ' << this->_charsPecas[pecaAtual] << ' ' << CHAR_BORDA_COLUNA;
         }
 
         std::cout << std::endl;

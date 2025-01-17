@@ -1,7 +1,8 @@
 #ifndef TABULEIRO_H
 #define TABULEIRO_H
 
-#define CHAR_BORDA '#'
+#define CHAR_BORDA_COLUNA '|'
+#define CHAR_BORDA_LINHA '-'
 
 #include <iostream>
 #include "Casa.hpp"
@@ -26,7 +27,7 @@ public:
     Casa stringParaCasa(const int);
     PosicaoCartesiana calculaVies(int);
     int getTipo();
-    void imprimeBordaVertical();
+    void virtual imprimeBordaVertical();
     void imprimeTabuleiro();
 };
 
