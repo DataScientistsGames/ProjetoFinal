@@ -28,7 +28,7 @@ int Tabuleiro::finalizarJogo() { return 1; };
 
 bool Tabuleiro::posicionarPeca(int x, int y, int num_jogador = 0)
 {
-    if ((x >= 0 && x < this->_x) && (y >= 0 && y < this->_y) && (this->_board[x][y] == VAZIO)) 
+    if ((x >= 0 && x < this->_x) && (y >= 0 && y < this->_y) && (this->_board[x][y] == VAZIO))
     {
         this->_board[x][y] = stringParaCasa(num_jogador);
         return true;

@@ -11,10 +11,12 @@ public:
     Reversi();
     ~Reversi();
 
-    int finalizarJogo() override final;
-    void posicionarPeca(int, int, int) override final; // acho que n precisa de override e final junto, só override já funciona
-    void imprimeBordaVertical() override final;        // parece que 'override final' é redundante
-    Casa localizarPeca(int, int) override final;
+    int finalizarJogo() override final;                // acho que n precisa de override e final junto, só override já funciona
+    bool posicionarPeca(int, int, int) override final; // parece que 'override final' é redundante
+
+    // metodos exclusivo do reversi por causa da complexidade das regras
+    bool temJogadaValida(Casa);
+    bool jogadaValida(int, int, Casa, bool);
 };
 
 #endif

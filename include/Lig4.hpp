@@ -13,6 +13,7 @@ public:
 
     int finalizarJogo() override final;
     bool posicionarPeca(int, int, int) override final;
+    void imprimeBordaVertical() override final;
 };
 
 #endif

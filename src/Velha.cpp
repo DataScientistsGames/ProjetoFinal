@@ -32,16 +32,17 @@ int Velha::finalizarJogo()
     {
         return this->_board[0][2] == JOGADOR_1 ? 1 : 2;
     }
-    return 0; // jogo continua
-}
 
-/*bool Velha::posicionarPeca(int x, int y, int num_jogador)
-{
-    if (x >= 0 && x < 3 && y >= 0 && y < 3 && this->_board[x][y] == VAZIO)
+    for (int i = 0; i < 3; i++)
     {
-        Tabuleiro::posicionarPeca(x, y, num_jogador);
-        return true;
+        for (int j = 0; j < 3; j++)
+        {
+            if (this->_board[i][j] == VAZIO)
+            {
+                return 0; // jogo continua
+            }
+        }
     }
 
-    return false;
-}*/
+    return 3; // empate
+}
