@@ -12,8 +12,7 @@ public:
     ~Lig4();
 
     int finalizarJogo() override final;
-    void posicionarPeca(int, int, int) override final;
-    Casa localizarPeca(int, int) override final;
+    bool posicionarPeca(int, int, int) override final;
 };
 
 #endif

@@ -21,7 +21,7 @@ public:
     Tabuleiro(int, int, char = 'O', char = '@');
     ~Tabuleiro();
 
-    void virtual posicionarPeca(int, int, int);
+    bool virtual posicionarPeca(int, int, int);
     int virtual finalizarJogo(); // 0 - continua, 1 - jogador 1 venceu, 2 - jogador 2 venceu
     Casa virtual localizarPeca(int, int);
     Casa stringParaCasa(const int);

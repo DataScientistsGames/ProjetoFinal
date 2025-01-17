@@ -11,7 +11,7 @@ int Reversi::finalizarJogo()
     return 0; // jogo continua
 }
 
-void Reversi::posicionarPeca(int x, int y, int num_jogador)
+bool Reversi::posicionarPeca(int x, int y, int num_jogador)
 {
     if (x >= 0 && x < 8 && y >= 0 && y < 8 && _board[x][y] == VAZIO)
     {
