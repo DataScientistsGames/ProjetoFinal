@@ -1,6 +1,6 @@
 #include "Lig4.hpp"
 
-Lig4::Lig4() : Tabuleiro(6, 7)
+Lig4::Lig4() : Tabuleiro(6, 7, '●', 'ｏ')
 {
     this->_tipo = 2; // identificador para lig4
 }

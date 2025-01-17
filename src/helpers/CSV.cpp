@@ -28,7 +28,7 @@ void CSV::escreverArquivo(std::string entrada)
     this->_arquivo.seekp(0, std::ios::end);
 }
 
-void CSV::apagarNoArquivo(std::string linha_remover)
+void CSV::apagarNoArquivo(std::string apelido)
 {
     this->_arquivo.clear();
     this->_arquivo.seekg(0, std::ios::beg);
@@ -37,7 +37,7 @@ void CSV::apagarNoArquivo(std::string linha_remover)
 
     while (std::getline(this->_arquivo, linha))
     {
-        if (linha != linha_remover)
+        if (pegaApelidoLinha(linha) != apelido)
         {
             linhas.push_back(linha);
         }

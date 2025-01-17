@@ -15,7 +15,9 @@ Comandos stringParaComando(const std::string &comandoStr)
         return LJ;
     else if (comandoStr == "EP")
         return EP;
-    if (comandoStr == "FS")
+    else if (comandoStr == "EST")
+        return EST;
+    else if (comandoStr == "FS")
         return FS;
     else
         throw std::invalid_argument(comandoStr + " não é um comando válido!");
@@ -28,9 +30,9 @@ int main()
     std::string entrada;
     Comandos comando;
 
-    try
+    do
     {
-        do
+        try
         {
             CoutComuns::displayComandos();
             std::cout << "Digite um comando válido: ";
@@ -39,12 +41,12 @@ int main()
 
             comando = stringParaComando(entrada);
             sistema.leitorComando(comando);
-        } while (comando != FS);
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << "Erro: " << e.what() << '\n';
-    }
+        }
+        catch (const std::exception &e)
+        {
+            std::cerr << "Erro: " << e.what() << '\n';
+        }
+    } while (comando != FS);
 
     return 0;
 }

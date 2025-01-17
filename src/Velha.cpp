@@ -1,6 +1,6 @@
 #include "Velha.hpp"
 
-Velha::Velha() : Tabuleiro(3, 3)
+Velha::Velha() : Tabuleiro(3, 3, 'X', 'O')
 {
     this->_tipo = 0; // identificador para velha
 }

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-Jogador::Jogador(std::string linha, bool cor) : _cor_atual(cor)
+Jogador::Jogador(std::string linha)
 {
     long unsigned int i;
     for (i = 0; linha[i] != ','; i++)

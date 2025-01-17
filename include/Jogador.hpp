@@ -12,10 +12,9 @@ private:
     int _vitorias_reversi, _derrotas_reversi;
     int _vitorias_lig, _derrotas_lig;
     PosicaoCartesiana _vies;
-    bool _cor_atual;
 
 public:
-    Jogador(std::string, bool);
+    Jogador(std::string);
     ~Jogador();
 
     std::string getApelido();

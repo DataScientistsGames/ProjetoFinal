@@ -8,6 +8,7 @@
 #include "Cadastrador.hpp"
 #include "Comandos.hpp"
 #include "Jogador.hpp"
+#include "Estatistica.hpp"
 #include "Tabuleiro.hpp"
 #include "Reversi.hpp"
 #include "Lig4.hpp"
@@ -24,10 +25,13 @@ void Controlador::leitorComando(Comandos comando)
     case CJ:
         this->cadastrarJogador();
         CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case RJ:
         this->removerJogador();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case LJ:
@@ -39,6 +43,13 @@ void Controlador::leitorComando(Comandos comando)
     case EP:
         this->executarPartida();
         CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
+        break;
+
+    case EST:
+        this->estatisticasJogador();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case FS:
@@ -86,8 +97,6 @@ void Controlador::removerJogador()
     try
     {
         std::string apelido_jogador;
-
-        std::cout << "Digite o apelido do jogador que deseja remover: ";
         std::cin >> apelido_jogador;
         /*
             caso alguem coloque o nome "Enzo Braz",
@@ -109,7 +118,6 @@ void Controlador::removerJogador()
 void Controlador::listarJogador()
 {
     char metodo;
-    std::cout << "Digite o método pelo qual os jogadores serão listados, Apelido ou Nome (A|N): ";
     std::cin >> metodo;
 
     if (metodo == 'A' || metodo == 'N')
@@ -128,26 +136,24 @@ void Controlador::executarPartida()
     /*
         Pegar jogo
     */
-    std::unique_ptr<Tabuleiro> tabuleiro(new Tabuleiro(1, 1));
+    std::unique_ptr<Tabuleiro> tabuleiro;
     char nome_jogo;
     std::cin >> nome_jogo;
-    /*
-        switch (nome_jogo)
-        {
-        case 'R':
-            // tabuleiro = std::unique_ptr<Tabuleiro>(new Reversi());
-            break;
-        case 'L':
-            // tabuleiro = std::unique_ptr<Tabuleiro>(new Lig4());
-            break;
-        case 'V':
-            // tabuleiro = std::unique_ptr<Tabuleiro>(new Velha());
-            break;
-        default:
-            throw std::invalid_argument("ERRO: dados incorretos");
-            break;
-        }
-    */
+    switch (nome_jogo)
+    {
+    case 'R':
+        tabuleiro = std::unique_ptr<Tabuleiro>(new Reversi());
+        break;
+    case 'L':
+        tabuleiro = std::unique_ptr<Tabuleiro>(new Lig4());
+        break;
+    case 'V':
+        tabuleiro = std::unique_ptr<Tabuleiro>(new Velha());
+        break;
+    default:
+        throw std::invalid_argument("ERRO: dados incorretos");
+        break;
+    }
 
     /*
         Pegar jogador
@@ -155,13 +161,16 @@ void Controlador::executarPartida()
     std::string apelido_primeiro, apelido_segundo;
     std::cin >> apelido_primeiro >> apelido_segundo;
 
-    Cadastrador *retornar = new Cadastrador;
+    if (apelido_primeiro == apelido_segundo)
+    {
+        throw std::invalid_argument("ERRO: jogadores repetidos");
+    }
+
+    std::unique_ptr<Cadastrador> retornar(new Cadastrador);
     std::string linha_primeiro, linha_segundo;
 
     linha_primeiro = retornar->retornaLinhaJogador(apelido_primeiro);
     linha_segundo = retornar->retornaLinhaJogador(apelido_segundo);
-
-    delete retornar;
 
     std::unique_ptr<Jogador> jogador_1;
     std::unique_ptr<Jogador> jogador_2;
@@ -172,11 +181,33 @@ void Controlador::executarPartida()
     }
     else
     {
-        jogador_1 = std::unique_ptr<Jogador>(new Jogador(linha_primeiro, 0));
-        jogador_2 = std::unique_ptr<Jogador>(new Jogador(linha_segundo, 1));
+        jogador_1 = std::unique_ptr<Jogador>(new Jogador(linha_primeiro));
+        jogador_2 = std::unique_ptr<Jogador>(new Jogador(linha_segundo));
     }
 
     Partida partida(std::move(tabuleiro), std::move(jogador_1), std::move(jogador_2));
+}
+
+void Controlador::estatisticasJogador()
+{
+    std::string apelido;
+    std::cin >> apelido;
+
+    std::string linha_jogador;
+
+    std::unique_ptr<Cadastrador> retornar;
+
+    linha_jogador = retornar->retornaLinhaJogador(apelido);
+
+    if (linha_jogador.empty())
+    {
+        throw std::invalid_argument("ERRO: jogador não encontrado");
+    }
+
+    else
+    {
+        Estatistica::calculaEstatisticasJogador(linha_jogador);
+    }
 }
 
 void Controlador::finalizarSistema()

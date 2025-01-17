@@ -14,28 +14,26 @@ Cadastrador::~Cadastrador() {}
 std::string Cadastrador::removerJogador(std::string apelido_jogador)
 {
     std::string resultado = "";
-    CSV arquivo("../src/data/jogadores.csv");
 
+    // verifica se o jogador está registrado e apaga
     if (this->existeJogador(apelido_jogador))
     {
-        std::string linha = arquivo.lerLinhaArquivo();
-        while (!linha.empty())
-        {
-            bool contem = linha.find(apelido_jogador) != std::string::npos; // corrigir erro do find
-            if (contem)
-            {
-                arquivo.apagarNoArquivo(linha);
-                break;
-            }
-            linha = arquivo.lerLinhaArquivo();
-        }
-
-        return "Jogador " + apelido_jogador + " removido com sucesso";
+        CSV arq_jogadores("../src/data/jogadores.csv");
+        arq_jogadores.apagarNoArquivo(apelido_jogador);
     }
     else
     {
         return "ERRO: jogador inexistente";
     }
+
+    // remover os dados do jogador das estatíticas (se houver)
+    if (this->existeEstatistica(apelido_jogador))
+    {
+        CSV arq_estatisticas("../src/data/partidas.csv");
+        arq_estatisticas.apagarNoArquivo(apelido_jogador);
+    }
+
+    return "Jogador " + apelido_jogador + " removido com sucesso";
 }
 
 std::string Cadastrador::cadastrarJogador(std::string apelido_jogador, std::string nome_jogador)
@@ -126,6 +124,24 @@ bool Cadastrador::existeJogador(std::string apelido_jogador)
     std::string linha = arquivo.lerLinhaArquivo(); // ignora a primeira linha (template)
 
     linha = arquivo.lerLinhaArquivo();
+    while (!linha.empty())
+    {
+        std::string apelido = pegaPalavraLinha(linha);
+        if (apelido == apelido_jogador)
+        {
+            return true;
+        }
+
+        linha = arquivo.lerLinhaArquivo();
+    }
+
+    return false;
+}
+
+bool Cadastrador::existeEstatistica(std::string apelido_jogador)
+{
+    CSV arquivo("../src/data/partidas.csv");
+    std::string linha = arquivo.lerLinhaArquivo();
     while (!linha.empty())
     {
         std::string apelido = pegaPalavraLinha(linha);

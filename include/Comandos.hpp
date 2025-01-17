@@ -7,6 +7,7 @@ enum Comandos
     RJ,
     LJ,
     EP,
+    EST,
     FS
 };
 

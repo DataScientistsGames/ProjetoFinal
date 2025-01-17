@@ -14,6 +14,7 @@ public:
     void removerJogador();
     void listarJogador();
     void executarPartida();
+    void estatisticasJogador();
     void finalizarSistema();
 };
 

@@ -18,17 +18,18 @@ protected:
     char _charsPecas[3];
 
 public:
-    Tabuleiro(int, int, char = 'O', char = '@');
+    Tabuleiro(int, int, char, char);
     ~Tabuleiro();
 
     bool virtual posicionarPeca(int, int, int);
-    int virtual finalizarJogo(); // 0 - continua, 1 - jogador 1 venceu, 2 - jogador 2 venceu
+    int virtual finalizarJogo(); // 0 - continua, 1 - jogador 1 venceu, 2 - jogador 2 venceu, 3 - empatou
     Casa virtual localizarPeca(int, int);
     Casa stringParaCasa(const int);
     PosicaoCartesiana calculaVies(int);
     int getTipo();
     void virtual imprimeBordaVertical();
     void imprimeTabuleiro();
+    bool virtual temJogadaValida(Casa);
 };
 
 #endif

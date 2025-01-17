@@ -21,6 +21,7 @@ public:
     std::string pegaPalavraLinha(std::string);
     std::string retornaLinhaJogador(std::string);
     bool existeJogador(std::string);
+    bool existeEstatistica(std::string);
     void traduzChaveCSV(std::string);
 };
 

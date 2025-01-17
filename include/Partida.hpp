@@ -25,6 +25,7 @@ public:
     void finalizarPartida(int);
     void atualizaDadosJogador(std::unique_ptr<Jogador>, std::unique_ptr<Jogador>);
     void atualizaDadosPartida(std::unique_ptr<Jogador>, std::unique_ptr<Jogador>);
+    void atualizaDadosPartida();
 };
 
 #endif
