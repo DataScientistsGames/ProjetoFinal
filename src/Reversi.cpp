@@ -1,6 +1,6 @@
 #include "Reversi.hpp"
 
-Reversi::Reversi() : Tabuleiro(8, 8, '●', 'ｏ')
+Reversi::Reversi() : Tabuleiro(8, 8, '@', 'O')
 {
     this->_tipo = 1; // identificador para reversi
 

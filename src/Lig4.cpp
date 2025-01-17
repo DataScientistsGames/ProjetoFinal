@@ -1,6 +1,6 @@
 #include "Lig4.hpp"
 
-Lig4::Lig4() : Tabuleiro(6, 7, '●', 'ｏ')
+Lig4::Lig4() : Tabuleiro(6, 7, '@', 'O')
 {
     this->_tipo = 2; // identificador para lig4
 }
@@ -10,7 +10,7 @@ int Lig4::finalizarJogo()
     // olha por todas as casas do tabuleiro de baixo pra cima, ja que posicionamos de baixo pra cima
 
     bool existeCasaVazia = false;
-    for (int x = 5; x <= 0; x--)
+    for (int x = 5; x >= 0; x--)
     {
         for (int y = 0; y < 7; y++)
         {
@@ -55,7 +55,7 @@ int Lig4::finalizarJogo()
             }
             else
             {
-                existeCasaVazia == true;
+                existeCasaVazia = true;
             }
         }
     }
