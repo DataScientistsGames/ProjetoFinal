@@ -1,6 +1,5 @@
 Apelido,Resultado_Partida,Vies_X,Vies_Y,Jogo
 smola,Derrotado,3,2,V
-guima,Vencedor,-2,5,V
 smola,Vencedor,-2,0,L
 smola,Derrotado,0,0,L
 zimas,Vencedor,0,0,R
@@ -27,3 +26,5 @@ smola,Vencedor,0,0,V
 zeca_tatu,Derrotado,0,0,V
 zimas,Vencedor,0,0,R
 smola,Derrotado,0,0,R
+zimas,Vencedor,0,0,V
+smola,Derrotado,0,0,V

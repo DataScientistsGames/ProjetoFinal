@@ -18,9 +18,9 @@ void CoutComuns::displayComandos()
 
 void CoutComuns::espereEnter()
 {
+    std::cin.clear(); // Ignora o buffer restante
     std::cout << "Pressione Enter para continuar...";
-    std::cin.ignore(); // Ignora o buffer restante
-    std::cin.get();    // Aguarda Enter
+    std::cin.get(); // Aguarda Enter
 }
 
 void CoutComuns::limparCmd()

@@ -54,6 +54,7 @@ void Partida::leitorJogada(int num_jogador)
     int linha = 0, coluna;
     while (!valido)
     {
+        CoutComuns::limparCmd();
         this->_tabuleiro->imprimeTabuleiro();
         jogada_possivel = this->_tabuleiro->temJogadaValida(this->_tabuleiro->stringParaCasa(num_jogador));
 
@@ -86,6 +87,8 @@ void Partida::leitorJogada(int num_jogador)
 
 void Partida::finalizarPartida(int vencedor)
 {
+    CoutComuns::limparCmd();
+    this->_tabuleiro->imprimeTabuleiro();
 
     if (vencedor == 1)
     {
@@ -168,13 +171,9 @@ void Partida::atualizaDadosJogador(std::unique_ptr<Jogador> jogador_vencedor, st
     adicionar_derrota += ',';
     adicionar_derrota.append(std::to_string(derrotasL));
 
-    CSV *arquivo_vitoria = new CSV("../src/data/jogadores.csv");
-    arquivo_vitoria->atualizarNoArquivo(jogador_vencedor->getApelido(), adicionar_vitoria);
-    delete (arquivo_vitoria);
-
-    CSV *arquivo_derrota = new CSV("../src/data/jogadores.csv");
-    arquivo_derrota->atualizarNoArquivo(jogador_perdedor->getApelido(), adicionar_derrota);
-    delete (arquivo_derrota);
+    std::unique_ptr<CSV> atualizar(new CSV("../src/data/jogadores.csv"));
+    atualizar->atualizarNoArquivo(jogador_vencedor->getApelido(), adicionar_vitoria);
+    atualizar->atualizarNoArquivo(jogador_perdedor->getApelido(), adicionar_derrota);
 
     std::cout << "Dados jogador atualizados." << std::endl;
     this->atualizaDadosPartida(std::move(jogador_vencedor), std::move(jogador_perdedor));
