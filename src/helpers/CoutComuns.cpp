@@ -1,8 +1,10 @@
 #include "CoutComuns.hpp"
+#include "Cores.hpp"
 #include <iostream>
 
 void CoutComuns::displayComandos()
 {
+    std::cout << AMAR;
     std::cout << "----------------[C O M A N D O S]----------------" << std::endl;
     std::cout << "  CJ <Apelido> <Nome> - Cadastrar Jogador" << std::endl;
     std::cout << "  RJ <Apelido> - Remover Jogador" << std::endl;
@@ -11,6 +13,7 @@ void CoutComuns::displayComandos()
     std::cout << "  EST <Apelido Jogador> - Calcula e mostra as estatísticas do Jogador " << std::endl;
     std::cout << "  FS - Finalizar Sistema" << std::endl;
     std::cout << "-------------------------------------------------" << std::endl;
+    std::cout << FIMCOR;
 }
 
 void CoutComuns::espereEnter()

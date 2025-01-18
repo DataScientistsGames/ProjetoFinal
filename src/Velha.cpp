@@ -1,6 +1,8 @@
 #include "Velha.hpp"
+#define STRING_JOGADOR_1 "\e[0;34m X \033[0m"
+#define STRING_JOGADOR_2 "\e[0;31m O \033[0m"
 
-Velha::Velha() : Tabuleiro(3, 3, 'X', 'O')
+Velha::Velha() : Tabuleiro(3, 3, STRING_JOGADOR_1, STRING_JOGADOR_2)
 {
     this->_tipo = 0; // identificador para velha
 }

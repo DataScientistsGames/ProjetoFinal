@@ -14,6 +14,7 @@
 #include "Lig4.hpp"
 #include "Velha.hpp"
 #include "Partida.hpp"
+#include "Cores.hpp"
 
 Controlador::Controlador() {}
 Controlador::~Controlador() {}
@@ -212,5 +213,5 @@ void Controlador::estatisticasJogador()
 
 void Controlador::finalizarSistema()
 {
-    std::cout << "Finalizando...";
+    std::cout << VERD << "Finalizando..." << FIMCOR << std::endl;
 }

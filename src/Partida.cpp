@@ -8,6 +8,7 @@
 #include "Reversi.hpp"
 #include "CSV.hpp"
 #include "CoutComuns.hpp" // helper do embelezamento do cmd
+#include "Cores.hpp"
 
 Partida::Partida(std::unique_ptr<Tabuleiro> tabuleiro, std::unique_ptr<Jogador> player1, std::unique_ptr<Jogador> player2) : _rounds(0)
 {
@@ -39,6 +40,15 @@ void Partida::round()
 
 void Partida::leitorJogada(int num_jogador)
 {
+    std::string cor_jogador = "";
+    if (num_jogador == 1)
+        cor_jogador.append(AZUL);
+    else
+        cor_jogador.append(VERM);
+
+    cor_jogador.append(std::to_string(num_jogador));
+    cor_jogador.append(FIMCOR);
+
     bool valido = false;
     bool jogada_possivel = true;
     int linha = 0, coluna;
@@ -49,14 +59,14 @@ void Partida::leitorJogada(int num_jogador)
 
         if (!jogada_possivel)
         {
-            std::cout << "Infelizmente o jogador " << num_jogador << " não tem jogadas possíveis." << std::endl;
+            std::cout << "Infelizmente o jogador " << cor_jogador << " não tem jogadas possíveis." << std::endl;
             CoutComuns::espereEnter();
             break;
         }
 
-        std::cout << "Jogador " << num_jogador << "! É a sua vez:";
+        std::cout << "Jogador " << cor_jogador << "! É a sua vez:";
 
-        if(this->_tabuleiro->getTipo() == 2) 
+        if (this->_tabuleiro->getTipo() == 2)
         {
             std::cin >> coluna;
             coluna--;

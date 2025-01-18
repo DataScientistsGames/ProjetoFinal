@@ -2,7 +2,7 @@
 #include "Casa.hpp"
 #include <iostream>
 
-Tabuleiro::Tabuleiro(int x, int y, char charPlayer1, char charPlayer2) : _x(x), _y(y), _charsPecas{' ', charPlayer1, charPlayer2}
+Tabuleiro::Tabuleiro(int x, int y, std::string string_player1, std::string string_player2) : _x(x), _y(y), _string_pecas{" ", string_player1, string_player2}
 {
     this->_board = new Casa *[x];
     for (int i = 0; i < x; ++i)
@@ -88,7 +88,7 @@ void Tabuleiro::imprimeTabuleiro()
     std::cout << '\t';
     for (int i = 0; i < this->_x; i++)
     {
-        std::cout << "    " << i+1 << '\t';
+        std::cout << "    " << i + 1 << '\t';
     }
     std::cout << std::endl;
 
@@ -96,13 +96,13 @@ void Tabuleiro::imprimeTabuleiro()
 
     for (int i = 0; i < this->_y; i++)
     {
-        std::cout << i+1 << '\t';
+        std::cout << i + 1 << '\t';
         std::cout << CHAR_BORDA_COLUNA;
         for (int j = 0; j < this->_x; j++)
         {
             int pecaAtual = this->localizarPeca(j, i);
 
-            std::cout << ' ' << ' ' << ' ' << this->_charsPecas[pecaAtual] << '\t' << CHAR_BORDA_COLUNA;
+            std::cout << ' ' << ' ' << this->_string_pecas[pecaAtual] << '\t' << CHAR_BORDA_COLUNA;
         }
 
         std::cout << std::endl;

@@ -15,10 +15,10 @@ protected:
     int _x;
     int _y;
     int _tipo; // 0 - velha, 1 - reversi, 2 - lig4
-    char _charsPecas[3];
+    std::string _string_pecas[3];
 
 public:
-    Tabuleiro(int, int, char, char);
+    Tabuleiro(int, int, std::string, std::string);
     ~Tabuleiro();
 
     bool virtual posicionarPeca(int, int, int);

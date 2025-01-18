@@ -1,6 +1,8 @@
 #include "Reversi.hpp"
+#define STRING_JOGADOR_1 "\e[0;34m @ \033[0m"
+#define STRING_JOGADOR_2 "\e[0;31m O \033[0m"
 
-Reversi::Reversi() : Tabuleiro(8, 8, '@', 'O')
+Reversi::Reversi() : Tabuleiro(8, 8, STRING_JOGADOR_1, STRING_JOGADOR_2)
 {
     this->_tipo = 1; // identificador para reversi
 

@@ -15,7 +15,7 @@ public:
     static void calculaEstatisticasJogador(std::string);
     static double media(std::vector<int>);
     static std::vector<double> vies(std::string, char);
-    static double porcentagem(std::vector<int>);
+    static double proporcao(std::vector<double>);
     static std::string pegaApelido(std::string);
     static char pegaJogo(std::string);
     static int pegaVies(std::string linha, char direcao);

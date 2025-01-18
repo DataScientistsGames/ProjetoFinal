@@ -6,6 +6,7 @@
 #include <algorithm>
 #include "Cadastrador.hpp"
 #include "CSV.hpp"
+#include "Cores.hpp"
 
 Cadastrador::Cadastrador() {}
 
@@ -257,9 +258,9 @@ void Cadastrador::traduzChaveCSV(std::string linha)
         derrotas_lig4 += linha[i];
     }
 
-    std::cout << apelido_jogador << " " << nome_jogador << std::endl;
-    std::cout << "REVERSI - V: " << vitorias_reversi << " D: " << derrotas_reversi << std::endl;
-    std::cout << "LIG4 - V: " << vitorias_lig4 << " D: " << derrotas_lig4 << std::endl;
-    std::cout << "VELHA - V: " << vitorias_velha << " D: " << derrotas_velha << std::endl;
+    std::cout << AZUL << apelido_jogador << MAGE << " " << nome_jogador << FIMCOR << std::endl;
+    std::cout << "REVERSI - " << VERD << "V: " << vitorias_reversi << VERM << " D: " << derrotas_reversi << FIMCOR << std::endl;
+    std::cout << "LIG4 - " << VERD << "V: " << vitorias_lig4 << VERM << " D: " << derrotas_lig4 << FIMCOR << std::endl;
+    std::cout << "VELHA - " << VERD << "V: " << vitorias_velha << VERM << " D: " << derrotas_velha << FIMCOR << std::endl;
     std::cout << std::endl;
 }

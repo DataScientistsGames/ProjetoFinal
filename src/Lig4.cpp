@@ -1,6 +1,8 @@
 #include "Lig4.hpp"
+#define STRING_JOGADOR_1 "\e[0;34m @ \033[0m"
+#define STRING_JOGADOR_2 "\e[0;31m O \033[0m"
 
-Lig4::Lig4() : Tabuleiro(6, 7, '@', 'O')
+Lig4::Lig4() : Tabuleiro(6, 7, STRING_JOGADOR_1, STRING_JOGADOR_2)
 {
     this->_tipo = 2; // identificador para lig4
 }
@@ -65,15 +67,18 @@ int Lig4::finalizarJogo()
 
 bool Lig4::posicionarPeca(int x, int y, int num_jogador)
 {
-    if (x < 0 || x > 5) 
+    if (x < 0 || x > 5)
         return false;
 
     for (int i = 6; i >= 0; --i)
     {
-        if(this->_board[x][i] == VAZIO){
+        if (this->_board[x][i] == VAZIO)
+        {
             return Tabuleiro::posicionarPeca(x, i, num_jogador);
         }
     }
+
+    return false;
 }
 
 void Lig4::imprimeBordaVertical()
