@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include <limits>
+#include <fstream>
 #include "CoutComuns.hpp" // helper do embelezamento do cmd
 #include "Controlador.hpp"
 #include "Comandos.hpp"
+#include "Cores.hpp"
 
 Comandos stringParaComando(const std::string &comandoStr)
 {
@@ -44,8 +47,19 @@ int main()
         }
         catch (const std::exception &e)
         {
-            std::cerr << "Erro: " << e.what() << '\n';
+            CoutComuns::limparCmd();
+            std::cerr << VERM << "ERRO: " << e.what() << '\n'
+                      << FIMCOR;
         }
+
+        if (!std::cin.eof())
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
     } while (comando != FS);
 
     return 0;

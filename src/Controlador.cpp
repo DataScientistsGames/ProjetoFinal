@@ -25,32 +25,22 @@ void Controlador::leitorComando(Comandos comando)
     {
     case CJ:
         this->cadastrarJogador();
-        CoutComuns::espereEnter();
-        CoutComuns::limparCmd();
         break;
 
     case RJ:
         this->removerJogador();
-        CoutComuns::espereEnter();
-        CoutComuns::limparCmd();
         break;
 
     case LJ:
         this->listarJogador();
-        CoutComuns::espereEnter();
-        CoutComuns::limparCmd();
         break;
 
     case EP:
         this->executarPartida();
-        CoutComuns::espereEnter();
-        CoutComuns::limparCmd();
         break;
 
     case EST:
         this->estatisticasJogador();
-        CoutComuns::espereEnter();
-        CoutComuns::limparCmd();
         break;
 
     case FS:
@@ -65,55 +55,43 @@ void Controlador::leitorComando(Comandos comando)
 
 void Controlador::cadastrarJogador()
 {
-    try
+    std::string resultado;
+    std::string nome_jogador;
+    std::string apelido_jogador;
+
+    std::cin >> apelido_jogador;
+    std::cin.ignore();
+    std::getline(std::cin, nome_jogador);
+
+    if (apelido_jogador.find(',') != std::string::npos)
     {
-        std::string resultado;
-        std::string nome_jogador;
-        std::string apelido_jogador;
-
-        std::cin >> apelido_jogador;
-        std::cin.ignore();
-        std::getline(std::cin, nome_jogador);
-
-        if (apelido_jogador.find(',') != std::string::npos)
-        {
-            resultado = "ERRO: dados incorretos";
-        }
-        else
-        {
-            std::unique_ptr<Cadastrador> cadastrar(new Cadastrador);
-            resultado = cadastrar->cadastrarJogador(apelido_jogador, nome_jogador);
-        }
-
-        std::cout << resultado << std::endl;
+        std::cin.clear();
+        throw std::invalid_argument("Caractere (,) não permitido");
     }
-    catch (const std::exception &e)
+    else
     {
-        std::cerr << e.what() << '\n';
+        std::unique_ptr<Cadastrador> cadastrar(new Cadastrador);
+        resultado = cadastrar->cadastrarJogador(apelido_jogador, nome_jogador);
     }
+
+    std::cout << resultado << std::endl;
 }
 
 void Controlador::removerJogador()
 {
-    try
-    {
-        std::string apelido_jogador;
-        std::cin >> apelido_jogador;
-        /*
-            caso alguem coloque o nome "Enzo Braz",
-            o "Braz" volta na entrada de comando no loop e gera erro
-        */
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::string apelido_jogador;
+    std::cin >> apelido_jogador;
+    /*
+        caso alguem coloque o nome "Enzo Braz",
+        o "Braz" volta na entrada de comando no loop e gera erro
+    */
+    // std::cin.clear();
+    // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        std::unique_ptr<Cadastrador> remover(new Cadastrador);
+    std::unique_ptr<Cadastrador> remover(new Cadastrador);
 
-        std::string resultado = remover->removerJogador(apelido_jogador);
-        std::cout << resultado << std::endl;
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    std::string resultado = remover->removerJogador(apelido_jogador);
+    std::cout << resultado << std::endl;
 }
 
 void Controlador::listarJogador()
@@ -128,7 +106,7 @@ void Controlador::listarJogador()
     }
     else
     {
-        std::invalid_argument(metodo + " não é método comando válido!");
+        throw std::invalid_argument(metodo + " não é método de lista válido");
     }
 }
 
@@ -152,7 +130,7 @@ void Controlador::executarPartida()
         tabuleiro = std::unique_ptr<Tabuleiro>(new Velha());
         break;
     default:
-        throw std::invalid_argument("ERRO: dados incorretos");
+        throw std::invalid_argument("O jogo digitado não existe.");
         break;
     }
 
@@ -164,7 +142,9 @@ void Controlador::executarPartida()
 
     if (apelido_primeiro == apelido_segundo)
     {
-        throw std::invalid_argument("ERRO: jogadores repetidos");
+        // std::cin.clear();
+        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        throw std::invalid_argument("jogadores repetidos.");
     }
 
     std::unique_ptr<Cadastrador> retornar(new Cadastrador);
@@ -178,7 +158,9 @@ void Controlador::executarPartida()
 
     if (linha_primeiro.empty() || linha_segundo.empty())
     {
-        throw std::invalid_argument("ERRO: jogador não encontrado");
+        // std::cin.clear();
+        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        throw std::invalid_argument("jogador não encontrado.");
     }
     else
     {
@@ -202,7 +184,7 @@ void Controlador::estatisticasJogador()
 
     if (linha_jogador.empty())
     {
-        throw std::invalid_argument("ERRO: jogador não encontrado");
+        throw std::invalid_argument("jogador não encontrado.");
     }
 
     else

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <limits>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -24,7 +25,9 @@ std::string Cadastrador::removerJogador(std::string apelido_jogador)
     }
     else
     {
-        return "ERRO: jogador inexistente";
+        // std::cin.clear();
+        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        throw std::invalid_argument("Jogador inexistente");
     }
 
     // remover os dados do jogador das estatíticas (se houver)
@@ -56,7 +59,9 @@ std::string Cadastrador::cadastrarJogador(std::string apelido_jogador, std::stri
     }
     else
     {
-        return "ERRO: jogador repetido";
+        // std::cin.clear();
+        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        throw std::invalid_argument("Apelido já cadastrado");
     }
 }
 

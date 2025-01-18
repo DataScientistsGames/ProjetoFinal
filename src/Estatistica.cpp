@@ -2,6 +2,7 @@
 #include "Jogador.hpp"
 #include "CSV.hpp"
 #include "Cores.hpp"
+#include "CoutComuns.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -9,6 +10,7 @@
 
 void Estatistica::calculaEstatisticasJogador(std::string linha_jogador)
 {
+    CoutComuns::limparCmd();
     Jogador jogador(linha_jogador);
 
     std::vector<int> media_vitoria;
@@ -80,34 +82,46 @@ double Estatistica::proporcao(std::vector<double> valores)
 
 std::vector<double> Estatistica::vies(std::string apelido_jogador, char jogo)
 {
-
-    std::vector<double> vies;
-    double vies_x = 0, vies_y = 0, n = 0;
-    CSV arquivo_partidas("../src/data/partidas.csv");
-
-    std::string linha = arquivo_partidas.lerLinhaArquivo(); // ignora a primeira linha (template)
-
-    linha = arquivo_partidas.lerLinhaArquivo();
-    while (!linha.empty())
+    try
     {
-        std::string apelido_linha = Estatistica::pegaApelido(linha);
-        if (apelido_linha == apelido_jogador)
-        {
-            if (jogo == Estatistica::pegaJogo(linha))
-            {
-                vies_x += Estatistica::pegaVies(linha, 'X');
-                vies_y += Estatistica::pegaVies(linha, 'Y');
-                n += 1;
-            }
-        }
+        std::vector<double> vies;
+        double vies_x = 0, vies_y = 0, n = 0;
+        CSV arquivo_partidas("../src/data/partidas.csv");
+
+        std::string linha = arquivo_partidas.lerLinhaArquivo(); // ignora a primeira linha (template)
 
         linha = arquivo_partidas.lerLinhaArquivo();
+        while (!linha.empty())
+        {
+            std::string apelido_linha = Estatistica::pegaApelido(linha);
+            if (apelido_linha == apelido_jogador)
+            {
+                if (jogo == Estatistica::pegaJogo(linha))
+                {
+                    vies_x += Estatistica::pegaVies(linha, 'X');
+                    vies_y += Estatistica::pegaVies(linha, 'Y');
+                    n += 1;
+                }
+            }
+
+            linha = arquivo_partidas.lerLinhaArquivo();
+        }
+
+        vies.push_back(vies_x / n);
+        vies.push_back(vies_y / n);
+
+        return vies;
     }
-
-    vies.push_back(vies_x / n);
-    vies.push_back(vies_y / n);
-
-    return vies;
+    catch (const std::runtime_error &e)
+    {
+        std::cerr << VERM << "ERRO:" << e.what() << '\n'
+                  << "Impossível Calcular viés." << FIMCOR;
+        std::vector<double> vies;
+        CoutComuns::espereEnter();
+        vies.push_back(0);
+        vies.push_back(0);
+        return vies;
+    }
 }
 
 std::string Estatistica::pegaApelido(std::string linha)
