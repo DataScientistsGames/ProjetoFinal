@@ -33,6 +33,8 @@ int main()
     std::string entrada;
     Comandos comando;
 
+    CoutComuns::limparCmd();
+
     do
     {
         try
@@ -47,19 +49,13 @@ int main()
         }
         catch (const std::exception &e)
         {
+            CoutComuns::limpaBuffer();
             CoutComuns::limparCmd();
-            std::cerr << VERM << "ERRO: " << e.what() << '\n'
-                      << FIMCOR;
+            std::cerr << VERM << "ERRO: " << e.what() << FIMCOR << std::endl;
+            CoutComuns::espereEnter();
+            CoutComuns::limparCmd();
         }
 
-        if (!std::cin.eof())
-        {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
-
-        CoutComuns::espereEnter();
-        CoutComuns::limparCmd();
     } while (comando != FS);
 
     return 0;

@@ -9,6 +9,7 @@ public:
     static void displayComandos();
     static void espereEnter();
     static void limparCmd();
+    static void limpaBuffer();
 
     CoutComuns() = delete; // desabilita criar uma instancia - classe estatica
 };

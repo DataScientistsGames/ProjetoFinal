@@ -24,26 +24,44 @@ void Controlador::leitorComando(Comandos comando)
     switch (comando)
     {
     case CJ:
+
         this->cadastrarJogador();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case RJ:
         this->removerJogador();
+        CoutComuns::limpaBuffer();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case LJ:
+        CoutComuns::limparCmd();
         this->listarJogador();
+        CoutComuns::limpaBuffer();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case EP:
         this->executarPartida();
+        CoutComuns::limpaBuffer();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case EST:
+        CoutComuns::limparCmd();
         this->estatisticasJogador();
+        CoutComuns::limpaBuffer();
+        CoutComuns::espereEnter();
+        CoutComuns::limparCmd();
         break;
 
     case FS:
+        CoutComuns::limparCmd();
         this->finalizarSistema();
         break;
 
@@ -60,12 +78,15 @@ void Controlador::cadastrarJogador()
     std::string apelido_jogador;
 
     std::cin >> apelido_jogador;
-    std::cin.ignore();
     std::getline(std::cin, nome_jogador);
 
     if (apelido_jogador.find(',') != std::string::npos)
     {
-        std::cin.clear();
+        if (!std::cin.eof())
+        {
+            std::cin.clear();
+            std::cout << VERM << "Buffer corrompido, precione enter para ler o erro..." << FIMCOR;
+        }
         throw std::invalid_argument("Caractere (,) não permitido");
     }
     else
@@ -106,7 +127,7 @@ void Controlador::listarJogador()
     }
     else
     {
-        throw std::invalid_argument(metodo + " não é método de lista válido");
+        throw std::invalid_argument("O método digitado não é válido");
     }
 }
 

@@ -80,8 +80,13 @@ void Partida::leitorJogada(int num_jogador)
         }
 
         valido = this->_tabuleiro->posicionarPeca(coluna, linha, num_jogador);
+
         if (!valido)
-            std::cout << "Jogada inválida" << std::endl;
+        {
+            CoutComuns::limpaBuffer();
+            std::cout << CIAN << "Jogada inválida" << FIMCOR << std::endl;
+            CoutComuns::espereEnter();
+        }
     }
 };
 
@@ -92,8 +97,8 @@ void Partida::finalizarPartida(int vencedor)
 
     if (vencedor == 1)
     {
-        std::cout << this->_player1->getApelido() << " foi o vencedor!" << std::endl;
-        std::cout << this->_player2->getApelido() << " foi o derrotado." << std::endl;
+        std::cout << VERD << this->_player1->getApelido() << " foi o vencedor!" << FIMCOR << std::endl;
+        std::cout << MAGE << this->_player2->getApelido() << " foi o derrotado." << FIMCOR << std::endl;
         this->atualizaDadosJogador(std::move(this->_player1), std::move(this->_player2));
     }
 
@@ -171,110 +176,131 @@ void Partida::atualizaDadosJogador(std::unique_ptr<Jogador> jogador_vencedor, st
     adicionar_derrota += ',';
     adicionar_derrota.append(std::to_string(derrotasL));
 
-    std::unique_ptr<CSV> atualizar(new CSV("../src/data/jogadores.csv"));
-    atualizar->atualizarNoArquivo(jogador_vencedor->getApelido(), adicionar_vitoria);
-    atualizar->atualizarNoArquivo(jogador_perdedor->getApelido(), adicionar_derrota);
+    try
+    {
+        std::unique_ptr<CSV> atualizar(new CSV("../src/data/jogadores.csv"));
+        atualizar->atualizarNoArquivo(jogador_vencedor->getApelido(), adicionar_vitoria);
+        atualizar->atualizarNoArquivo(jogador_perdedor->getApelido(), adicionar_derrota);
 
-    std::cout << "Dados jogador atualizados." << std::endl;
-    this->atualizaDadosPartida(std::move(jogador_vencedor), std::move(jogador_perdedor));
+        std::cout << "Dados jogador atualizados." << std::endl;
+        this->atualizaDadosPartida(std::move(jogador_vencedor), std::move(jogador_perdedor));
+    }
+    catch (const std::runtime_error &e)
+    {
+        std::cerr << "ERRO: " << e.what() << " E devido a isso, os dados não foram atualizados." << std::endl;
+    }
 };
 
 void Partida::atualizaDadosPartida(std::unique_ptr<Jogador> jogador_vencedor, std::unique_ptr<Jogador> jogador_perdedor)
 {
-    CSV arquivo_partidas("../src/data/partidas.csv");
-
-    char jogo;
-    if (this->_tabuleiro->getTipo() == 0)
+    try
     {
-        jogo = 'V';
+        CSV arquivo_partidas("../src/data/partidas.csv");
+
+        char jogo;
+        if (this->_tabuleiro->getTipo() == 0)
+        {
+            jogo = 'V';
+        }
+        else if (this->_tabuleiro->getTipo() == 1)
+        {
+            jogo = 'R';
+        }
+        else
+        {
+            jogo = 'L';
+        }
+
+        PosicaoCartesiana vies_ganhador = this->_tabuleiro->calculaVies(1);
+
+        std::string adicionar_vitoria = "";
+        adicionar_vitoria.append(jogador_vencedor->getApelido());
+        adicionar_vitoria += ',';
+        adicionar_vitoria.append("Vencedor");
+        adicionar_vitoria += ',';
+        adicionar_vitoria.append(std::to_string(vies_ganhador.getX()));
+        adicionar_vitoria += ',';
+        adicionar_vitoria.append(std::to_string(vies_ganhador.getY()));
+        adicionar_vitoria += ',';
+        adicionar_vitoria += jogo;
+        adicionar_vitoria += '\n';
+
+        arquivo_partidas.escreverArquivo(adicionar_vitoria);
+
+        PosicaoCartesiana vies_perdedor = this->_tabuleiro->calculaVies(2);
+
+        std::string adicionar_derrota = "";
+        adicionar_derrota.append(jogador_perdedor->getApelido());
+        adicionar_derrota += ',';
+        adicionar_derrota.append("Derrotado");
+        adicionar_derrota += ',';
+        adicionar_derrota.append(std::to_string(vies_perdedor.getX()));
+        adicionar_derrota += ',';
+        adicionar_derrota.append(std::to_string(vies_perdedor.getY()));
+        adicionar_derrota += ',';
+        adicionar_derrota += jogo;
+        adicionar_derrota += '\n';
+
+        arquivo_partidas.escreverArquivo(adicionar_derrota);
+        std::cout << "Dados partida atualizados." << std::endl;
     }
-    else if (this->_tabuleiro->getTipo() == 1)
+    catch (const std::runtime_error &e)
     {
-        jogo = 'R';
+        std::cerr << "ERRO: " << e.what() << " E devido a isso, os dados não foram atualizados." << std::endl;
     }
-    else
-    {
-        jogo = 'L';
-    }
-
-    PosicaoCartesiana vies_ganhador = this->_tabuleiro->calculaVies(1);
-
-    std::string adicionar_vitoria = "";
-    adicionar_vitoria.append(jogador_vencedor->getApelido());
-    adicionar_vitoria += ',';
-    adicionar_vitoria.append("Vencedor");
-    adicionar_vitoria += ',';
-    adicionar_vitoria.append(std::to_string(vies_ganhador.getX()));
-    adicionar_vitoria += ',';
-    adicionar_vitoria.append(std::to_string(vies_ganhador.getY()));
-    adicionar_vitoria += ',';
-    adicionar_vitoria += jogo;
-    adicionar_vitoria += '\n';
-
-    arquivo_partidas.escreverArquivo(adicionar_vitoria);
-
-    PosicaoCartesiana vies_perdedor = this->_tabuleiro->calculaVies(2);
-
-    std::string adicionar_derrota = "";
-    adicionar_derrota.append(jogador_perdedor->getApelido());
-    adicionar_derrota += ',';
-    adicionar_derrota.append("Derrotado");
-    adicionar_derrota += ',';
-    adicionar_derrota.append(std::to_string(vies_perdedor.getX()));
-    adicionar_derrota += ',';
-    adicionar_derrota.append(std::to_string(vies_perdedor.getY()));
-    adicionar_derrota += ',';
-    adicionar_derrota += jogo;
-    adicionar_derrota += '\n';
-
-    arquivo_partidas.escreverArquivo(adicionar_derrota);
-    std::cout << "Dados partida atualizados." << std::endl;
 };
 
 void Partida::atualizaDadosPartida()
 {
-    CSV arquivo_partidas("../src/data/partidas.csv");
-
-    char jogo;
-    if (this->_tabuleiro->getTipo() == 0)
+    try
     {
-        jogo = 'V';
+        CSV arquivo_partidas("../src/data/partidas.csv");
+
+        char jogo;
+        if (this->_tabuleiro->getTipo() == 0)
+        {
+            jogo = 'V';
+        }
+        else if (this->_tabuleiro->getTipo() == 1)
+        {
+            jogo = 'R';
+        }
+        else
+        {
+            jogo = 'L';
+        }
+
+        PosicaoCartesiana vies_1 = this->_tabuleiro->calculaVies(1);
+        PosicaoCartesiana vies_2 = this->_tabuleiro->calculaVies(2);
+
+        std::string linha_1 = "";
+        linha_1.append(this->_player1->getApelido());
+        linha_1.append(",Empate,");
+        linha_1.append(std::to_string(vies_1.getX()));
+        linha_1 += ',';
+        linha_1.append(std::to_string(vies_1.getY()));
+        linha_1 += ',';
+        linha_1 += jogo;
+        linha_1 += '\n';
+
+        arquivo_partidas.escreverArquivo(linha_1);
+
+        std::string linha_2 = "";
+        linha_2.append(this->_player2->getApelido());
+        linha_2.append(",Empate,");
+        linha_2.append(std::to_string(vies_2.getX()));
+        linha_2 += ',';
+        linha_2.append(std::to_string(vies_2.getY()));
+        linha_2 += ',';
+        linha_2 += jogo;
+        linha_2 += '\n';
+
+        arquivo_partidas.escreverArquivo(linha_2);
+
+        std::cout << "Dados partida atualizados." << std::endl;
     }
-    else if (this->_tabuleiro->getTipo() == 1)
+    catch (const std::runtime_error &e)
     {
-        jogo = 'R';
+        std::cerr << "ERRO: " << e.what() << " E devido a isso, os dados não foram atualizados." << std::endl;
     }
-    else
-    {
-        jogo = 'L';
-    }
-
-    PosicaoCartesiana vies_1 = this->_tabuleiro->calculaVies(1);
-    PosicaoCartesiana vies_2 = this->_tabuleiro->calculaVies(2);
-
-    std::string linha_1 = "";
-    linha_1.append(this->_player1->getApelido());
-    linha_1.append(",Empate,");
-    linha_1.append(std::to_string(vies_1.getX()));
-    linha_1 += ',';
-    linha_1.append(std::to_string(vies_1.getY()));
-    linha_1 += ',';
-    linha_1 += jogo;
-    linha_1 += '\n';
-
-    arquivo_partidas.escreverArquivo(linha_1);
-
-    std::string linha_2 = "";
-    linha_2.append(this->_player2->getApelido());
-    linha_2.append(",Empate,");
-    linha_2.append(std::to_string(vies_2.getX()));
-    linha_2 += ',';
-    linha_2.append(std::to_string(vies_2.getY()));
-    linha_2 += ',';
-    linha_2 += jogo;
-    linha_2 += '\n';
-
-    arquivo_partidas.escreverArquivo(linha_2);
-
-    std::cout << "Dados partida atualizados." << std::endl;
 }

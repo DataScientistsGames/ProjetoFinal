@@ -25,8 +25,6 @@ std::string Cadastrador::removerJogador(std::string apelido_jogador)
     }
     else
     {
-        // std::cin.clear();
-        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         throw std::invalid_argument("Jogador inexistente");
     }
 
@@ -52,15 +50,25 @@ std::string Cadastrador::cadastrarJogador(std::string apelido_jogador, std::stri
         adicionar_no_arquivo.append(",0,0,0,0,0,0\n");
 
         // agora a linha está formatada no estilo "apelido,nome sobrenome,0,0\n", pronto para adicionar no arquivo de jogadores
-        CSV arquivo("../src/data/jogadores.csv");
-        arquivo.escreverArquivo(adicionar_no_arquivo);
+        try
+        {
+            CSV arquivo("../src/data/jogadores.csv");
+            arquivo.escreverArquivo(adicionar_no_arquivo);
 
-        return "Jogador " + apelido_jogador + " cadastrado com sucesso";
+            return "Jogador " + apelido_jogador + " cadastrado com sucesso";
+        }
+        catch (const std::runtime_error &e)
+        {
+            return "Falha no cadastro do jogador. Arquivo não foi aberto.";
+        }
     }
     else
     {
-        // std::cin.clear();
-        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        if (!std::cin.eof())
+        {
+            std::cin.clear();
+            std::cout << VERM << "Buffer corrompido, precione enter para ler o erro..." << FIMCOR;
+        }
         throw std::invalid_argument("Apelido já cadastrado");
     }
 }
@@ -267,5 +275,5 @@ void Cadastrador::traduzChaveCSV(std::string linha)
     std::cout << "REVERSI - " << VERD << "V: " << vitorias_reversi << VERM << " D: " << derrotas_reversi << FIMCOR << std::endl;
     std::cout << "LIG4 - " << VERD << "V: " << vitorias_lig4 << VERM << " D: " << derrotas_lig4 << FIMCOR << std::endl;
     std::cout << "VELHA - " << VERD << "V: " << vitorias_velha << VERM << " D: " << derrotas_velha << FIMCOR << std::endl;
-    std::cout << std::endl;
+    // std::cout << std::endl;
 }
