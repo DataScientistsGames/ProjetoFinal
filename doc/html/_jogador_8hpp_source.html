@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Final: Código-Fonte de include/Jogador.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto Final
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_jogador_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Jogador.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_jogador_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef JOGADOR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define JOGADOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_posicao_cartesiana_8hpp.html">PosicaoCartesiana.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_jogador.html">    7</a></span><span class="keyword">class </span><a class="code hl_function" href="class_jogador.html#aca75cfcf41ef60e193af95b919ea66dc">Jogador</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    std::string _apelido, _nome;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">int</span> _vitorias_velha, _derrotas_velha;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> _vitorias_reversi, _derrotas_reversi;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> _vitorias_lig, _derrotas_lig;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="class_posicao_cartesiana.html">PosicaoCartesiana</a> _vies;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_jogador.html#aca75cfcf41ef60e193af95b919ea66dc">   22</a></span>    <a class="code hl_function" href="class_jogador.html#aca75cfcf41ef60e193af95b919ea66dc">Jogador</a>(std::string linha);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_jogador.html#a3e62c32199fc9cfbcf22cf83f9008be6">   23</a></span>    <a class="code hl_function" href="class_jogador.html#a3e62c32199fc9cfbcf22cf83f9008be6">~Jogador</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_jogador.html#a69bcabfdd275c3f5ef39cacce1c53592">   28</a></span>    std::string <a class="code hl_function" href="class_jogador.html#a69bcabfdd275c3f5ef39cacce1c53592">getApelido</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_jogador.html#aa5c6ea943399895fd9ae9da8453e108c">   33</a></span>    std::string <a class="code hl_function" href="class_jogador.html#aa5c6ea943399895fd9ae9da8453e108c">getNome</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_jogador.html#a81ea12187ca7dfb3a0b51f774ab8516e">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_jogador.html#a81ea12187ca7dfb3a0b51f774ab8516e">getVitoriasV</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_jogador.html#a3f616da767463be38d0b0ffe7476abac">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_jogador.html#a3f616da767463be38d0b0ffe7476abac">getDerrotasV</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_jogador.html#a179858f14356b00be93c4db6a9ea74e4">   48</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_jogador.html#a179858f14356b00be93c4db6a9ea74e4">getVitoriasR</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_jogador.html#a6333b0d650ed23351d3a88dc4b9dbe86">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_jogador.html#a6333b0d650ed23351d3a88dc4b9dbe86">getDerrotasR</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_jogador.html#a731242897a599f341493566e18327c36">   58</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_jogador.html#a731242897a599f341493566e18327c36">getVitoriasL</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_jogador.html#ae203c58918d8ace2bb78b252fd011e64">   63</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_jogador.html#ae203c58918d8ace2bb78b252fd011e64">getDerrotasL</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_posicao_cartesiana_8hpp_html"><div class="ttname"><a href="_posicao_cartesiana_8hpp.html">PosicaoCartesiana.hpp</a></div></div>
+<div class="ttc" id="aclass_jogador_html_a179858f14356b00be93c4db6a9ea74e4"><div class="ttname"><a href="class_jogador.html#a179858f14356b00be93c4db6a9ea74e4">Jogador::getVitoriasR</a></div><div class="ttdeci">int getVitoriasR()</div><div class="ttdoc">Retorna o valor de Vitórias no Jogo Reversi desse jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_a3e62c32199fc9cfbcf22cf83f9008be6"><div class="ttname"><a href="class_jogador.html#a3e62c32199fc9cfbcf22cf83f9008be6">Jogador::~Jogador</a></div><div class="ttdeci">~Jogador()</div></div>
+<div class="ttc" id="aclass_jogador_html_a3f616da767463be38d0b0ffe7476abac"><div class="ttname"><a href="class_jogador.html#a3f616da767463be38d0b0ffe7476abac">Jogador::getDerrotasV</a></div><div class="ttdeci">int getDerrotasV()</div><div class="ttdoc">Retorna o valor de Derrotas no Jogo Velha desse jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_a6333b0d650ed23351d3a88dc4b9dbe86"><div class="ttname"><a href="class_jogador.html#a6333b0d650ed23351d3a88dc4b9dbe86">Jogador::getDerrotasR</a></div><div class="ttdeci">int getDerrotasR()</div><div class="ttdoc">Retorna o valor de Derrotas no Jogo Reversi desse jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_a69bcabfdd275c3f5ef39cacce1c53592"><div class="ttname"><a href="class_jogador.html#a69bcabfdd275c3f5ef39cacce1c53592">Jogador::getApelido</a></div><div class="ttdeci">std::string getApelido()</div><div class="ttdoc">Retorna o apelido desse jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_a731242897a599f341493566e18327c36"><div class="ttname"><a href="class_jogador.html#a731242897a599f341493566e18327c36">Jogador::getVitoriasL</a></div><div class="ttdeci">int getVitoriasL()</div><div class="ttdoc">Retorna o valor de Vitórias no Jogo Lig4 desse jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_a81ea12187ca7dfb3a0b51f774ab8516e"><div class="ttname"><a href="class_jogador.html#a81ea12187ca7dfb3a0b51f774ab8516e">Jogador::getVitoriasV</a></div><div class="ttdeci">int getVitoriasV()</div><div class="ttdoc">Retorna o valor de Vitórias no Jogo Velha desse jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_aa5c6ea943399895fd9ae9da8453e108c"><div class="ttname"><a href="class_jogador.html#aa5c6ea943399895fd9ae9da8453e108c">Jogador::getNome</a></div><div class="ttdeci">std::string getNome()</div><div class="ttdoc">Retorna o nome desse jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_aca75cfcf41ef60e193af95b919ea66dc"><div class="ttname"><a href="class_jogador.html#aca75cfcf41ef60e193af95b919ea66dc">Jogador::Jogador</a></div><div class="ttdeci">Jogador(std::string linha)</div><div class="ttdoc">Construtor base da classe jogador.</div></div>
+<div class="ttc" id="aclass_jogador_html_ae203c58918d8ace2bb78b252fd011e64"><div class="ttname"><a href="class_jogador.html#ae203c58918d8ace2bb78b252fd011e64">Jogador::getDerrotasL</a></div><div class="ttdeci">int getDerrotasL()</div><div class="ttdoc">Retorna o valor de Derrotas no Jogo Lig4 desse jogador.</div></div>
+<div class="ttc" id="aclass_posicao_cartesiana_html"><div class="ttname"><a href="class_posicao_cartesiana.html">PosicaoCartesiana</a></div><div class="ttdef"><b>Definição</b> PosicaoCartesiana.hpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_jogador_8hpp.html">Jogador.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

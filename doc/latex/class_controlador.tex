@@ -1,0 +1,198 @@
+\doxysection{Referência à classe Controlador}
+\hypertarget{class_controlador}{}\label{class_controlador}\index{Controlador@{Controlador}}
+
+
+Classe controlar o fluxo do programa.  
+
+
+
+
+{\ttfamily \#include $<$Controlador.\+hpp$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_controlador_a17db08229680461d4d1a2110a92ccf78}{Controlador}} ()
+\begin{DoxyCompactList}\small\item\em Controi o objeto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_controlador_a2f1828135645f009d3772de86f12d507}{\texorpdfstring{$\sim$}{\string~}\+Controlador}} ()
+\begin{DoxyCompactList}\small\item\em Destroi o objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controlador_a926107f995a0532e5be06502851cf0db}{leitor\+Comando}} (\mbox{\hyperlink{_comandos_8hpp_aacc7d8b520aeca5c24eace056460d0e4}{Comandos}} comando)
+\begin{DoxyCompactList}\small\item\em Recebe os comandos do sistema e redireciona para as funções/classes necessárias. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controlador_a78508dbd2ddc49e35e89c851f61e78b4}{cadastrar\+Jogador}} ()
+\begin{DoxyCompactList}\small\item\em Cadastra o jogador, lendo do teclado o apelido e o nome. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controlador_a7c36dfe90c26dab5fe6382f1df29dd50}{remover\+Jogador}} ()
+\begin{DoxyCompactList}\small\item\em Remove o jogador, lendo do teclado o apelido e removendo através dele. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controlador_ab0342045469e19e18cde81c68295f4b9}{listar\+Jogador}} ()
+\begin{DoxyCompactList}\small\item\em Lista os jogadores existentes, lendo do teclado o método de ordenação, apelido(\+A) ou nome(\+N). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controlador_ab5591bea62dbd39c887af51c199ba5e5}{executar\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Executa o objeto da partida, lendo do teclado o jogo desejado e os apelidos dos jogadores,1 e 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controlador_a5ab08c39e519bdd027057d68df7a1b57}{estatisticas\+Jogador}} ()
+\begin{DoxyCompactList}\small\item\em Chama o método de calculo das estatisticas, lendo do teclado o jogador pelo apelido e passando para o método. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_controlador_aeae1587e179fcc224ba49551e5dd91a3}{finalizar\+Sistema}} ()
+\begin{DoxyCompactList}\small\item\em Finaliza o looping de comandos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe controlar o fluxo do programa. 
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{class_controlador_a17db08229680461d4d1a2110a92ccf78}\index{Controlador@{Controlador}!Controlador@{Controlador}}
+\index{Controlador@{Controlador}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{Controlador()}{Controlador()}}
+{\footnotesize\ttfamily \label{class_controlador_a17db08229680461d4d1a2110a92ccf78} 
+Controlador\+::\+Controlador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Controi o objeto. 
+
+\begin{DoxyReturn}{Retorna}
+Não há return. 
+\end{DoxyReturn}
+\Hypertarget{class_controlador_a2f1828135645f009d3772de86f12d507}\index{Controlador@{Controlador}!````~Controlador@{\texorpdfstring{$\sim$}{\string~}Controlador}}
+\index{````~Controlador@{\texorpdfstring{$\sim$}{\string~}Controlador}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Controlador()}{\string~Controlador()}}
+{\footnotesize\ttfamily \label{class_controlador_a2f1828135645f009d3772de86f12d507} 
+Controlador\+::\texorpdfstring{$\sim$}{\string~}\+Controlador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroi o objeto. 
+
+\begin{DoxyReturn}{Retorna}
+Não há return. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_controlador_a78508dbd2ddc49e35e89c851f61e78b4}\index{Controlador@{Controlador}!cadastrarJogador@{cadastrarJogador}}
+\index{cadastrarJogador@{cadastrarJogador}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{cadastrarJogador()}{cadastrarJogador()}}
+{\footnotesize\ttfamily \label{class_controlador_a78508dbd2ddc49e35e89c851f61e78b4} 
+void Controlador\+::cadastrar\+Jogador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Cadastra o jogador, lendo do teclado o apelido e o nome. 
+
+\begin{DoxyReturn}{Retorna}
+Não há retorno. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso de vírgula no apelido, a exceção parte para a main indicando o erro de comando. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_controlador_a5ab08c39e519bdd027057d68df7a1b57}\index{Controlador@{Controlador}!estatisticasJogador@{estatisticasJogador}}
+\index{estatisticasJogador@{estatisticasJogador}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{estatisticasJogador()}{estatisticasJogador()}}
+{\footnotesize\ttfamily \label{class_controlador_a5ab08c39e519bdd027057d68df7a1b57} 
+void Controlador\+::estatisticas\+Jogador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Chama o método de calculo das estatisticas, lendo do teclado o jogador pelo apelido e passando para o método. 
+
+\begin{DoxyReturn}{Retorna}
+Não há retorno. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso do jogador não existir, a exceção parte para a main indicando o erro de comando. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_controlador_ab5591bea62dbd39c887af51c199ba5e5}\index{Controlador@{Controlador}!executarPartida@{executarPartida}}
+\index{executarPartida@{executarPartida}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{executarPartida()}{executarPartida()}}
+{\footnotesize\ttfamily \label{class_controlador_ab5591bea62dbd39c887af51c199ba5e5} 
+void Controlador\+::executar\+Partida (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Executa o objeto da partida, lendo do teclado o jogo desejado e os apelidos dos jogadores,1 e 2. 
+
+\begin{DoxyReturn}{Retorna}
+Não há retorno. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso de um atributo ser digitado errado, a exceção parte para a main indicando o erro de comando. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_controlador_aeae1587e179fcc224ba49551e5dd91a3}\index{Controlador@{Controlador}!finalizarSistema@{finalizarSistema}}
+\index{finalizarSistema@{finalizarSistema}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{finalizarSistema()}{finalizarSistema()}}
+{\footnotesize\ttfamily \label{class_controlador_aeae1587e179fcc224ba49551e5dd91a3} 
+void Controlador\+::finalizar\+Sistema (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Finaliza o looping de comandos. 
+
+\begin{DoxyReturn}{Retorna}
+Não há retorno. 
+\end{DoxyReturn}
+\Hypertarget{class_controlador_a926107f995a0532e5be06502851cf0db}\index{Controlador@{Controlador}!leitorComando@{leitorComando}}
+\index{leitorComando@{leitorComando}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{leitorComando()}{leitorComando()}}
+{\footnotesize\ttfamily \label{class_controlador_a926107f995a0532e5be06502851cf0db} 
+void Controlador\+::leitor\+Comando (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_comandos_8hpp_aacc7d8b520aeca5c24eace056460d0e4}{Comandos}}}]{comando}{}\end{DoxyParamCaption})}
+
+
+
+Recebe os comandos do sistema e redireciona para as funções/classes necessárias. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em comando} & O comando digitado pelo usuário. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Não há retorno. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso de escrita incorreta, a exceção parte para a main indicando o erro de comando. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_controlador_ab0342045469e19e18cde81c68295f4b9}\index{Controlador@{Controlador}!listarJogador@{listarJogador}}
+\index{listarJogador@{listarJogador}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{listarJogador()}{listarJogador()}}
+{\footnotesize\ttfamily \label{class_controlador_ab0342045469e19e18cde81c68295f4b9} 
+void Controlador\+::listar\+Jogador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lista os jogadores existentes, lendo do teclado o método de ordenação, apelido(\+A) ou nome(\+N). 
+
+\begin{DoxyReturn}{Retorna}
+Não há retorno. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso do método ser digitado errado, a exceção parte para a main indicando o erro de comando. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_controlador_a7c36dfe90c26dab5fe6382f1df29dd50}\index{Controlador@{Controlador}!removerJogador@{removerJogador}}
+\index{removerJogador@{removerJogador}!Controlador@{Controlador}}
+\doxysubsubsection{\texorpdfstring{removerJogador()}{removerJogador()}}
+{\footnotesize\ttfamily \label{class_controlador_a7c36dfe90c26dab5fe6382f1df29dd50} 
+void Controlador\+::remover\+Jogador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Remove o jogador, lendo do teclado o apelido e removendo através dele. 
+
+\begin{DoxyReturn}{Retorna}
+Não há retorno. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso do apelido não ser encontrado, a exceção parte para a main indicando o erro de comando. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_controlador_8hpp}{Controlador.\+hpp}}\end{DoxyCompactItemize}

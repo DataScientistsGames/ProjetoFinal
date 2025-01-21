@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Final: Código-Fonte de include/Cadastrador.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto Final
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_cadastrador_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Cadastrador.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_cadastrador_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CADASTRADOR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CADASTRADOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_c_s_v_8hpp.html">CSV.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_cadastrador.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_cadastrador.html#af22b527857aad65a00904c7053f9a877">Cadastrador</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_cadastrador.html#af22b527857aad65a00904c7053f9a877">   19</a></span>    <a class="code hl_function" href="class_cadastrador.html#af22b527857aad65a00904c7053f9a877">Cadastrador</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_cadastrador.html#aab19c735dc70d4af8d5f12a839f59670">   25</a></span>    <a class="code hl_function" href="class_cadastrador.html#aab19c735dc70d4af8d5f12a839f59670">~Cadastrador</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_cadastrador.html#a78a74e7e7007f32b03173d6396db857e">   33</a></span>    std::string <a class="code hl_function" href="class_cadastrador.html#a78a74e7e7007f32b03173d6396db857e">removerJogador</a>(std::string apelido_jogador);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_cadastrador.html#ab56c182b7d771138f1ea61b5cec7fb3b">   42</a></span>    std::string <a class="code hl_function" href="class_cadastrador.html#ab56c182b7d771138f1ea61b5cec7fb3b">cadastrarJogador</a>(std::string apelido_jogador, std::string nome_jogador);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_cadastrador.html#a103052079b9fffee6d8decbabc2e8211">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cadastrador.html#a103052079b9fffee6d8decbabc2e8211">listarJogador</a>(<span class="keywordtype">char</span> metodo);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_cadastrador.html#a6b4e8333899bf24d9875649216bf7bc9">   56</a></span>    std::string <a class="code hl_function" href="class_cadastrador.html#a6b4e8333899bf24d9875649216bf7bc9">adicionaChave</a>(<span class="keywordtype">char</span> metodo, std::string linha);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_cadastrador.html#a167f15151532c24cf69fd0e45eece15f">   63</a></span>    std::string <a class="code hl_function" href="class_cadastrador.html#a167f15151532c24cf69fd0e45eece15f">pegaPalavraLinha</a>(std::string linha);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_cadastrador.html#aec2f94966f004aa0a2c9fbc10ba34de4">   70</a></span>    std::string <a class="code hl_function" href="class_cadastrador.html#aec2f94966f004aa0a2c9fbc10ba34de4">retornaLinhaJogador</a>(std::string apelido_jogador);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_cadastrador.html#afed2542aeda10ec71a06a81fd2dc0424">   77</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cadastrador.html#afed2542aeda10ec71a06a81fd2dc0424">existeJogador</a>(std::string apelido_jogador);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_cadastrador.html#a023e2ae1cd4ebb0d6423f88a7ecf4344">   84</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cadastrador.html#a023e2ae1cd4ebb0d6423f88a7ecf4344">existeEstatistica</a>(std::string apelido_jogador);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_cadastrador.html#a764bf5f68b3bfd7e3bb69a01b12a7aec">   97</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cadastrador.html#a764bf5f68b3bfd7e3bb69a01b12a7aec">traduzChaveCSV</a>(std::string linha);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_c_s_v_8hpp_html"><div class="ttname"><a href="_c_s_v_8hpp.html">CSV.hpp</a></div></div>
+<div class="ttc" id="aclass_cadastrador_html_a023e2ae1cd4ebb0d6423f88a7ecf4344"><div class="ttname"><a href="class_cadastrador.html#a023e2ae1cd4ebb0d6423f88a7ecf4344">Cadastrador::existeEstatistica</a></div><div class="ttdeci">bool existeEstatistica(std::string apelido_jogador)</div><div class="ttdoc">Verifica se há alguma estatística do jogador no arquivo de partidas.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_a103052079b9fffee6d8decbabc2e8211"><div class="ttname"><a href="class_cadastrador.html#a103052079b9fffee6d8decbabc2e8211">Cadastrador::listarJogador</a></div><div class="ttdeci">void listarJogador(char metodo)</div><div class="ttdoc">Lista os jogadores salvos.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_a167f15151532c24cf69fd0e45eece15f"><div class="ttname"><a href="class_cadastrador.html#a167f15151532c24cf69fd0e45eece15f">Cadastrador::pegaPalavraLinha</a></div><div class="ttdeci">std::string pegaPalavraLinha(std::string linha)</div><div class="ttdoc">Pega o Apelido do jogador dada a linha de arquivo (primeira célula do CSV).</div></div>
+<div class="ttc" id="aclass_cadastrador_html_a6b4e8333899bf24d9875649216bf7bc9"><div class="ttname"><a href="class_cadastrador.html#a6b4e8333899bf24d9875649216bf7bc9">Cadastrador::adicionaChave</a></div><div class="ttdeci">std::string adicionaChave(char metodo, std::string linha)</div><div class="ttdoc">Adiciona nos dados dos jogadores a chave (Nome ou Apelido) para que seja de mais fácil ordenação.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_a764bf5f68b3bfd7e3bb69a01b12a7aec"><div class="ttname"><a href="class_cadastrador.html#a764bf5f68b3bfd7e3bb69a01b12a7aec">Cadastrador::traduzChaveCSV</a></div><div class="ttdeci">void traduzChaveCSV(std::string linha)</div><div class="ttdoc">Imprime para o usuário os dados de uma chave+string relativos a um jogador.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_a78a74e7e7007f32b03173d6396db857e"><div class="ttname"><a href="class_cadastrador.html#a78a74e7e7007f32b03173d6396db857e">Cadastrador::removerJogador</a></div><div class="ttdeci">std::string removerJogador(std::string apelido_jogador)</div><div class="ttdoc">Remove um jogador dos arquivos, caso exista.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_aab19c735dc70d4af8d5f12a839f59670"><div class="ttname"><a href="class_cadastrador.html#aab19c735dc70d4af8d5f12a839f59670">Cadastrador::~Cadastrador</a></div><div class="ttdeci">~Cadastrador()</div><div class="ttdoc">Destrutor padrão da classe.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_ab56c182b7d771138f1ea61b5cec7fb3b"><div class="ttname"><a href="class_cadastrador.html#ab56c182b7d771138f1ea61b5cec7fb3b">Cadastrador::cadastrarJogador</a></div><div class="ttdeci">std::string cadastrarJogador(std::string apelido_jogador, std::string nome_jogador)</div><div class="ttdoc">Adiciona um jogador ao arquivo de jogadores.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_aec2f94966f004aa0a2c9fbc10ba34de4"><div class="ttname"><a href="class_cadastrador.html#aec2f94966f004aa0a2c9fbc10ba34de4">Cadastrador::retornaLinhaJogador</a></div><div class="ttdeci">std::string retornaLinhaJogador(std::string apelido_jogador)</div><div class="ttdoc">Retorna a linha do arquivo CSV com os dados do jogador dado apelido.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_af22b527857aad65a00904c7053f9a877"><div class="ttname"><a href="class_cadastrador.html#af22b527857aad65a00904c7053f9a877">Cadastrador::Cadastrador</a></div><div class="ttdeci">Cadastrador()</div><div class="ttdoc">Construtor padrão da classe.</div></div>
+<div class="ttc" id="aclass_cadastrador_html_afed2542aeda10ec71a06a81fd2dc0424"><div class="ttname"><a href="class_cadastrador.html#afed2542aeda10ec71a06a81fd2dc0424">Cadastrador::existeJogador</a></div><div class="ttdeci">bool existeJogador(std::string apelido_jogador)</div><div class="ttdoc">Verifica se o jogador está registrado no arquivo.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_cadastrador_8hpp.html">Cadastrador.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

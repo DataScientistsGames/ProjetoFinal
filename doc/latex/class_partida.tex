@@ -1,0 +1,153 @@
+\doxysection{Referência à classe Partida}
+\hypertarget{class_partida}{}\label{class_partida}\index{Partida@{Partida}}
+
+
+Classe criada para organizar e lidar com os dados durante a partida.  
+
+
+
+
+{\ttfamily \#include $<$Partida.\+hpp$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_partida_aa283ae54cb760a95b8bd56f7e1c67d23}{Partida}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $>$ tabuleiro, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$ player1, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$ player2)
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe, que recebe um tabuleiro e dois jogadores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_partida_aeb7153c737dcc7b06c0cc4c7f7cbb21a}{\texorpdfstring{$\sim$}{\string~}\+Partida}} ()
+\item 
+void \mbox{\hyperlink{class_partida_ad637c7f4e3f2b3c0100ff8e93aa29c9f}{round}} ()
+\begin{DoxyCompactList}\small\item\em Método que executa a partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_a80eb834407f27e8ade0be8c40f3b0112}{leitor\+Jogada}} (int num\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Método que lê a jogada de um jogador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_ae40f5609ec12147ba6b4dcfd27856052}{finalizar\+Partida}} (int vencedor)
+\begin{DoxyCompactList}\small\item\em Método feito para finalizar a partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_a6f5dcaabbfa314a6d7d7ae5c80e7a1d6}{atualiza\+Dados\+Jogador}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$ jogador\+\_\+vencedor, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$ jogador\+\_\+perdedor)
+\begin{DoxyCompactList}\small\item\em Método feito para atualizar os dados dos jogadores no arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_a99a2b9427698b54124d716d025217f52}{atualiza\+Dados\+Partida}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$ jogador\+\_\+vencedor, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$ jogador\+\_\+perdedor)
+\begin{DoxyCompactList}\small\item\em Método feito para atualizar os dados da partida no arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partida_ad536aa88b7d8593e3c2e5c273e21ab38}{atualiza\+Dados\+Partida}} ()
+\begin{DoxyCompactList}\small\item\em Método feito para atualizar os dados da partida no arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe criada para organizar e lidar com os dados durante a partida. 
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{class_partida_aa283ae54cb760a95b8bd56f7e1c67d23}\index{Partida@{Partida}!Partida@{Partida}}
+\index{Partida@{Partida}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{Partida()}{Partida()}}
+{\footnotesize\ttfamily \label{class_partida_aa283ae54cb760a95b8bd56f7e1c67d23} 
+Partida\+::\+Partida (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}} $>$}]{tabuleiro}{, }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$}]{player1}{, }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$}]{player2}{}\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe, que recebe um tabuleiro e dois jogadores. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em tabuleiro} & Ponteiro do tipo unique\+\_\+ptr que aponta para o tabuleiro onde será jogado o jogo \\
+\hline
+{\em player1} & Ponteiro do tipo unique\+\_\+ptr que aponta para o primeiro jogador da partida \\
+\hline
+{\em player2} & Ponteiro do tipo unique\+\_\+ptr que aponta para o segundo jogador da partida \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_partida_aeb7153c737dcc7b06c0cc4c7f7cbb21a}\index{Partida@{Partida}!````~Partida@{\texorpdfstring{$\sim$}{\string~}Partida}}
+\index{````~Partida@{\texorpdfstring{$\sim$}{\string~}Partida}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Partida()}{\string~Partida()}}
+{\footnotesize\ttfamily \label{class_partida_aeb7153c737dcc7b06c0cc4c7f7cbb21a} 
+Partida\+::\texorpdfstring{$\sim$}{\string~}\+Partida (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_partida_a6f5dcaabbfa314a6d7d7ae5c80e7a1d6}\index{Partida@{Partida}!atualizaDadosJogador@{atualizaDadosJogador}}
+\index{atualizaDadosJogador@{atualizaDadosJogador}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{atualizaDadosJogador()}{atualizaDadosJogador()}}
+{\footnotesize\ttfamily \label{class_partida_a6f5dcaabbfa314a6d7d7ae5c80e7a1d6} 
+void Partida\+::atualiza\+Dados\+Jogador (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$}]{jogador\+\_\+vencedor}{, }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$}]{jogador\+\_\+perdedor}{}\end{DoxyParamCaption})}
+
+
+
+Método feito para atualizar os dados dos jogadores no arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogador\+\_\+vencedor} & Recebe o ponteiro do jogador que foi vencedor \\
+\hline
+{\em jogador\+\_\+perdedor} & Recebe o ponteiro do jogador que foi perdedor\\
+\hline
+\end{DoxyParams}
+Esse método deve chamar o método de atualização de dados de partida ao fim \Hypertarget{class_partida_ad536aa88b7d8593e3c2e5c273e21ab38}\index{Partida@{Partida}!atualizaDadosPartida@{atualizaDadosPartida}}
+\index{atualizaDadosPartida@{atualizaDadosPartida}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{atualizaDadosPartida()}{atualizaDadosPartida()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_partida_ad536aa88b7d8593e3c2e5c273e21ab38} 
+void Partida\+::atualiza\+Dados\+Partida (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método feito para atualizar os dados da partida no arquivo. 
+
+Esse método é chamado em caso de empate, ou seja, não há diferença entre vencedor e o perdedor. \Hypertarget{class_partida_a99a2b9427698b54124d716d025217f52}\index{Partida@{Partida}!atualizaDadosPartida@{atualizaDadosPartida}}
+\index{atualizaDadosPartida@{atualizaDadosPartida}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{atualizaDadosPartida()}{atualizaDadosPartida()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_partida_a99a2b9427698b54124d716d025217f52} 
+void Partida\+::atualiza\+Dados\+Partida (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$}]{jogador\+\_\+vencedor}{, }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_jogador}{Jogador}} $>$}]{jogador\+\_\+perdedor}{}\end{DoxyParamCaption})}
+
+
+
+Método feito para atualizar os dados da partida no arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em jogador\+\_\+vencedor} & Recebe o ponteiro do jogador que foi vencedor \\
+\hline
+{\em jogador\+\_\+perdedor} & Recebe o ponteiro do jogador que foi perdedor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_partida_ae40f5609ec12147ba6b4dcfd27856052}\index{Partida@{Partida}!finalizarPartida@{finalizarPartida}}
+\index{finalizarPartida@{finalizarPartida}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{finalizarPartida()}{finalizarPartida()}}
+{\footnotesize\ttfamily \label{class_partida_ae40f5609ec12147ba6b4dcfd27856052} 
+void Partida\+::finalizar\+Partida (\begin{DoxyParamCaption}\item[{int}]{vencedor}{}\end{DoxyParamCaption})}
+
+
+
+Método feito para finalizar a partida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em vencedor} & Recebe o número do jogador que foi vencedor\\
+\hline
+\end{DoxyParams}
+Esse método deve chamar métodos de atualização dos dados nos arquivos e ser chamado quando a partida termina \Hypertarget{class_partida_a80eb834407f27e8ade0be8c40f3b0112}\index{Partida@{Partida}!leitorJogada@{leitorJogada}}
+\index{leitorJogada@{leitorJogada}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{leitorJogada()}{leitorJogada()}}
+{\footnotesize\ttfamily \label{class_partida_a80eb834407f27e8ade0be8c40f3b0112} 
+void Partida\+::leitor\+Jogada (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+jogador}{}\end{DoxyParamCaption})}
+
+
+
+Método que lê a jogada de um jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em num\+\_\+jogador} & Número do jogador referente à jogada (1 ou 2)\\
+\hline
+\end{DoxyParams}
+Esse método deve verificar se o jogador tem jogadas válidas, se a jogada feita foi válida e printar o tabuleiro \Hypertarget{class_partida_ad637c7f4e3f2b3c0100ff8e93aa29c9f}\index{Partida@{Partida}!round@{round}}
+\index{round@{round}!Partida@{Partida}}
+\doxysubsubsection{\texorpdfstring{round()}{round()}}
+{\footnotesize\ttfamily \label{class_partida_ad637c7f4e3f2b3c0100ff8e93aa29c9f} 
+void Partida\+::round (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método que executa a partida. 
+
+Esse método é responsável por alternar os rounds e chamar o método de leitura com o jogador certo 
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_partida_8hpp}{Partida.\+hpp}}\end{DoxyCompactItemize}

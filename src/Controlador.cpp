@@ -102,12 +102,7 @@ void Controlador::removerJogador()
 {
     std::string apelido_jogador;
     std::cin >> apelido_jogador;
-    /*
-        caso alguem coloque o nome "Enzo Braz",
-        o "Braz" volta na entrada de comando no loop e gera erro
-    */
-    // std::cin.clear();
-    // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
 
     std::unique_ptr<Cadastrador> remover(new Cadastrador);
 

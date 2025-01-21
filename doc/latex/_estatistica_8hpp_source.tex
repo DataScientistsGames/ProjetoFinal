@@ -1,0 +1,37 @@
+\doxysection{Estatistica.\+hpp}
+\hypertarget{_estatistica_8hpp_source}{}\label{_estatistica_8hpp_source}\index{include/Estatistica.hpp@{include/Estatistica.hpp}}
+\mbox{\hyperlink{_estatistica_8hpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ESTATISTICA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ESTATISTICA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_c_s_v_8hpp}{CSV.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_jogador_8hpp}{Jogador.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tabuleiro_8hpp}{Tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_posicao_cartesiana_8hpp}{PosicaoCartesiana.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_estatistica}{Estatistica}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_estatistica_a1fe28a278c4eac13338abedb573b97c2}{calculaEstatisticasJogador}}(std::string\ linha\_jogador);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_estatistica_ad360da992476cdfad77d6a03142c0c2a}{media}}(std::vector<int>\ valores);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<double>\ \mbox{\hyperlink{class_estatistica_a111732f2947e735030f8beda56623d12}{vies}}(std::string\ apelido\_jogador,\ \textcolor{keywordtype}{char}\ jogo);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_estatistica_a0bb9c186c2a43aa0622e4f789ecd0231}{proporcao}}(std::vector<double>\ valores);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{class_estatistica_aeaf0312a611df5f81a4b63ebbf8b4a52}{pegaApelido}}(std::string\ linha);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_estatistica_a4f0b44d3cb0d9f5d5d900574c41836c2}{pegaJogo}}(std::string\ linha);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_estatistica_ab9fadebdc6131f97b0ee32df63f09602}{pegaVies}}(std::string\ linha,\ \textcolor{keywordtype}{char}\ direcao);}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

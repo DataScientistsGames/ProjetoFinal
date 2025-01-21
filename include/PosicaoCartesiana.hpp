@@ -7,6 +7,7 @@ private:
     int _x, _y;
 
 public:
+
     PosicaoCartesiana(int x, int y);
     PosicaoCartesiana();
     ~PosicaoCartesiana();

@@ -1,0 +1,247 @@
+\doxysection{Referência à classe Cadastrador}
+\hypertarget{class_cadastrador}{}\label{class_cadastrador}\index{Cadastrador@{Cadastrador}}
+
+
+classe criada para lidar com a escrita, remoção e leitura de jogadores do \doxylink{class_c_s_v}{CSV}  
+
+
+
+
+{\ttfamily \#include $<$Cadastrador.\+hpp$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cadastrador_af22b527857aad65a00904c7053f9a877}{Cadastrador}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cadastrador_aab19c735dc70d4af8d5f12a839f59670}{\texorpdfstring{$\sim$}{\string~}\+Cadastrador}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor padrão da classe. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cadastrador_a78a74e7e7007f32b03173d6396db857e}{remover\+Jogador}} (std\+::string apelido\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Remove um jogador dos arquivos, caso exista. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cadastrador_ab56c182b7d771138f1ea61b5cec7fb3b}{cadastrar\+Jogador}} (std\+::string apelido\+\_\+jogador, std\+::string nome\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Adiciona um jogador ao arquivo de jogadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastrador_a103052079b9fffee6d8decbabc2e8211}{listar\+Jogador}} (char metodo)
+\begin{DoxyCompactList}\small\item\em Lista os jogadores salvos. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cadastrador_a6b4e8333899bf24d9875649216bf7bc9}{adiciona\+Chave}} (char metodo, std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Adiciona nos dados dos jogadores a chave (Nome ou Apelido) para que seja de mais fácil ordenação. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cadastrador_a167f15151532c24cf69fd0e45eece15f}{pega\+Palavra\+Linha}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Pega o Apelido do jogador dada a linha de arquivo (primeira célula do \doxylink{class_c_s_v}{CSV}). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cadastrador_aec2f94966f004aa0a2c9fbc10ba34de4}{retorna\+Linha\+Jogador}} (std\+::string apelido\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Retorna a linha do arquivo \doxylink{class_c_s_v}{CSV} com os dados do jogador dado apelido. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cadastrador_afed2542aeda10ec71a06a81fd2dc0424}{existe\+Jogador}} (std\+::string apelido\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Verifica se o jogador está registrado no arquivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cadastrador_a023e2ae1cd4ebb0d6423f88a7ecf4344}{existe\+Estatistica}} (std\+::string apelido\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Verifica se há alguma estatística do jogador no arquivo de partidas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cadastrador_a764bf5f68b3bfd7e3bb69a01b12a7aec}{traduz\+Chave\+CSV}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Imprime para o usuário os dados de uma chave+string relativos a um jogador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+classe criada para lidar com a escrita, remoção e leitura de jogadores do \doxylink{class_c_s_v}{CSV} 
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{class_cadastrador_af22b527857aad65a00904c7053f9a877}\index{Cadastrador@{Cadastrador}!Cadastrador@{Cadastrador}}
+\index{Cadastrador@{Cadastrador}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{Cadastrador()}{Cadastrador()}}
+{\footnotesize\ttfamily \label{class_cadastrador_af22b527857aad65a00904c7053f9a877} 
+Cadastrador\+::\+Cadastrador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe. 
+
+\Hypertarget{class_cadastrador_aab19c735dc70d4af8d5f12a839f59670}\index{Cadastrador@{Cadastrador}!````~Cadastrador@{\texorpdfstring{$\sim$}{\string~}Cadastrador}}
+\index{````~Cadastrador@{\texorpdfstring{$\sim$}{\string~}Cadastrador}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Cadastrador()}{\string~Cadastrador()}}
+{\footnotesize\ttfamily \label{class_cadastrador_aab19c735dc70d4af8d5f12a839f59670} 
+Cadastrador\+::\texorpdfstring{$\sim$}{\string~}\+Cadastrador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor padrão da classe. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_cadastrador_a6b4e8333899bf24d9875649216bf7bc9}\index{Cadastrador@{Cadastrador}!adicionaChave@{adicionaChave}}
+\index{adicionaChave@{adicionaChave}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{adicionaChave()}{adicionaChave()}}
+{\footnotesize\ttfamily \label{class_cadastrador_a6b4e8333899bf24d9875649216bf7bc9} 
+std\+::string Cadastrador\+::adiciona\+Chave (\begin{DoxyParamCaption}\item[{char}]{metodo}{, }\item[{std\+::string}]{linha}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona nos dados dos jogadores a chave (Nome ou Apelido) para que seja de mais fácil ordenação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em metodo} & Método (Nome ou Apelido) pelo qual os jogadores serão listados. \\
+\hline
+{\em linha} & String com os dados do jogador que será adicionada a chave. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cadastrador_ab56c182b7d771138f1ea61b5cec7fb3b}\index{Cadastrador@{Cadastrador}!cadastrarJogador@{cadastrarJogador}}
+\index{cadastrarJogador@{cadastrarJogador}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{cadastrarJogador()}{cadastrarJogador()}}
+{\footnotesize\ttfamily \label{class_cadastrador_ab56c182b7d771138f1ea61b5cec7fb3b} 
+std\+::string Cadastrador\+::cadastrar\+Jogador (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido\+\_\+jogador}{, }\item[{std\+::string}]{nome\+\_\+jogador}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona um jogador ao arquivo de jogadores. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido\+\_\+jogador} & Apelido do jogador que será adicionado (único). \\
+\hline
+{\em nome\+\_\+jogador} & Nome do jogador que será removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o resultado da operação. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso de falha, a exceção parte do \doxylink{class_c_s_v}{CSV} até a main do programa. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_cadastrador_a023e2ae1cd4ebb0d6423f88a7ecf4344}\index{Cadastrador@{Cadastrador}!existeEstatistica@{existeEstatistica}}
+\index{existeEstatistica@{existeEstatistica}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{existeEstatistica()}{existeEstatistica()}}
+{\footnotesize\ttfamily \label{class_cadastrador_a023e2ae1cd4ebb0d6423f88a7ecf4344} 
+bool Cadastrador\+::existe\+Estatistica (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido\+\_\+jogador}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se há alguma estatística do jogador no arquivo de partidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido\+\_\+jogador} & Apelido do jogador que quer verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna verdadeiro o falso caso esse jogador tenha estatísticas registradas. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastrador_afed2542aeda10ec71a06a81fd2dc0424}\index{Cadastrador@{Cadastrador}!existeJogador@{existeJogador}}
+\index{existeJogador@{existeJogador}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{existeJogador()}{existeJogador()}}
+{\footnotesize\ttfamily \label{class_cadastrador_afed2542aeda10ec71a06a81fd2dc0424} 
+bool Cadastrador\+::existe\+Jogador (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido\+\_\+jogador}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se o jogador está registrado no arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido\+\_\+jogador} & Apelido do jogador que quer verificar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna verdadeiro o falso caso esse jogador esteja cadastrado. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastrador_a103052079b9fffee6d8decbabc2e8211}\index{Cadastrador@{Cadastrador}!listarJogador@{listarJogador}}
+\index{listarJogador@{listarJogador}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{listarJogador()}{listarJogador()}}
+{\footnotesize\ttfamily \label{class_cadastrador_a103052079b9fffee6d8decbabc2e8211} 
+void Cadastrador\+::listar\+Jogador (\begin{DoxyParamCaption}\item[{char}]{metodo}{}\end{DoxyParamCaption})}
+
+
+
+Lista os jogadores salvos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em metodo} & Método (Nome ou Apelido) pelo qual os jogadores serão listados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso de falha, a exceção parte do \doxylink{class_c_s_v}{CSV} até a main do programa. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_cadastrador_a167f15151532c24cf69fd0e45eece15f}\index{Cadastrador@{Cadastrador}!pegaPalavraLinha@{pegaPalavraLinha}}
+\index{pegaPalavraLinha@{pegaPalavraLinha}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{pegaPalavraLinha()}{pegaPalavraLinha()}}
+{\footnotesize\ttfamily \label{class_cadastrador_a167f15151532c24cf69fd0e45eece15f} 
+std\+::string Cadastrador\+::pega\+Palavra\+Linha (\begin{DoxyParamCaption}\item[{std\+::string}]{linha}{}\end{DoxyParamCaption})}
+
+
+
+Pega o Apelido do jogador dada a linha de arquivo (primeira célula do \doxylink{class_c_s_v}{CSV}). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & String com os dados do jogador que será lida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o Apelido. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastrador_a78a74e7e7007f32b03173d6396db857e}\index{Cadastrador@{Cadastrador}!removerJogador@{removerJogador}}
+\index{removerJogador@{removerJogador}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{removerJogador()}{removerJogador()}}
+{\footnotesize\ttfamily \label{class_cadastrador_a78a74e7e7007f32b03173d6396db857e} 
+std\+::string Cadastrador\+::remover\+Jogador (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido\+\_\+jogador}{}\end{DoxyParamCaption})}
+
+
+
+Remove um jogador dos arquivos, caso exista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido\+\_\+jogador} & Apelido do jogador que será removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o resultado da operação. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso de falha, a exceção parte do \doxylink{class_c_s_v}{CSV} até a main do programa. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_cadastrador_aec2f94966f004aa0a2c9fbc10ba34de4}\index{Cadastrador@{Cadastrador}!retornaLinhaJogador@{retornaLinhaJogador}}
+\index{retornaLinhaJogador@{retornaLinhaJogador}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{retornaLinhaJogador()}{retornaLinhaJogador()}}
+{\footnotesize\ttfamily \label{class_cadastrador_aec2f94966f004aa0a2c9fbc10ba34de4} 
+std\+::string Cadastrador\+::retorna\+Linha\+Jogador (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido\+\_\+jogador}{}\end{DoxyParamCaption})}
+
+
+
+Retorna a linha do arquivo \doxylink{class_c_s_v}{CSV} com os dados do jogador dado apelido. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido\+\_\+jogador} & Apelido do jogador que quer os dados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a linha com os dados. 
+\end{DoxyReturn}
+\Hypertarget{class_cadastrador_a764bf5f68b3bfd7e3bb69a01b12a7aec}\index{Cadastrador@{Cadastrador}!traduzChaveCSV@{traduzChaveCSV}}
+\index{traduzChaveCSV@{traduzChaveCSV}!Cadastrador@{Cadastrador}}
+\doxysubsubsection{\texorpdfstring{traduzChaveCSV()}{traduzChaveCSV()}}
+{\footnotesize\ttfamily \label{class_cadastrador_a764bf5f68b3bfd7e3bb69a01b12a7aec} 
+void Cadastrador\+::traduz\+Chave\+CSV (\begin{DoxyParamCaption}\item[{std\+::string}]{linha}{}\end{DoxyParamCaption})}
+
+
+
+Imprime para o usuário os dados de uma chave+string relativos a um jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & Linha com chave que será traduzida e impressa.\\
+\hline
+\end{DoxyParams}
+Exemplo de print\+: \begin{DoxyVerb}apelido_jogador Nome do Jogador
+Reversi - V: 0 D: 0 
+Lig4 - V: 0 D: 0 
+Velha - V: 0 D: 0
+\end{DoxyVerb}
+ 
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_cadastrador_8hpp}{Cadastrador.\+hpp}}\end{DoxyCompactItemize}

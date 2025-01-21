@@ -1,0 +1,44 @@
+\doxysection{Partida.\+hpp}
+\hypertarget{_partida_8hpp_source}{}\label{_partida_8hpp_source}\index{include/Partida.hpp@{include/Partida.hpp}}
+\mbox{\hyperlink{_partida_8hpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PARTIDA\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PARTIDA\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_c_s_v_8hpp}{CSV.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_jogador_8hpp}{Jogador.hpp}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tabuleiro_8hpp}{Tabuleiro.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_posicao_cartesiana_8hpp}{PosicaoCartesiana.hpp}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_partida_aa283ae54cb760a95b8bd56f7e1c67d23}{Partida}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::unique\_ptr<Jogador>\ \_player1;}
+\DoxyCodeLine{00018\ \ \ \ \ std::unique\_ptr<Jogador>\ \_player2;}
+\DoxyCodeLine{00019\ \ \ \ \ std::unique\_ptr<Tabuleiro>\ \_tabuleiro;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \_rounds;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_partida_aa283ae54cb760a95b8bd56f7e1c67d23}{Partida}}(std::unique\_ptr<Tabuleiro>\ tabuleiro,\ std::unique\_ptr<Jogador>\ player1,\ std::unique\_ptr<Jogador>\ player2);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_partida_aeb7153c737dcc7b06c0cc4c7f7cbb21a}{\string~Partida}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_ad637c7f4e3f2b3c0100ff8e93aa29c9f}{round}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_a80eb834407f27e8ade0be8c40f3b0112}{leitorJogada}}(\textcolor{keywordtype}{int}\ num\_jogador);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_ae40f5609ec12147ba6b4dcfd27856052}{finalizarPartida}}(\textcolor{keywordtype}{int}\ vencedor);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_a6f5dcaabbfa314a6d7d7ae5c80e7a1d6}{atualizaDadosJogador}}(std::unique\_ptr<Jogador>\ jogador\_vencedor,\ std::unique\_ptr<Jogador>\ jogador\_perdedor);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_a99a2b9427698b54124d716d025217f52}{atualizaDadosPartida}}(std::unique\_ptr<Jogador>\ jogador\_vencedor,\ std::unique\_ptr<Jogador>\ jogador\_perdedor);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_partida_ad536aa88b7d8593e3c2e5c273e21ab38}{atualizaDadosPartida}}();}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

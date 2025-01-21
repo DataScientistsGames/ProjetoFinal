@@ -1,0 +1,47 @@
+\doxysection{Tabuleiro.\+hpp}
+\hypertarget{_tabuleiro_8hpp_source}{}\label{_tabuleiro_8hpp_source}\index{include/Tabuleiro.hpp@{include/Tabuleiro.hpp}}
+\mbox{\hyperlink{_tabuleiro_8hpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TABULEIRO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TABULEIRO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ CHAR\_BORDA\_COLUNA\ '|'}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ CHAR\_BORDA\_LINHA\ '-\/'}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_casa_8hpp}{Casa.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_posicao_cartesiana_8hpp}{PosicaoCartesiana.hpp}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}{Tabuleiro}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}}\ **\mbox{\hyperlink{class_tabuleiro_acf9f7f3fe0ad78a56223ea02fe073454}{\_board}};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tabuleiro_ad88c2ea8b54f0b6578967a3705d97fe9}{\_x}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tabuleiro_a7170756176608664e90ea9b171023e04}{\_y}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tabuleiro_a18cff9be1fe2214064db82c60d95a201}{\_tipo}};\ \textcolor{comment}{//\ 0\ -\/\ velha,\ 1\ -\/\ reversi,\ 2\ -\/\ lig4}}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911}{\_string\_pecas}}[3];}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}{Tabuleiro}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ std::string\ string\_player1,\ std::string\ string\_player2);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\string~Tabuleiro}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74}{posicionarPeca}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ num\_jogador\ =\ 0);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}{finalizarJogo}}();\ \textcolor{comment}{//\ 0\ -\/\ continua,\ 1\ -\/\ jogador\ 1\ venceu,\ 2\ -\/\ jogador\ 2\ venceu,\ 3\ -\/\ empatou}}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizarPeca}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}}\ \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{stringParaCasa}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ num\_jogador);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_posicao_cartesiana}{PosicaoCartesiana}}\ \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calculaVies}}(\textcolor{keywordtype}{int}\ jogador);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tabuleiro_a2a6a0618a0885164995d4b99aca6c759}{getTipo}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_tabuleiro_a541651c7991ffa99680ca8439b34f350}{imprimeBordaVertical}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_tabuleiro_a4ce5aa160c82779f953edd68b7b06be6}{imprimeTabuleiro}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_tabuleiro_a7e5ca9f37811bb47bdbb7e3860c1d70e}{temJogadaValida}}(\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}}\ jogador);}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

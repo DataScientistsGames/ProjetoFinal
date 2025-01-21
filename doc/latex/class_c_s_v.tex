@@ -1,0 +1,150 @@
+\doxysection{Referência à classe CSV}
+\hypertarget{class_c_s_v}{}\label{class_c_s_v}\index{CSV@{CSV}}
+
+
+Classe comunicadora entre os arquivos \doxylink{class_c_s_v}{CSV} e as outras classes.  
+
+
+
+
+{\ttfamily \#include $<$CSV.\+hpp$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_s_v_a4ebd31b9c1c31f05694b7146c85585b1}{CSV}} (std\+::string caminho)
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_s_v_ae1b0cfd98d62cf81004462320848c665}{\texorpdfstring{$\sim$}{\string~}\+CSV}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor padrão que fecha o arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_s_v_a610f34190cd867d3ae68b9f80478a9bd}{escrever\+Arquivo}} (std\+::string entrada)
+\begin{DoxyCompactList}\small\item\em Escreve no arquivo referente ao objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_s_v_a4876c706e65b4c6fdab0a0f7d5807ed4}{apagar\+No\+Arquivo}} (std\+::string apelido)
+\begin{DoxyCompactList}\small\item\em Remove do arquivo referente ao objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_s_v_a88ad2dcacad1f653d9f67d3557b3cb55}{atualizar\+No\+Arquivo}} (std\+::string apelido\+\_\+jogador, std\+::string novos\+\_\+dados)
+\begin{DoxyCompactList}\small\item\em Substitui uma linha por outra no arquivo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_c_s_v_a6e71ae55e87fef1c66ac875e452a4dce}{pega\+Apelido\+Linha}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Lê o apelido de uma linha do arquivo. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_c_s_v_aca76c79bb237b834764153f271dc5eed}{ler\+Linha\+Arquivo}} ()
+\begin{DoxyCompactList}\small\item\em Lê uma linha do arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe comunicadora entre os arquivos \doxylink{class_c_s_v}{CSV} e as outras classes. 
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{class_c_s_v_a4ebd31b9c1c31f05694b7146c85585b1}\index{CSV@{CSV}!CSV@{CSV}}
+\index{CSV@{CSV}!CSV@{CSV}}
+\doxysubsubsection{\texorpdfstring{CSV()}{CSV()}}
+{\footnotesize\ttfamily \label{class_c_s_v_a4ebd31b9c1c31f05694b7146c85585b1} 
+CSV\+::\+CSV (\begin{DoxyParamCaption}\item[{std\+::string}]{caminho}{}\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em caminho} & Caminho do arquivo que deve ser lido \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Se} & auto-\/destrói e retorna exceção a ser tratada na main caso haja erro ao tentar acessar o arquivo \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_c_s_v_ae1b0cfd98d62cf81004462320848c665}\index{CSV@{CSV}!````~CSV@{\texorpdfstring{$\sim$}{\string~}CSV}}
+\index{````~CSV@{\texorpdfstring{$\sim$}{\string~}CSV}!CSV@{CSV}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CSV()}{\string~CSV()}}
+{\footnotesize\ttfamily \label{class_c_s_v_ae1b0cfd98d62cf81004462320848c665} 
+CSV\+::\texorpdfstring{$\sim$}{\string~}\+CSV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destrutor padrão que fecha o arquivo. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_c_s_v_a4876c706e65b4c6fdab0a0f7d5807ed4}\index{CSV@{CSV}!apagarNoArquivo@{apagarNoArquivo}}
+\index{apagarNoArquivo@{apagarNoArquivo}!CSV@{CSV}}
+\doxysubsubsection{\texorpdfstring{apagarNoArquivo()}{apagarNoArquivo()}}
+{\footnotesize\ttfamily \label{class_c_s_v_a4876c706e65b4c6fdab0a0f7d5807ed4} 
+void CSV\+::apagar\+No\+Arquivo (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido}{}\end{DoxyParamCaption})}
+
+
+
+Remove do arquivo referente ao objeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido} & Apelido da linha que será removida \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_s_v_a88ad2dcacad1f653d9f67d3557b3cb55}\index{CSV@{CSV}!atualizarNoArquivo@{atualizarNoArquivo}}
+\index{atualizarNoArquivo@{atualizarNoArquivo}!CSV@{CSV}}
+\doxysubsubsection{\texorpdfstring{atualizarNoArquivo()}{atualizarNoArquivo()}}
+{\footnotesize\ttfamily \label{class_c_s_v_a88ad2dcacad1f653d9f67d3557b3cb55} 
+void CSV\+::atualizar\+No\+Arquivo (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido\+\_\+jogador}{, }\item[{std\+::string}]{novos\+\_\+dados}{}\end{DoxyParamCaption})}
+
+
+
+Substitui uma linha por outra no arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido\+\_\+jogador} & Apelido da linha que será removida \\
+\hline
+{\em novos\+\_\+dados} & Linha que será colocada no lugar da removida \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_s_v_a610f34190cd867d3ae68b9f80478a9bd}\index{CSV@{CSV}!escreverArquivo@{escreverArquivo}}
+\index{escreverArquivo@{escreverArquivo}!CSV@{CSV}}
+\doxysubsubsection{\texorpdfstring{escreverArquivo()}{escreverArquivo()}}
+{\footnotesize\ttfamily \label{class_c_s_v_a610f34190cd867d3ae68b9f80478a9bd} 
+void CSV\+::escrever\+Arquivo (\begin{DoxyParamCaption}\item[{std\+::string}]{entrada}{}\end{DoxyParamCaption})}
+
+
+
+Escreve no arquivo referente ao objeto. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em entrada} & Linha que será escrita no arquivo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_c_s_v_aca76c79bb237b834764153f271dc5eed}\index{CSV@{CSV}!lerLinhaArquivo@{lerLinhaArquivo}}
+\index{lerLinhaArquivo@{lerLinhaArquivo}!CSV@{CSV}}
+\doxysubsubsection{\texorpdfstring{lerLinhaArquivo()}{lerLinhaArquivo()}}
+{\footnotesize\ttfamily \label{class_c_s_v_aca76c79bb237b834764153f271dc5eed} 
+std\+::string CSV\+::ler\+Linha\+Arquivo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lê uma linha do arquivo. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna a linha lida ou não retorna nada caso tenha atingido o fim do arquivo. 
+\end{DoxyReturn}
+\Hypertarget{class_c_s_v_a6e71ae55e87fef1c66ac875e452a4dce}\index{CSV@{CSV}!pegaApelidoLinha@{pegaApelidoLinha}}
+\index{pegaApelidoLinha@{pegaApelidoLinha}!CSV@{CSV}}
+\doxysubsubsection{\texorpdfstring{pegaApelidoLinha()}{pegaApelidoLinha()}}
+{\footnotesize\ttfamily \label{class_c_s_v_a6e71ae55e87fef1c66ac875e452a4dce} 
+std\+::string CSV\+::pega\+Apelido\+Linha (\begin{DoxyParamCaption}\item[{std\+::string}]{linha}{}\end{DoxyParamCaption})}
+
+
+
+Lê o apelido de uma linha do arquivo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & Linha que será lida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o apelido da linha. 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/helpers/\mbox{\hyperlink{_c_s_v_8hpp}{CSV.\+hpp}}\end{DoxyCompactItemize}

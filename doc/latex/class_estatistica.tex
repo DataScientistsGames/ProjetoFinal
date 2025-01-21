@@ -1,0 +1,185 @@
+\doxysection{Referência à classe Estatistica}
+\hypertarget{class_estatistica}{}\label{class_estatistica}\index{Estatistica@{Estatistica}}
+
+
+Classe estática, para calcular as estatisticas do jogador.  
+
+
+
+
+{\ttfamily \#include $<$Estatistica.\+hpp$>$}
+
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_estatistica_a1fe28a278c4eac13338abedb573b97c2}{calcula\+Estatisticas\+Jogador}} (std\+::string linha\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Pega as estatísticas de um jogador existente. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_estatistica_ad360da992476cdfad77d6a03142c0c2a}{media}} (std\+::vector$<$ int $>$ valores)
+\begin{DoxyCompactList}\small\item\em Calcula a média de um jogador. \end{DoxyCompactList}\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{class_estatistica_a111732f2947e735030f8beda56623d12}{vies}} (std\+::string apelido\+\_\+jogador, char jogo)
+\begin{DoxyCompactList}\small\item\em Calcula o viés, chamandos os métodos de leitura do arquivo e pegando os dados. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_estatistica_a0bb9c186c2a43aa0622e4f789ecd0231}{proporcao}} (std\+::vector$<$ double $>$ valores)
+\begin{DoxyCompactList}\small\item\em Calcula a proporção entre dois doubles. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_estatistica_aeaf0312a611df5f81a4b63ebbf8b4a52}{pega\+Apelido}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Pega da linha o apelido do jogador. \end{DoxyCompactList}\item 
+static char \mbox{\hyperlink{class_estatistica_a4f0b44d3cb0d9f5d5d900574c41836c2}{pega\+Jogo}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Pega da linha o jogo referente a partida. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_estatistica_ab9fadebdc6131f97b0ee32df63f09602}{pega\+Vies}} (std\+::string linha, char direcao)
+\begin{DoxyCompactList}\small\item\em Pega o Viés da linha de partidas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe estática, para calcular as estatisticas do jogador. 
+
+Classe interamente nova, pensada para ser um atributo novo para o sistema para facilitar vizualização dos dados. 
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_estatistica_a1fe28a278c4eac13338abedb573b97c2}\index{Estatistica@{Estatistica}!calculaEstatisticasJogador@{calculaEstatisticasJogador}}
+\index{calculaEstatisticasJogador@{calculaEstatisticasJogador}!Estatistica@{Estatistica}}
+\doxysubsubsection{\texorpdfstring{calculaEstatisticasJogador()}{calculaEstatisticasJogador()}}
+{\footnotesize\ttfamily \label{class_estatistica_a1fe28a278c4eac13338abedb573b97c2} 
+static void Estatistica\+::calcula\+Estatisticas\+Jogador (\begin{DoxyParamCaption}\item[{std\+::string}]{linha\+\_\+jogador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pega as estatísticas de um jogador existente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha\+\_\+jogador} & Dados do jogador para ser criado seu objeto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Não há return
+\end{DoxyReturn}
+Exemplo de print\+: \begin{DoxyVerb} Média de vitórias: 11.3333
+ Média de derrotas: 13.3333
+ Viés Jogador Velha: 0.27 na direção X e 0.18 na direção Y.
+ Viés Jogador Reversi: 0.00 na direção X e 0.00 na direção Y.
+ Viés Jogador Lig4: -0.29 na direção X e 0.00 na direção Y.
+ Proporcao de Vitórias Velha: 0.44
+ Proporcao de Vitórias Reversi: 0.48
+ Proporcao de Vitórias Lig4: 0.46
+\end{DoxyVerb}
+ \Hypertarget{class_estatistica_ad360da992476cdfad77d6a03142c0c2a}\index{Estatistica@{Estatistica}!media@{media}}
+\index{media@{media}!Estatistica@{Estatistica}}
+\doxysubsubsection{\texorpdfstring{media()}{media()}}
+{\footnotesize\ttfamily \label{class_estatistica_ad360da992476cdfad77d6a03142c0c2a} 
+static double Estatistica\+::media (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{valores}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calcula a média de um jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valores} & valores a serem calculados alguma média. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a média. 
+\end{DoxyReturn}
+\Hypertarget{class_estatistica_aeaf0312a611df5f81a4b63ebbf8b4a52}\index{Estatistica@{Estatistica}!pegaApelido@{pegaApelido}}
+\index{pegaApelido@{pegaApelido}!Estatistica@{Estatistica}}
+\doxysubsubsection{\texorpdfstring{pegaApelido()}{pegaApelido()}}
+{\footnotesize\ttfamily \label{class_estatistica_aeaf0312a611df5f81a4b63ebbf8b4a52} 
+static std\+::string Estatistica\+::pega\+Apelido (\begin{DoxyParamCaption}\item[{std\+::string}]{linha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pega da linha o apelido do jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & Dados de uma linha do arquivo, partida.\+csv ou jogadores.\+csv. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o apelido. 
+\end{DoxyReturn}
+\Hypertarget{class_estatistica_a4f0b44d3cb0d9f5d5d900574c41836c2}\index{Estatistica@{Estatistica}!pegaJogo@{pegaJogo}}
+\index{pegaJogo@{pegaJogo}!Estatistica@{Estatistica}}
+\doxysubsubsection{\texorpdfstring{pegaJogo()}{pegaJogo()}}
+{\footnotesize\ttfamily \label{class_estatistica_a4f0b44d3cb0d9f5d5d900574c41836c2} 
+static char Estatistica\+::pega\+Jogo (\begin{DoxyParamCaption}\item[{std\+::string}]{linha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pega da linha o jogo referente a partida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & Dados de uma linha do arquivo, partida.\+csv. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o Jogo. 
+\end{DoxyReturn}
+\Hypertarget{class_estatistica_ab9fadebdc6131f97b0ee32df63f09602}\index{Estatistica@{Estatistica}!pegaVies@{pegaVies}}
+\index{pegaVies@{pegaVies}!Estatistica@{Estatistica}}
+\doxysubsubsection{\texorpdfstring{pegaVies()}{pegaVies()}}
+{\footnotesize\ttfamily \label{class_estatistica_ab9fadebdc6131f97b0ee32df63f09602} 
+static int Estatistica\+::pega\+Vies (\begin{DoxyParamCaption}\item[{std\+::string}]{linha}{, }\item[{char}]{direcao}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pega o Viés da linha de partidas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & A linha a qual será retirada os vies. \\
+\hline
+{\em direcao} & A direção cartesiana desejada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o resultado do vies 
+\end{DoxyReturn}
+\Hypertarget{class_estatistica_a0bb9c186c2a43aa0622e4f789ecd0231}\index{Estatistica@{Estatistica}!proporcao@{proporcao}}
+\index{proporcao@{proporcao}!Estatistica@{Estatistica}}
+\doxysubsubsection{\texorpdfstring{proporcao()}{proporcao()}}
+{\footnotesize\ttfamily \label{class_estatistica_a0bb9c186c2a43aa0622e4f789ecd0231} 
+static double Estatistica\+::proporcao (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{valores}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calcula a proporção entre dois doubles. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valores} & Vetor que contêm os doubles a serem calculados. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a proporção do item 0 em relação ao total. 
+\end{DoxyReturn}
+\Hypertarget{class_estatistica_a111732f2947e735030f8beda56623d12}\index{Estatistica@{Estatistica}!vies@{vies}}
+\index{vies@{vies}!Estatistica@{Estatistica}}
+\doxysubsubsection{\texorpdfstring{vies()}{vies()}}
+{\footnotesize\ttfamily \label{class_estatistica_a111732f2947e735030f8beda56623d12} 
+static std\+::vector$<$ double $>$ Estatistica\+::vies (\begin{DoxyParamCaption}\item[{std\+::string}]{apelido\+\_\+jogador}{, }\item[{char}]{jogo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calcula o viés, chamandos os métodos de leitura do arquivo e pegando os dados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em apelido\+\_\+jogador} & Apelido do jogador que será lido. \\
+\hline
+{\em jogo} & Qual o jogo é desejado o viés. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o resultado da operação, como um vetor. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Em} & caso de falha, a exceção parte do \doxylink{class_c_s_v}{CSV} até a main do programa. \\
+\hline
+\end{DoxyExceptions}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_estatistica_8hpp}{Estatistica.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,98 @@
+\doxysection{Referência à classe Cout\+Comuns}
+\hypertarget{class_cout_comuns}{}\label{class_cout_comuns}\index{CoutComuns@{CoutComuns}}
+
+
+classe auxiliadora com funções base de manipulação do terminal  
+
+
+
+
+{\ttfamily \#include $<$Cout\+Comuns.\+hpp$>$}
+
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cout_comuns_adf14f3cbf8734bf78f85f0176b3696a2}{Cout\+Comuns}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_cout_comuns_ac690d42ad204c148b7930263af869a20}{display\+Comandos}} ()
+\begin{DoxyCompactList}\small\item\em Método que imprime os comandos do menu do sistema. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_cout_comuns_afb6532707ba43a491a7bae8faabc0ab8}{espere\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em Método que espera uma entrada de \textquotesingle{}ENTER\textquotesingle{} para que continue o programa. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_cout_comuns_ae068b3bcad4733cfa962baeeb62184a7}{limpar\+Cmd}} ()
+\begin{DoxyCompactList}\small\item\em Método para limpar o terminal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_cout_comuns_af928a87fb3e6f8ca3aeac2ed5afd8079}{limpa\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Método que limpa o buffer de entrada caso haja algum lixo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+classe auxiliadora com funções base de manipulação do terminal 
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{class_cout_comuns_adf14f3cbf8734bf78f85f0176b3696a2}\index{CoutComuns@{CoutComuns}!CoutComuns@{CoutComuns}}
+\index{CoutComuns@{CoutComuns}!CoutComuns@{CoutComuns}}
+\doxysubsubsection{\texorpdfstring{CoutComuns()}{CoutComuns()}}
+{\footnotesize\ttfamily \label{class_cout_comuns_adf14f3cbf8734bf78f85f0176b3696a2} 
+Cout\+Comuns\+::\+Cout\+Comuns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_cout_comuns_ac690d42ad204c148b7930263af869a20}\index{CoutComuns@{CoutComuns}!displayComandos@{displayComandos}}
+\index{displayComandos@{displayComandos}!CoutComuns@{CoutComuns}}
+\doxysubsubsection{\texorpdfstring{displayComandos()}{displayComandos()}}
+{\footnotesize\ttfamily \label{class_cout_comuns_ac690d42ad204c148b7930263af869a20} 
+static void Cout\+Comuns\+::display\+Comandos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método que imprime os comandos do menu do sistema. 
+
+Exemplo de print\+: \begin{DoxyVerb}----------------[C O M A N D O S]----------------
+  CJ <Apelido> <Nome> - Cadastrar Jogador
+  RJ <Apelido> - Remover Jogador
+  LJ [A|N] - Listar Jogador por Apelido ou Nome
+  EP [R|L|V] <Apelido Jogador 1> <Apelido Jogador 2> - Executar Partida de Reversi, Lig4 ou Jogo da Velha
+  EST <Apelido> - Calcula e mostra as estatísticas de um Jogador
+  FS - Finalizar Sistema
+-------------------------------------------------
+\end{DoxyVerb}
+ \Hypertarget{class_cout_comuns_afb6532707ba43a491a7bae8faabc0ab8}\index{CoutComuns@{CoutComuns}!espereEnter@{espereEnter}}
+\index{espereEnter@{espereEnter}!CoutComuns@{CoutComuns}}
+\doxysubsubsection{\texorpdfstring{espereEnter()}{espereEnter()}}
+{\footnotesize\ttfamily \label{class_cout_comuns_afb6532707ba43a491a7bae8faabc0ab8} 
+static void Cout\+Comuns\+::espere\+Enter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método que espera uma entrada de \textquotesingle{}ENTER\textquotesingle{} para que continue o programa. 
+
+Exemplo de print\+: \begin{DoxyVerb}Pressione Enter para continuar...
+\end{DoxyVerb}
+ \Hypertarget{class_cout_comuns_af928a87fb3e6f8ca3aeac2ed5afd8079}\index{CoutComuns@{CoutComuns}!limpaBuffer@{limpaBuffer}}
+\index{limpaBuffer@{limpaBuffer}!CoutComuns@{CoutComuns}}
+\doxysubsubsection{\texorpdfstring{limpaBuffer()}{limpaBuffer()}}
+{\footnotesize\ttfamily \label{class_cout_comuns_af928a87fb3e6f8ca3aeac2ed5afd8079} 
+static void Cout\+Comuns\+::limpa\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método que limpa o buffer de entrada caso haja algum lixo. 
+
+\Hypertarget{class_cout_comuns_ae068b3bcad4733cfa962baeeb62184a7}\index{CoutComuns@{CoutComuns}!limparCmd@{limparCmd}}
+\index{limparCmd@{limparCmd}!CoutComuns@{CoutComuns}}
+\doxysubsubsection{\texorpdfstring{limparCmd()}{limparCmd()}}
+{\footnotesize\ttfamily \label{class_cout_comuns_ae068b3bcad4733cfa962baeeb62184a7} 
+static void Cout\+Comuns\+::limpar\+Cmd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para limpar o terminal. 
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/helpers/\mbox{\hyperlink{_cout_comuns_8hpp}{Cout\+Comuns.\+hpp}}\end{DoxyCompactItemize}

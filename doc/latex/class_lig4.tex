@@ -1,0 +1,129 @@
+\doxysection{Referência à classe Lig4}
+\hypertarget{class_lig4}{}\label{class_lig4}\index{Lig4@{Lig4}}
+
+
+{\ttfamily \#include $<$Lig4.\+hpp$>$}
+
+Diagrama de heranças da classe Lig4\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lig4}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lig4_adffdeddf3d20829f752913801554126d}{Lig4}} ()
+\item 
+\mbox{\hyperlink{class_lig4_add1bf78f99caaf523113e7f4cf843744}{\texorpdfstring{$\sim$}{\string~}\+Lig4}} ()
+\item 
+int \mbox{\hyperlink{class_lig4_acf870058cc2b7dd98874860b1d15107b}{finalizar\+Jogo}} () override final
+\item 
+bool \mbox{\hyperlink{class_lig4_a28576441387a55d3b7f180df34782def}{posicionar\+Peca}} (int, int, int) override final
+\item 
+void \mbox{\hyperlink{class_lig4_a2fc274f519e3353d7fbcda39f9d739f7}{imprime\+Borda\+Vertical}} () override final
+\begin{DoxyCompactList}\small\item\em Imprime uma linha de caracteres do comprimento do tabuleiro impresso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lig4_abb9dc539eb010ece69226c6609639b16}{imprime\+Tabuleiro}} () override final
+\begin{DoxyCompactList}\small\item\em Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas bordas verticais. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}{Tabuleiro}} (int x, int y, std\+::string string\+\_\+player1, std\+::string string\+\_\+player2)
+\item 
+\mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\texorpdfstring{$\sim$}{\string~}\+Tabuleiro}} ()
+\item 
+virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizar\+Peca}} (int x, int y)
+\item 
+\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{string\+Para\+Casa}} (const int num\+\_\+jogador)
+\item 
+\mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calcula\+Vies}} (int jogador)
+\begin{DoxyCompactList}\small\item\em Calcula o viés nas posições jogadas pelo jogador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tabuleiro_a2a6a0618a0885164995d4b99aca6c759}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o tipo do tabuleiro, ou seja, o jogo que está sendo jogado. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tabuleiro_a7e5ca9f37811bb47bdbb7e3860c1d70e}{tem\+Jogada\+Valida}} (\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} jogador)
+\begin{DoxyCompactList}\small\item\em Checa se o jogador ainda pode fazer alguma jogada válida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_tabuleiro_acf9f7f3fe0ad78a56223ea02fe073454}{\+\_\+board}}
+\item 
+int \mbox{\hyperlink{class_tabuleiro_ad88c2ea8b54f0b6578967a3705d97fe9}{\+\_\+x}}
+\item 
+int \mbox{\hyperlink{class_tabuleiro_a7170756176608664e90ea9b171023e04}{\+\_\+y}}
+\item 
+int \mbox{\hyperlink{class_tabuleiro_a18cff9be1fe2214064db82c60d95a201}{\+\_\+tipo}}
+\item 
+std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911}{\+\_\+string\+\_\+pecas}} \mbox{[}3\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{class_lig4_adffdeddf3d20829f752913801554126d}\index{Lig4@{Lig4}!Lig4@{Lig4}}
+\index{Lig4@{Lig4}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{Lig4()}{Lig4()}}
+{\footnotesize\ttfamily \label{class_lig4_adffdeddf3d20829f752913801554126d} 
+Lig4\+::\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_lig4_add1bf78f99caaf523113e7f4cf843744}\index{Lig4@{Lig4}!````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}}
+\index{````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Lig4()}{\string~Lig4()}}
+{\footnotesize\ttfamily \label{class_lig4_add1bf78f99caaf523113e7f4cf843744} 
+Lig4\+::\texorpdfstring{$\sim$}{\string~}\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_lig4_acf870058cc2b7dd98874860b1d15107b}\index{Lig4@{Lig4}!finalizarJogo@{finalizarJogo}}
+\index{finalizarJogo@{finalizarJogo}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{finalizarJogo()}{finalizarJogo()}}
+{\footnotesize\ttfamily \label{class_lig4_acf870058cc2b7dd98874860b1d15107b} 
+int Lig4\+::finalizar\+Jogo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementado de \mbox{\hyperlink{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}{Tabuleiro}}.
+
+\Hypertarget{class_lig4_a2fc274f519e3353d7fbcda39f9d739f7}\index{Lig4@{Lig4}!imprimeBordaVertical@{imprimeBordaVertical}}
+\index{imprimeBordaVertical@{imprimeBordaVertical}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{imprimeBordaVertical()}{imprimeBordaVertical()}}
+{\footnotesize\ttfamily \label{class_lig4_a2fc274f519e3353d7fbcda39f9d739f7} 
+void Lig4\+::imprime\+Borda\+Vertical (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Imprime uma linha de caracteres do comprimento do tabuleiro impresso. 
+
+
+
+Reimplementado de \mbox{\hyperlink{class_tabuleiro_a541651c7991ffa99680ca8439b34f350}{Tabuleiro}}.
+
+\Hypertarget{class_lig4_abb9dc539eb010ece69226c6609639b16}\index{Lig4@{Lig4}!imprimeTabuleiro@{imprimeTabuleiro}}
+\index{imprimeTabuleiro@{imprimeTabuleiro}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{imprimeTabuleiro()}{imprimeTabuleiro()}}
+{\footnotesize\ttfamily \label{class_lig4_abb9dc539eb010ece69226c6609639b16} 
+void Lig4\+::imprime\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas bordas verticais. 
+
+
+
+Reimplementado de \mbox{\hyperlink{class_tabuleiro_a4ce5aa160c82779f953edd68b7b06be6}{Tabuleiro}}.
+
+\Hypertarget{class_lig4_a28576441387a55d3b7f180df34782def}\index{Lig4@{Lig4}!posicionarPeca@{posicionarPeca}}
+\index{posicionarPeca@{posicionarPeca}!Lig4@{Lig4}}
+\doxysubsubsection{\texorpdfstring{posicionarPeca()}{posicionarPeca()}}
+{\footnotesize\ttfamily \label{class_lig4_a28576441387a55d3b7f180df34782def} 
+bool Lig4\+::posicionar\+Peca (\begin{DoxyParamCaption}\item[{int}]{}{, }\item[{int}]{}{, }\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplementado de \mbox{\hyperlink{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74}{Tabuleiro}}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_lig4_8hpp}{Lig4.\+hpp}}\end{DoxyCompactItemize}

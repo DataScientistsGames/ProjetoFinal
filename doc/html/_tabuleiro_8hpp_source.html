@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto Final: Código-Fonte de include/Tabuleiro.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Projeto Final
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_tabuleiro_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Tabuleiro.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_tabuleiro_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TABULEIRO_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TABULEIRO_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="_tabuleiro_8hpp.html#af03a86481f6f589d049e708d7a28dbd7">    4</a></span><span class="preprocessor">#define CHAR_BORDA_COLUNA &#39;|&#39;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="_tabuleiro_8hpp.html#af02bdee8bede517b0144831a440f0d23">    5</a></span><span class="preprocessor">#define CHAR_BORDA_LINHA &#39;-&#39;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_casa_8hpp.html">Casa.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_posicao_cartesiana_8hpp.html">PosicaoCartesiana.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_tabuleiro.html">   11</a></span><span class="keyword">class </span><a class="code hl_function" href="class_tabuleiro.html#a628b277f8595422d9b705bc66089e2c5">Tabuleiro</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#acf9f7f3fe0ad78a56223ea02fe073454">   14</a></span>    <a class="code hl_enumeration" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> **<a class="code hl_variable" href="class_tabuleiro.html#acf9f7f3fe0ad78a56223ea02fe073454">_board</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#ad88c2ea8b54f0b6578967a3705d97fe9">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_tabuleiro.html#ad88c2ea8b54f0b6578967a3705d97fe9">_x</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a7170756176608664e90ea9b171023e04">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_tabuleiro.html#a7170756176608664e90ea9b171023e04">_y</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a18cff9be1fe2214064db82c60d95a201">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_tabuleiro.html#a18cff9be1fe2214064db82c60d95a201">_tipo</a>; <span class="comment">// 0 - velha, 1 - reversi, 2 - lig4</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#ac8ea89cfdf7b39bbeb04c52932394911">   18</a></span>    std::string <a class="code hl_variable" href="class_tabuleiro.html#ac8ea89cfdf7b39bbeb04c52932394911">_string_pecas</a>[3];</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a628b277f8595422d9b705bc66089e2c5">   21</a></span>    <a class="code hl_function" href="class_tabuleiro.html#a628b277f8595422d9b705bc66089e2c5">Tabuleiro</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, std::string string_player1, std::string string_player2);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a25dfc7efac326aff2cdb7dd8a3b8b084">   22</a></span>    <a class="code hl_function" href="class_tabuleiro.html#a25dfc7efac326aff2cdb7dd8a3b8b084">~Tabuleiro</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#ac988a22a2dc0a37d126d0a87cc69ee74">   24</a></span>    <span class="keywordtype">bool</span> <span class="keyword">virtual</span> <a class="code hl_function" href="class_tabuleiro.html#ac988a22a2dc0a37d126d0a87cc69ee74">posicionarPeca</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> num_jogador = 0);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a9497c30dd9c74bc482768bc5c38c3592">   25</a></span>    <span class="keywordtype">int</span> <span class="keyword">virtual</span> <a class="code hl_function" href="class_tabuleiro.html#a9497c30dd9c74bc482768bc5c38c3592">finalizarJogo</a>(); <span class="comment">// 0 - continua, 1 - jogador 1 venceu, 2 - jogador 2 venceu, 3 - empatou</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a59c318eba3a0287c654d2df36c68be5e">   26</a></span>    <a class="code hl_enumeration" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> <span class="keyword">virtual</span> <a class="code hl_function" href="class_tabuleiro.html#a59c318eba3a0287c654d2df36c68be5e">localizarPeca</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#aff726f46b3b2a22b58a82fa57edaa3e8">   28</a></span>    <a class="code hl_enumeration" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> <a class="code hl_function" href="class_tabuleiro.html#aff726f46b3b2a22b58a82fa57edaa3e8">stringParaCasa</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> num_jogador);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a127e162d5581da2ff718d2fb9f32e434">   35</a></span>    <a class="code hl_class" href="class_posicao_cartesiana.html">PosicaoCartesiana</a> <a class="code hl_function" href="class_tabuleiro.html#a127e162d5581da2ff718d2fb9f32e434">calculaVies</a>(<span class="keywordtype">int</span> jogador);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a2a6a0618a0885164995d4b99aca6c759">   41</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_tabuleiro.html#a2a6a0618a0885164995d4b99aca6c759">getTipo</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a541651c7991ffa99680ca8439b34f350">   46</a></span>    <span class="keywordtype">void</span> <span class="keyword">virtual</span> <a class="code hl_function" href="class_tabuleiro.html#a541651c7991ffa99680ca8439b34f350">imprimeBordaVertical</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a4ce5aa160c82779f953edd68b7b06be6">   51</a></span>    <span class="keywordtype">void</span> <span class="keyword">virtual</span> <a class="code hl_function" href="class_tabuleiro.html#a4ce5aa160c82779f953edd68b7b06be6">imprimeTabuleiro</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_tabuleiro.html#a7e5ca9f37811bb47bdbb7e3860c1d70e">   59</a></span>    <span class="keywordtype">bool</span> <span class="keyword">virtual</span> <a class="code hl_function" href="class_tabuleiro.html#a7e5ca9f37811bb47bdbb7e3860c1d70e">temJogadaValida</a>(<a class="code hl_enumeration" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> jogador);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_casa_8hpp_html"><div class="ttname"><a href="_casa_8hpp.html">Casa.hpp</a></div></div>
+<div class="ttc" id="a_casa_8hpp_html_a26612ebdee6afe7507bb02287b313752"><div class="ttname"><a href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a></div><div class="ttdeci">Casa</div><div class="ttdef"><b>Definição</b> Casa.hpp:8</div></div>
+<div class="ttc" id="a_posicao_cartesiana_8hpp_html"><div class="ttname"><a href="_posicao_cartesiana_8hpp.html">PosicaoCartesiana.hpp</a></div></div>
+<div class="ttc" id="aclass_posicao_cartesiana_html"><div class="ttname"><a href="class_posicao_cartesiana.html">PosicaoCartesiana</a></div><div class="ttdef"><b>Definição</b> PosicaoCartesiana.hpp:5</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a127e162d5581da2ff718d2fb9f32e434"><div class="ttname"><a href="class_tabuleiro.html#a127e162d5581da2ff718d2fb9f32e434">Tabuleiro::calculaVies</a></div><div class="ttdeci">PosicaoCartesiana calculaVies(int jogador)</div><div class="ttdoc">Calcula o viés nas posições jogadas pelo jogador.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a18cff9be1fe2214064db82c60d95a201"><div class="ttname"><a href="class_tabuleiro.html#a18cff9be1fe2214064db82c60d95a201">Tabuleiro::_tipo</a></div><div class="ttdeci">int _tipo</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:17</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a25dfc7efac326aff2cdb7dd8a3b8b084"><div class="ttname"><a href="class_tabuleiro.html#a25dfc7efac326aff2cdb7dd8a3b8b084">Tabuleiro::~Tabuleiro</a></div><div class="ttdeci">~Tabuleiro()</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a2a6a0618a0885164995d4b99aca6c759"><div class="ttname"><a href="class_tabuleiro.html#a2a6a0618a0885164995d4b99aca6c759">Tabuleiro::getTipo</a></div><div class="ttdeci">int getTipo()</div><div class="ttdoc">Retorna o tipo do tabuleiro, ou seja, o jogo que está sendo jogado.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a4ce5aa160c82779f953edd68b7b06be6"><div class="ttname"><a href="class_tabuleiro.html#a4ce5aa160c82779f953edd68b7b06be6">Tabuleiro::imprimeTabuleiro</a></div><div class="ttdeci">virtual void imprimeTabuleiro()</div><div class="ttdoc">Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas bordas verticais.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a541651c7991ffa99680ca8439b34f350"><div class="ttname"><a href="class_tabuleiro.html#a541651c7991ffa99680ca8439b34f350">Tabuleiro::imprimeBordaVertical</a></div><div class="ttdeci">virtual void imprimeBordaVertical()</div><div class="ttdoc">Imprime uma linha de caracteres do comprimento do tabuleiro impresso.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a59c318eba3a0287c654d2df36c68be5e"><div class="ttname"><a href="class_tabuleiro.html#a59c318eba3a0287c654d2df36c68be5e">Tabuleiro::localizarPeca</a></div><div class="ttdeci">virtual Casa localizarPeca(int x, int y)</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a628b277f8595422d9b705bc66089e2c5"><div class="ttname"><a href="class_tabuleiro.html#a628b277f8595422d9b705bc66089e2c5">Tabuleiro::Tabuleiro</a></div><div class="ttdeci">Tabuleiro(int x, int y, std::string string_player1, std::string string_player2)</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a7170756176608664e90ea9b171023e04"><div class="ttname"><a href="class_tabuleiro.html#a7170756176608664e90ea9b171023e04">Tabuleiro::_y</a></div><div class="ttdeci">int _y</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:16</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a7e5ca9f37811bb47bdbb7e3860c1d70e"><div class="ttname"><a href="class_tabuleiro.html#a7e5ca9f37811bb47bdbb7e3860c1d70e">Tabuleiro::temJogadaValida</a></div><div class="ttdeci">virtual bool temJogadaValida(Casa jogador)</div><div class="ttdoc">Checa se o jogador ainda pode fazer alguma jogada válida.</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_a9497c30dd9c74bc482768bc5c38c3592"><div class="ttname"><a href="class_tabuleiro.html#a9497c30dd9c74bc482768bc5c38c3592">Tabuleiro::finalizarJogo</a></div><div class="ttdeci">virtual int finalizarJogo()</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_ac8ea89cfdf7b39bbeb04c52932394911"><div class="ttname"><a href="class_tabuleiro.html#ac8ea89cfdf7b39bbeb04c52932394911">Tabuleiro::_string_pecas</a></div><div class="ttdeci">std::string _string_pecas[3]</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:18</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_ac988a22a2dc0a37d126d0a87cc69ee74"><div class="ttname"><a href="class_tabuleiro.html#ac988a22a2dc0a37d126d0a87cc69ee74">Tabuleiro::posicionarPeca</a></div><div class="ttdeci">virtual bool posicionarPeca(int x, int y, int num_jogador=0)</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_acf9f7f3fe0ad78a56223ea02fe073454"><div class="ttname"><a href="class_tabuleiro.html#acf9f7f3fe0ad78a56223ea02fe073454">Tabuleiro::_board</a></div><div class="ttdeci">Casa ** _board</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:14</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_ad88c2ea8b54f0b6578967a3705d97fe9"><div class="ttname"><a href="class_tabuleiro.html#ad88c2ea8b54f0b6578967a3705d97fe9">Tabuleiro::_x</a></div><div class="ttdeci">int _x</div><div class="ttdef"><b>Definição</b> Tabuleiro.hpp:15</div></div>
+<div class="ttc" id="aclass_tabuleiro_html_aff726f46b3b2a22b58a82fa57edaa3e8"><div class="ttname"><a href="class_tabuleiro.html#aff726f46b3b2a22b58a82fa57edaa3e8">Tabuleiro::stringParaCasa</a></div><div class="ttdeci">Casa stringParaCasa(const int num_jogador)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="_tabuleiro_8hpp.html">Tabuleiro.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
