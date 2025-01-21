@@ -128,14 +128,14 @@ bool Reversi::jogadaValida(int x, int y, Casa jogador, bool posicionar = false)
                                     {
                                         for (int i = x, j = y; i <= i_x && j <= i_y; i++, j++)
                                         {
-                                            this->_board[i][j];
+                                            this->_board[i][j] = jogador;
                                         }
                                     }
                                     else // e para esquerda
                                     {
                                         for (int i = x, j = y; i <= i_x && j >= i_y; i++, j--)
                                         {
-                                            this->_board[i][j];
+                                            this->_board[i][j] = jogador;
                                         }
                                     }
                                 }
@@ -145,14 +145,14 @@ bool Reversi::jogadaValida(int x, int y, Casa jogador, bool posicionar = false)
                                     {
                                         for (int i = x, j = y; i >= i_x && j <= i_y; i--, j++)
                                         {
-                                            this->_board[i][j];
+                                            this->_board[i][j] = jogador;
                                         }
                                     }
                                     else // e para esquerda
                                     {
                                         for (int i = x, j = y; i >= i_x && j >= i_y; i--, j--)
                                         {
-                                            this->_board[i][j];
+                                            this->_board[i][j] = jogador;
                                         }
                                     }
                                 }
