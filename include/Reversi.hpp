@@ -11,8 +11,8 @@ public:
     Reversi();
     ~Reversi();
 
-    int finalizarJogo() override final;                // acho que n precisa de override e final junto, só override já funciona
-    bool posicionarPeca(int, int, int) override final; // parece que 'override final' é redundante
+    int finalizarJogo() override final;
+    bool posicionarPeca(int, int, int) override final;
 
     // metodos exclusivo do reversi por causa da complexidade das regras
     bool temJogadaValida(Casa);
