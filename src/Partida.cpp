@@ -47,6 +47,14 @@ void Partida::leitorJogada(int num_jogador)
         cor_jogador.append(VERM);
 
     cor_jogador.append(std::to_string(num_jogador));
+
+    cor_jogador += '-';
+
+    if (num_jogador == 1)
+        cor_jogador.append(this->_player1->getApelido());
+    else
+        cor_jogador.append(this->_player2->getApelido());
+
     cor_jogador.append(FIMCOR);
 
     bool valido = false;
@@ -104,8 +112,8 @@ void Partida::finalizarPartida(int vencedor)
 
     else if (vencedor == 2)
     {
-        std::cout << this->_player2->getApelido() << " foi o vencedor!" << std::endl;
-        std::cout << this->_player1->getApelido() << " foi o derrotado." << std::endl;
+        std::cout << VERD << this->_player2->getApelido() << " foi o vencedor!" << FIMCOR << std::endl;
+        std::cout << MAGE << this->_player1->getApelido() << " foi o derrotado." << FIMCOR << std::endl;
         this->atualizaDadosJogador(std::move(this->_player2), std::move(this->_player1));
     }
     else // empate

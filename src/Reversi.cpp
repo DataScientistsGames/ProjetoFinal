@@ -35,9 +35,11 @@ Reversi::Reversi() : Tabuleiro(8, 8, STRING_JOGADOR_1, STRING_JOGADOR_2)
 // verifica se uma jogada é valida para um jogador na posicao x, y do tabuleiro
 bool Reversi::jogadaValida(int x, int y, Casa jogador, bool posicionar = false)
 {
-    if ((x < 0 && x >= this->_x) && (y < 0 && y >= this->_y) && (this->_board[x][y] != VAZIO))
+    bool resposta = false;
+
+    if ((x < 0 && x >= this->_x) || (y < 0 && y >= this->_y) || (this->_board[x][y] != VAZIO))
     {
-        return false; // posicao ocupada ou fora do tabuleiro
+        return resposta; // posicao ocupada ou fora do tabuleiro - resposta false
     }
 
     // direcoes possíveis para percorrer o tabuleiro e validar a jogada
@@ -160,7 +162,7 @@ bool Reversi::jogadaValida(int x, int y, Casa jogador, bool posicionar = false)
                         }
                     }
 
-                    return true; // jogada valida, pois precisa da condicao POCICAO_JOGADA -> OPONENTE -> JOGADOR em qualquer direcao
+                    resposta = true; // encontrou uma jogada valida, pois precisa da condicao POCICAO_JOGADA -> OPONENTE -> JOGADOR em qualquer direcao
                 }
                 break;
             }
@@ -170,7 +172,7 @@ bool Reversi::jogadaValida(int x, int y, Casa jogador, bool posicionar = false)
         }
     }
 
-    return false; // nenhuma jogada valida encontrada
+    return resposta; // retorna a resposta se false - nenhuma jogada valida encontrada, se true - alguma jogada valida
 }
 
 // verifica se um jogador tem alguma jogada valida
