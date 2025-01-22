@@ -2,6 +2,11 @@
 \hypertarget{class_lig4}{}\label{class_lig4}\index{Lig4@{Lig4}}
 
 
+Classe que representa um tabuleiro de Ligue 4.  
+
+
+
+
 {\ttfamily \#include $<$Lig4.\+hpp$>$}
 
 Diagrama de heranças da classe Lig4\begin{figure}[H]
@@ -14,13 +19,11 @@ Diagrama de heranças da classe Lig4\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_lig4_adffdeddf3d20829f752913801554126d}{Lig4}} ()
-\item 
-\mbox{\hyperlink{class_lig4_add1bf78f99caaf523113e7f4cf843744}{\texorpdfstring{$\sim$}{\string~}\+Lig4}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor do tabuleiro de Ligue 4. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_lig4_acf870058cc2b7dd98874860b1d15107b}{finalizar\+Jogo}} () override final
-\item 
+\begin{DoxyCompactList}\small\item\em Avalia se o tabuleiro atingiu um estado de finalização. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_lig4_a28576441387a55d3b7f180df34782def}{posicionar\+Peca}} (int, int, int) override final
-\item 
+\begin{DoxyCompactList}\small\item\em Posiciona uma peça de um jogador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_lig4_a2fc274f519e3353d7fbcda39f9d739f7}{imprime\+Borda\+Vertical}} () override final
 \begin{DoxyCompactList}\small\item\em Imprime uma linha de caracteres do comprimento do tabuleiro impresso. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_lig4_abb9dc539eb010ece69226c6609639b16}{imprime\+Tabuleiro}} () override final
@@ -29,11 +32,11 @@ void \mbox{\hyperlink{class_lig4_abb9dc539eb010ece69226c6609639b16}{imprime\+Tab
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}{Tabuleiro}} (int x, int y, std\+::string string\+\_\+player1, std\+::string string\+\_\+player2)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor base da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\texorpdfstring{$\sim$}{\string~}\+Tabuleiro}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destroi o objeto e libera a memória do quadro do tabuleiro. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizar\+Peca}} (int x, int y)
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna a casa correspondente à posição. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{string\+Para\+Casa}} (const int num\+\_\+jogador)
 \item 
 \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calcula\+Vies}} (int jogador)
@@ -58,6 +61,11 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Descrição detalhada}
+Classe que representa um tabuleiro de Ligue 4. 
+
+Essa classe herda as funções da classe genérica \doxylink{class_tabuleiro}{Tabuleiro} e especializa a avaliação da condição de finalização do tabuleiro, posicionamento das peças e a impreção da estética do tabuleiro. 
+
 \doxysubsection{Documentação dos Construtores \& Destrutor}
 \Hypertarget{class_lig4_adffdeddf3d20829f752913801554126d}\index{Lig4@{Lig4}!Lig4@{Lig4}}
 \index{Lig4@{Lig4}!Lig4@{Lig4}}
@@ -65,13 +73,11 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 {\footnotesize\ttfamily \label{class_lig4_adffdeddf3d20829f752913801554126d} 
 Lig4\+::\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_lig4_add1bf78f99caaf523113e7f4cf843744}\index{Lig4@{Lig4}!````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}}
-\index{````~Lig4@{\texorpdfstring{$\sim$}{\string~}Lig4}!Lig4@{Lig4}}
-\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Lig4()}{\string~Lig4()}}
-{\footnotesize\ttfamily \label{class_lig4_add1bf78f99caaf523113e7f4cf843744} 
-Lig4\+::\texorpdfstring{$\sim$}{\string~}\+Lig4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
+Construtor do tabuleiro de Ligue 4. 
+
+Constroi um tabuleiro 6 por 7 casas vazio. 
 
 \doxysubsection{Documentação das funções}
 \Hypertarget{class_lig4_acf870058cc2b7dd98874860b1d15107b}\index{Lig4@{Lig4}!finalizarJogo@{finalizarJogo}}
@@ -80,6 +86,13 @@ Lig4\+::\texorpdfstring{$\sim$}{\string~}\+Lig4 (\begin{DoxyParamCaption}{}{}\en
 {\footnotesize\ttfamily \label{class_lig4_acf870058cc2b7dd98874860b1d15107b} 
 int Lig4\+::finalizar\+Jogo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Avalia se o tabuleiro atingiu um estado de finalização. 
+
+O tabuleiro do Ligue 4, finaliza quando 4 peças de um jogador formam uma linha, coluna ou diagonal. \begin{DoxyReturn}{Retorna}
+Retorna 0 se o tabuleiro pode continuar a ser usado, retorna 1\texorpdfstring{$\vert$}{|}2 para o número do jogador vencedor ou retorna 3 para o empate. 
+\end{DoxyReturn}
 
 
 Reimplementado de \mbox{\hyperlink{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}{Tabuleiro}}.
@@ -120,7 +133,19 @@ bool Lig4\+::posicionar\+Peca (\begin{DoxyParamCaption}\item[{int}]{}{, }\item[{
 
 
 
-Reimplementado de \mbox{\hyperlink{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74}{Tabuleiro}}.
+Posiciona uma peça de um jogador. 
+
+Essa função posiciona as peças da coluna escolhida na última posição vazia. 
+\begin{DoxyParams}{Parâmetros}
+{\em y,Jogaor} & Coluna da posição e número correspondente ao jogador da jogada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se foi possível posicionar; retorna false se não. 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{class_tabuleiro_a97df3a84e52a6eedb1ecfe9ad3872811}{Tabuleiro}}.
 
 
 

@@ -26,7 +26,7 @@ Tabuleiro::~Tabuleiro()
 
 int Tabuleiro::finalizarJogo() { return 1; };
 
-bool Tabuleiro::posicionarPeca(int x, int y, int num_jogador = 0)
+bool Tabuleiro::posicionarPeca(int x, int y, int num_jogador)
 {
     if ((x >= 0 && x < this->_x) && (y >= 0 && y < this->_y) && (this->_board[x][y] == VAZIO))
     {

@@ -2,6 +2,11 @@
 \hypertarget{class_velha}{}\label{class_velha}\index{Velha@{Velha}}
 
 
+Classe que representa um tabuleiro de Jogo da \doxylink{class_velha}{Velha}.  
+
+
+
+
 {\ttfamily \#include $<$Velha.\+hpp$>$}
 
 Diagrama de heranças da classe Velha\begin{figure}[H]
@@ -14,24 +19,22 @@ Diagrama de heranças da classe Velha\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_velha_ab8ea9d95eddd38a7c7ca8d77dbe67af9}{Velha}} ()
-\item 
-\mbox{\hyperlink{class_velha_a7d207df9d99b3ebab54bd136490ff9c8}{\texorpdfstring{$\sim$}{\string~}\+Velha}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor do tabuleiro de Jogo da \doxylink{class_velha}{Velha}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_velha_a82c15d0f17207ae166e68aeb2582f313}{finalizar\+Jogo}} () override final
-\item 
+\begin{DoxyCompactList}\small\item\em Avalia se o tabuleiro atingiu um estado de finalização. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_velha_aa4e8fc7f3c46103e53deab36221103e8}{imprime\+Tabuleiro}} () override final
 \begin{DoxyCompactList}\small\item\em Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas bordas verticais. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros públicos herdados de \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}{Tabuleiro}} (int x, int y, std\+::string string\+\_\+player1, std\+::string string\+\_\+player2)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor base da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\texorpdfstring{$\sim$}{\string~}\+Tabuleiro}} ()
-\item 
-virtual bool \mbox{\hyperlink{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74}{posicionar\+Peca}} (int x, int y, int num\+\_\+jogador=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Destroi o objeto e libera a memória do quadro do tabuleiro. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tabuleiro_a97df3a84e52a6eedb1ecfe9ad3872811}{posicionar\+Peca}} (int x, int y, int num\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Posiciona uma peça de um jogador. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizar\+Peca}} (int x, int y)
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna a casa correspondente à posição. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{string\+Para\+Casa}} (const int num\+\_\+jogador)
 \item 
 \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calcula\+Vies}} (int jogador)
@@ -58,6 +61,11 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Descrição detalhada}
+Classe que representa um tabuleiro de Jogo da \doxylink{class_velha}{Velha}. 
+
+Essa classe herda as funções da classe genérica \doxylink{class_tabuleiro}{Tabuleiro} e especializa a avaliaçãoo da condição de finalização do tabuleiro. 
+
 \doxysubsection{Documentação dos Construtores \& Destrutor}
 \Hypertarget{class_velha_ab8ea9d95eddd38a7c7ca8d77dbe67af9}\index{Velha@{Velha}!Velha@{Velha}}
 \index{Velha@{Velha}!Velha@{Velha}}
@@ -65,13 +73,11 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 {\footnotesize\ttfamily \label{class_velha_ab8ea9d95eddd38a7c7ca8d77dbe67af9} 
 Velha\+::\+Velha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_velha_a7d207df9d99b3ebab54bd136490ff9c8}\index{Velha@{Velha}!````~Velha@{\texorpdfstring{$\sim$}{\string~}Velha}}
-\index{````~Velha@{\texorpdfstring{$\sim$}{\string~}Velha}!Velha@{Velha}}
-\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Velha()}{\string~Velha()}}
-{\footnotesize\ttfamily \label{class_velha_a7d207df9d99b3ebab54bd136490ff9c8} 
-Velha\+::\texorpdfstring{$\sim$}{\string~}\+Velha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
+Construtor do tabuleiro de Jogo da \doxylink{class_velha}{Velha}. 
+
+Constroi um tabuleiro 3 por 3 casas vazio. 
 
 \doxysubsection{Documentação das funções}
 \Hypertarget{class_velha_a82c15d0f17207ae166e68aeb2582f313}\index{Velha@{Velha}!finalizarJogo@{finalizarJogo}}
@@ -80,6 +86,13 @@ Velha\+::\texorpdfstring{$\sim$}{\string~}\+Velha (\begin{DoxyParamCaption}{}{}\
 {\footnotesize\ttfamily \label{class_velha_a82c15d0f17207ae166e68aeb2582f313} 
 int Velha\+::finalizar\+Jogo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Avalia se o tabuleiro atingiu um estado de finalização. 
+
+O tabuleiro do Jogo da \doxylink{class_velha}{Velha}, finaliza quando 3 peças de um jogador formam uma linha, coluna ou diagonal. \begin{DoxyReturn}{Retorna}
+Retorna 0 se o tabuleiro pode continuar a ser usado, retorna 1\texorpdfstring{$\vert$}{|}2 para o número do jogador vencedor ou retorna 3 para o empate. 
+\end{DoxyReturn}
 
 
 Reimplementado de \mbox{\hyperlink{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}{Tabuleiro}}.

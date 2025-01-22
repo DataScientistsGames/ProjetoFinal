@@ -8,7 +8,7 @@ var class_tabuleiro =
     [ "imprimeBordaVertical", "class_tabuleiro.html#a541651c7991ffa99680ca8439b34f350", null ],
     [ "imprimeTabuleiro", "class_tabuleiro.html#a4ce5aa160c82779f953edd68b7b06be6", null ],
     [ "localizarPeca", "class_tabuleiro.html#a59c318eba3a0287c654d2df36c68be5e", null ],
-    [ "posicionarPeca", "class_tabuleiro.html#ac988a22a2dc0a37d126d0a87cc69ee74", null ],
+    [ "posicionarPeca", "class_tabuleiro.html#a97df3a84e52a6eedb1ecfe9ad3872811", null ],
     [ "stringParaCasa", "class_tabuleiro.html#aff726f46b3b2a22b58a82fa57edaa3e8", null ],
     [ "temJogadaValida", "class_tabuleiro.html#a7e5ca9f37811bb47bdbb7e3860c1d70e", null ],
     [ "_board", "class_tabuleiro.html#acf9f7f3fe0ad78a56223ea02fe073454", null ],

@@ -9,7 +9,7 @@ var searchData=
   ['pegavies_6',['pegaVies',['../class_estatistica.html#ab9fadebdc6131f97b0ee32df63f09602',1,'Estatistica']]],
   ['posicaocartesiana_7',['PosicaoCartesiana',['../class_posicao_cartesiana.html',1,'PosicaoCartesiana'],['../class_posicao_cartesiana.html#a7a13fd9d9d584ad29372d0532288b8dc',1,'PosicaoCartesiana::PosicaoCartesiana(int x, int y)'],['../class_posicao_cartesiana.html#a88027e3f9fee9b935513fd63b016ef7e',1,'PosicaoCartesiana::PosicaoCartesiana()']]],
   ['posicaocartesiana_2ehpp_8',['PosicaoCartesiana.hpp',['../_posicao_cartesiana_8hpp.html',1,'']]],
-  ['posicionarpeca_9',['posicionarPeca',['../class_lig4.html#a28576441387a55d3b7f180df34782def',1,'Lig4::posicionarPeca()'],['../class_reversi.html#a416afa7bcf2d53aeb4cd5c963fb1942a',1,'Reversi::posicionarPeca()'],['../class_tabuleiro.html#ac988a22a2dc0a37d126d0a87cc69ee74',1,'Tabuleiro::posicionarPeca()']]],
+  ['posicionarpeca_9',['posicionarPeca',['../class_lig4.html#a28576441387a55d3b7f180df34782def',1,'Lig4::posicionarPeca()'],['../class_reversi.html#a416afa7bcf2d53aeb4cd5c963fb1942a',1,'Reversi::posicionarPeca()'],['../class_tabuleiro.html#a97df3a84e52a6eedb1ecfe9ad3872811',1,'Tabuleiro::posicionarPeca()']]],
   ['pret_10',['PRET',['../_cores_8hpp.html#acc60625dcf1609552de3dc6351adb818',1,'Cores.hpp']]],
   ['proporcao_11',['proporcao',['../class_estatistica.html#a0bb9c186c2a43aa0622e4f789ecd0231',1,'Estatistica']]]
 ];

@@ -2,6 +2,11 @@
 \hypertarget{class_tabuleiro}{}\label{class_tabuleiro}\index{Tabuleiro@{Tabuleiro}}
 
 
+Classe genérica que representa um \doxylink{class_tabuleiro}{Tabuleiro}.  
+
+
+
+
 {\ttfamily \#include $<$Tabuleiro.\+hpp$>$}
 
 Diagrama de heranças da classe Tabuleiro\begin{figure}[H]
@@ -14,15 +19,15 @@ Diagrama de heranças da classe Tabuleiro\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}{Tabuleiro}} (int x, int y, std\+::string string\+\_\+player1, std\+::string string\+\_\+player2)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor base da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\texorpdfstring{$\sim$}{\string~}\+Tabuleiro}} ()
-\item 
-virtual bool \mbox{\hyperlink{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74}{posicionar\+Peca}} (int x, int y, int num\+\_\+jogador=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Destroi o objeto e libera a memória do quadro do tabuleiro. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tabuleiro_a97df3a84e52a6eedb1ecfe9ad3872811}{posicionar\+Peca}} (int x, int y, int num\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Posiciona uma peça de um jogador. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}{finalizar\+Jogo}} ()
 \item 
 virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizar\+Peca}} (int x, int y)
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna a casa correspondente à posição. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{string\+Para\+Casa}} (const int num\+\_\+jogador)
 \item 
 \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calcula\+Vies}} (int jogador)
@@ -50,6 +55,11 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Descrição detalhada}
+Classe genérica que representa um \doxylink{class_tabuleiro}{Tabuleiro}. 
+
+Essa classe guarda o estado do tabuleiro, e performa ações de posiconar peça dos jogadores, avaliar condição de finalização e calcular vies da posição no tabuleiro. 
+
 \doxysubsection{Documentação dos Construtores \& Destrutor}
 \Hypertarget{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}\index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
 \index{Tabuleiro@{Tabuleiro}!Tabuleiro@{Tabuleiro}}
@@ -57,11 +67,24 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 {\footnotesize\ttfamily \label{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5} 
 Tabuleiro\+::\+Tabuleiro (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{std\+::string}]{string\+\_\+player1}{, }\item[{std\+::string}]{string\+\_\+player2}{}\end{DoxyParamCaption})}
 
+
+
+Construtor base da classe \doxylink{class_tabuleiro}{Tabuleiro}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x,y,string\+\_\+player1,string\+\_\+player2} & largura e comprimeto do tabuleiro, e strings que representam os jogadores. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}\index{Tabuleiro@{Tabuleiro}!````~Tabuleiro@{\texorpdfstring{$\sim$}{\string~}Tabuleiro}}
 \index{````~Tabuleiro@{\texorpdfstring{$\sim$}{\string~}Tabuleiro}!Tabuleiro@{Tabuleiro}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Tabuleiro()}{\string~Tabuleiro()}}
 {\footnotesize\ttfamily \label{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084} 
 Tabuleiro\+::\texorpdfstring{$\sim$}{\string~}\+Tabuleiro (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroi o objeto e libera a memória do quadro do tabuleiro. 
 
 
 
@@ -141,12 +164,36 @@ Reimplementado em \mbox{\hyperlink{class_lig4_abb9dc539eb010ece69226c6609639b16}
 {\footnotesize\ttfamily \label{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e} 
 virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} Tabuleiro\+::localizar\+Peca (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-\Hypertarget{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74}\index{Tabuleiro@{Tabuleiro}!posicionarPeca@{posicionarPeca}}
+
+
+Retorna a casa correspondente à posição. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x,y} & Coordenadas da posição checada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O viés calculado, expressado como uma posição cartesiana. 
+\end{DoxyReturn}
+\Hypertarget{class_tabuleiro_a97df3a84e52a6eedb1ecfe9ad3872811}\index{Tabuleiro@{Tabuleiro}!posicionarPeca@{posicionarPeca}}
 \index{posicionarPeca@{posicionarPeca}!Tabuleiro@{Tabuleiro}}
 \doxysubsubsection{\texorpdfstring{posicionarPeca()}{posicionarPeca()}}
-{\footnotesize\ttfamily \label{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74} 
-virtual bool Tabuleiro\+::posicionar\+Peca (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{num\+\_\+jogador}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a97df3a84e52a6eedb1ecfe9ad3872811} 
+virtual bool Tabuleiro\+::posicionar\+Peca (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{num\+\_\+jogador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+Posiciona uma peça de um jogador. 
+
+Essa função posiciona as peças se a casa do tabuleiro estiver vazia. 
+\begin{DoxyParams}{Parâmetros}
+{\em x,y,Jogaor} & Coordenadas da posição e número correspondente ao jogador da jogada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se foi possível posicionar; retorna false se não. 
+\end{DoxyReturn}
 
 
 Reimplementado em \mbox{\hyperlink{class_lig4_a28576441387a55d3b7f180df34782def}{Lig4}} e \mbox{\hyperlink{class_reversi_a416afa7bcf2d53aeb4cd5c963fb1942a}{Reversi}}.
@@ -177,7 +224,7 @@ Retorna true se existe pelo menos uma jogada válida que o jogador possa fazer; 
 \end{DoxyReturn}
 
 
-Reimplementado em \mbox{\hyperlink{class_reversi_a02d69d2ecdf17dd88670a7c97c2a684d}{Reversi}}.
+Reimplementado em \mbox{\hyperlink{class_reversi_a39d396bdd5d03942e4a2b6142efe8bda}{Reversi}}.
 
 
 

@@ -109,6 +109,9 @@ $(function(){initNavTree('class_reversi.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe que representa um tabuleiro de <a class="el" href="class_reversi.html" title="Classe que representa um tabuleiro de Reversi.">Reversi</a>.  
+ <a href="#details">Mais...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_reversi_8hpp_source.html">Reversi.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de heranças da classe Reversi</div>
@@ -116,34 +119,39 @@ Diagrama de heranças da classe Reversi</div>
  <div class="center">
   <img src="class_reversi.png" usemap="#Reversi_map" alt=""/>
   <map id="Reversi_map" name="Reversi_map">
-<area href="class_tabuleiro.html" alt="Tabuleiro" shape="rect" coords="0,0,65,24"/>
+<area href="class_tabuleiro.html" title="Classe genérica que representa um Tabuleiro." alt="Tabuleiro" shape="rect" coords="0,0,65,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros públicos</h2></td></tr>
 <tr class="memitem:a73e3ca5c21b634f9c490b404d62f0e01" id="r_a73e3ca5c21b634f9c490b404d62f0e01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73e3ca5c21b634f9c490b404d62f0e01">Reversi</a> ()</td></tr>
+<tr class="memdesc:a73e3ca5c21b634f9c490b404d62f0e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor do tabuleiro de <a class="el" href="class_reversi.html" title="Classe que representa um tabuleiro de Reversi.">Reversi</a>.  <br /></td></tr>
 <tr class="separator:a73e3ca5c21b634f9c490b404d62f0e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd006e4fdacdedc4a3bb34fe6f1d1940" id="r_afd006e4fdacdedc4a3bb34fe6f1d1940"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd006e4fdacdedc4a3bb34fe6f1d1940">~Reversi</a> ()</td></tr>
-<tr class="separator:afd006e4fdacdedc4a3bb34fe6f1d1940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6686b05c2e5aa2437ffc27d209d0e622" id="r_a6686b05c2e5aa2437ffc27d209d0e622"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6686b05c2e5aa2437ffc27d209d0e622">finalizarJogo</a> () override final</td></tr>
+<tr class="memdesc:a6686b05c2e5aa2437ffc27d209d0e622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avalia se o tabuleiro atingiu um estado de finalização.  <br /></td></tr>
 <tr class="separator:a6686b05c2e5aa2437ffc27d209d0e622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a416afa7bcf2d53aeb4cd5c963fb1942a" id="r_a416afa7bcf2d53aeb4cd5c963fb1942a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a416afa7bcf2d53aeb4cd5c963fb1942a">posicionarPeca</a> (int, int, int) override final</td></tr>
+<tr class="memdesc:a416afa7bcf2d53aeb4cd5c963fb1942a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posiciona uma peça de um jogador.  <br /></td></tr>
 <tr class="separator:a416afa7bcf2d53aeb4cd5c963fb1942a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02d69d2ecdf17dd88670a7c97c2a684d" id="r_a02d69d2ecdf17dd88670a7c97c2a684d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02d69d2ecdf17dd88670a7c97c2a684d">temJogadaValida</a> (<a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>)</td></tr>
-<tr class="memdesc:a02d69d2ecdf17dd88670a7c97c2a684d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checa se o jogador ainda pode fazer alguma jogada válida.  <br /></td></tr>
-<tr class="separator:a02d69d2ecdf17dd88670a7c97c2a684d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d396bdd5d03942e4a2b6142efe8bda" id="r_a39d396bdd5d03942e4a2b6142efe8bda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39d396bdd5d03942e4a2b6142efe8bda">temJogadaValida</a> (<a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> jogador)</td></tr>
+<tr class="memdesc:a39d396bdd5d03942e4a2b6142efe8bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checa se o jogador ainda pode fazer alguma jogada válida.  <br /></td></tr>
+<tr class="separator:a39d396bdd5d03942e4a2b6142efe8bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8107126533f957154e14319f0c0989f4" id="r_a8107126533f957154e14319f0c0989f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8107126533f957154e14319f0c0989f4">jogadaValida</a> (int, int, <a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>, bool)</td></tr>
+<tr class="memdesc:a8107126533f957154e14319f0c0989f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checa se uma jogada é válida para um jogador.  <br /></td></tr>
 <tr class="separator:a8107126533f957154e14319f0c0989f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fcdfa3aee73312ba92fbdfac70638f6" id="r_a3fcdfa3aee73312ba92fbdfac70638f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fcdfa3aee73312ba92fbdfac70638f6">imprimeTabuleiro</a> () override final</td></tr>
 <tr class="memdesc:a3fcdfa3aee73312ba92fbdfac70638f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas bordas verticais.  <br /></td></tr>
 <tr class="separator:a3fcdfa3aee73312ba92fbdfac70638f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_tabuleiro"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_tabuleiro')"><img src="closed.png" alt="-"/>&#160;Membros públicos herdados de <a class="el" href="class_tabuleiro.html">Tabuleiro</a></td></tr>
 <tr class="memitem:a628b277f8595422d9b705bc66089e2c5 inherit pub_methods_class_tabuleiro" id="r_a628b277f8595422d9b705bc66089e2c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tabuleiro.html#a628b277f8595422d9b705bc66089e2c5">Tabuleiro</a> (int x, int y, std::string string_player1, std::string string_player2)</td></tr>
+<tr class="memdesc:a628b277f8595422d9b705bc66089e2c5 inherit pub_methods_class_tabuleiro"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor base da classe <a class="el" href="class_tabuleiro.html" title="Classe genérica que representa um Tabuleiro.">Tabuleiro</a>.  <br /></td></tr>
 <tr class="separator:a628b277f8595422d9b705bc66089e2c5 inherit pub_methods_class_tabuleiro"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25dfc7efac326aff2cdb7dd8a3b8b084 inherit pub_methods_class_tabuleiro" id="r_a25dfc7efac326aff2cdb7dd8a3b8b084"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tabuleiro.html#a25dfc7efac326aff2cdb7dd8a3b8b084">~Tabuleiro</a> ()</td></tr>
+<tr class="memdesc:a25dfc7efac326aff2cdb7dd8a3b8b084 inherit pub_methods_class_tabuleiro"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroi o objeto e libera a memória do quadro do tabuleiro.  <br /></td></tr>
 <tr class="separator:a25dfc7efac326aff2cdb7dd8a3b8b084 inherit pub_methods_class_tabuleiro"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c318eba3a0287c654d2df36c68be5e inherit pub_methods_class_tabuleiro" id="r_a59c318eba3a0287c654d2df36c68be5e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tabuleiro.html#a59c318eba3a0287c654d2df36c68be5e">localizarPeca</a> (int x, int y)</td></tr>
+<tr class="memdesc:a59c318eba3a0287c654d2df36c68be5e inherit pub_methods_class_tabuleiro"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a casa correspondente à posição.  <br /></td></tr>
 <tr class="separator:a59c318eba3a0287c654d2df36c68be5e inherit pub_methods_class_tabuleiro"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff726f46b3b2a22b58a82fa57edaa3e8 inherit pub_methods_class_tabuleiro" id="r_aff726f46b3b2a22b58a82fa57edaa3e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tabuleiro.html#aff726f46b3b2a22b58a82fa57edaa3e8">stringParaCasa</a> (const int num_jogador)</td></tr>
 <tr class="separator:aff726f46b3b2a22b58a82fa57edaa3e8 inherit pub_methods_class_tabuleiro"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,7 +179,10 @@ Outros membros herdados</h2></td></tr>
 <tr class="memitem:ac8ea89cfdf7b39bbeb04c52932394911 inherit pro_attribs_class_tabuleiro" id="r_ac8ea89cfdf7b39bbeb04c52932394911"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tabuleiro.html#ac8ea89cfdf7b39bbeb04c52932394911">_string_pecas</a> [3]</td></tr>
 <tr class="separator:ac8ea89cfdf7b39bbeb04c52932394911 inherit pro_attribs_class_tabuleiro"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe que representa um tabuleiro de <a class="el" href="class_reversi.html" title="Classe que representa um tabuleiro de Reversi.">Reversi</a>. </p>
+<p>Essa classe herda as funções da classe genérica <a class="el" href="class_tabuleiro.html" title="Classe genérica que representa um Tabuleiro.">Tabuleiro</a> e especializa a avaliação da condição de finalização do tabuleiro, posicionamento das peças e avaliação de jogadas válidas. </p>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="a73e3ca5c21b634f9c490b404d62f0e01" name="a73e3ca5c21b634f9c490b404d62f0e01"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73e3ca5c21b634f9c490b404d62f0e01">&#9670;&#160;</a></span>Reversi()</h2>
 
@@ -187,22 +198,8 @@ Outros membros herdados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="afd006e4fdacdedc4a3bb34fe6f1d1940" name="afd006e4fdacdedc4a3bb34fe6f1d1940"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd006e4fdacdedc4a3bb34fe6f1d1940">&#9670;&#160;</a></span>~Reversi()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Reversi::~Reversi </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Construtor do tabuleiro de <a class="el" href="class_reversi.html" title="Classe que representa um tabuleiro de Reversi.">Reversi</a>. </p>
+<p>Constroi um tabuleiro 8 por 8 casas com as peças iniciais no padrão do tabuleiro de <a class="el" href="class_reversi.html" title="Classe que representa um tabuleiro de Reversi.">Reversi</a>. </p>
 
 </div>
 </div>
@@ -229,6 +226,9 @@ Outros membros herdados</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Avalia se o tabuleiro atingiu um estado de finalização. </p>
+<p>O tabuleiro do Ligue 4, finaliza não há mais jogadas válidas e o vencedor é escolhido pela quantidade de peças no tabuleiro. </p><dl class="section return"><dt>Retorna</dt><dd>Retorna 0 se o tabuleiro pode continuar a ser usado, retorna 1|2 para o número do jogador vencedor ou retorna 3 para o empate. </dd></dl>
 
 <p>Reimplementado de <a class="el" href="class_tabuleiro.html#a9497c30dd9c74bc482768bc5c38c3592">Tabuleiro</a>.</p>
 
@@ -292,6 +292,15 @@ Outros membros herdados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Checa se uma jogada é válida para um jogador. </p>
+<p>Além disso como ela percorre as formações de linhas e colunas das peças, essa função pode atuar na reversão das peças do oponente. </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y,Jogaor</td><td>Coordenadas da posição e número correspondente ao jogador sendo checado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna true se a jogada é válida para o jogador; retorna false se não. </dd></dl>
+
 </div>
 </div>
 <a id="a416afa7bcf2d53aeb4cd5c963fb1942a" name="a416afa7bcf2d53aeb4cd5c963fb1942a"></a>
@@ -326,12 +335,21 @@ Outros membros herdados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementado de <a class="el" href="class_tabuleiro.html#ac988a22a2dc0a37d126d0a87cc69ee74">Tabuleiro</a>.</p>
+<p>Posiciona uma peça de um jogador. </p>
+<p>Essa função chama o método de validação da jogada passando o parametro para posicionar e reverter as peças segunda as regras do tabuleiro. </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y,Jogaor</td><td>Coordenadas da posição e número correspondente ao jogador da jogada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna true se foi possível posicionar; retorna false se não. </dd></dl>
+
+<p>Reimplementado de <a class="el" href="class_tabuleiro.html#a97df3a84e52a6eedb1ecfe9ad3872811">Tabuleiro</a>.</p>
 
 </div>
 </div>
-<a id="a02d69d2ecdf17dd88670a7c97c2a684d" name="a02d69d2ecdf17dd88670a7c97c2a684d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02d69d2ecdf17dd88670a7c97c2a684d">&#9670;&#160;</a></span>temJogadaValida()</h2>
+<a id="a39d396bdd5d03942e4a2b6142efe8bda" name="a39d396bdd5d03942e4a2b6142efe8bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d396bdd5d03942e4a2b6142efe8bda">&#9670;&#160;</a></span>temJogadaValida()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,7 +372,7 @@ Outros membros herdados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checa se o jogador ainda pode fazer alguma jogada válida. </p>
-<p>Usado somente no <a class="el" href="class_reversi.html">Reversi</a>; em todo outro jogo sempre há jogadas válidas. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Exclusivo dessa classe, pois o reversi tem regras específicas para o posicionamento de uma peça. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">jogador</td><td>Número correspondente ao jogador sendo checado. </td></tr>
   </table>

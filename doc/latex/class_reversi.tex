@@ -2,6 +2,11 @@
 \hypertarget{class_reversi}{}\label{class_reversi}\index{Reversi@{Reversi}}
 
 
+Classe que representa um tabuleiro de \doxylink{class_reversi}{Reversi}.  
+
+
+
+
 {\ttfamily \#include $<$Reversi.\+hpp$>$}
 
 Diagrama de heranças da classe Reversi\begin{figure}[H]
@@ -14,28 +19,26 @@ Diagrama de heranças da classe Reversi\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01}{Reversi}} ()
-\item 
-\mbox{\hyperlink{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}{\texorpdfstring{$\sim$}{\string~}\+Reversi}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor do tabuleiro de \doxylink{class_reversi}{Reversi}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_reversi_a6686b05c2e5aa2437ffc27d209d0e622}{finalizar\+Jogo}} () override final
-\item 
+\begin{DoxyCompactList}\small\item\em Avalia se o tabuleiro atingiu um estado de finalização. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_a416afa7bcf2d53aeb4cd5c963fb1942a}{posicionar\+Peca}} (int, int, int) override final
-\item 
-bool \mbox{\hyperlink{class_reversi_a02d69d2ecdf17dd88670a7c97c2a684d}{tem\+Jogada\+Valida}} (\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}})
+\begin{DoxyCompactList}\small\item\em Posiciona uma peça de um jogador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_reversi_a39d396bdd5d03942e4a2b6142efe8bda}{tem\+Jogada\+Valida}} (\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} jogador)
 \begin{DoxyCompactList}\small\item\em Checa se o jogador ainda pode fazer alguma jogada válida. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_reversi_a8107126533f957154e14319f0c0989f4}{jogada\+Valida}} (int, int, \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}}, bool)
-\item 
+\begin{DoxyCompactList}\small\item\em Checa se uma jogada é válida para um jogador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_reversi_a3fcdfa3aee73312ba92fbdfac70638f6}{imprime\+Tabuleiro}} () override final
 \begin{DoxyCompactList}\small\item\em Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas bordas verticais. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros públicos herdados de \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_tabuleiro_a628b277f8595422d9b705bc66089e2c5}{Tabuleiro}} (int x, int y, std\+::string string\+\_\+player1, std\+::string string\+\_\+player2)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor base da classe \doxylink{class_tabuleiro}{Tabuleiro}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tabuleiro_a25dfc7efac326aff2cdb7dd8a3b8b084}{\texorpdfstring{$\sim$}{\string~}\+Tabuleiro}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destroi o objeto e libera a memória do quadro do tabuleiro. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizar\+Peca}} (int x, int y)
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna a casa correspondente à posição. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{string\+Para\+Casa}} (const int num\+\_\+jogador)
 \item 
 \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calcula\+Vies}} (int jogador)
@@ -60,6 +63,11 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Descrição detalhada}
+Classe que representa um tabuleiro de \doxylink{class_reversi}{Reversi}. 
+
+Essa classe herda as funções da classe genérica \doxylink{class_tabuleiro}{Tabuleiro} e especializa a avaliação da condição de finalização do tabuleiro, posicionamento das peças e avaliação de jogadas válidas. 
+
 \doxysubsection{Documentação dos Construtores \& Destrutor}
 \Hypertarget{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01}\index{Reversi@{Reversi}!Reversi@{Reversi}}
 \index{Reversi@{Reversi}!Reversi@{Reversi}}
@@ -67,13 +75,11 @@ std\+::string \mbox{\hyperlink{class_tabuleiro_ac8ea89cfdf7b39bbeb04c52932394911
 {\footnotesize\ttfamily \label{class_reversi_a73e3ca5c21b634f9c490b404d62f0e01} 
 Reversi\+::\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940}\index{Reversi@{Reversi}!````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}}
-\index{````~Reversi@{\texorpdfstring{$\sim$}{\string~}Reversi}!Reversi@{Reversi}}
-\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Reversi()}{\string~Reversi()}}
-{\footnotesize\ttfamily \label{class_reversi_afd006e4fdacdedc4a3bb34fe6f1d1940} 
-Reversi\+::\texorpdfstring{$\sim$}{\string~}\+Reversi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
+Construtor do tabuleiro de \doxylink{class_reversi}{Reversi}. 
+
+Constroi um tabuleiro 8 por 8 casas com as peças iniciais no padrão do tabuleiro de \doxylink{class_reversi}{Reversi}. 
 
 \doxysubsection{Documentação das funções}
 \Hypertarget{class_reversi_a6686b05c2e5aa2437ffc27d209d0e622}\index{Reversi@{Reversi}!finalizarJogo@{finalizarJogo}}
@@ -82,6 +88,13 @@ Reversi\+::\texorpdfstring{$\sim$}{\string~}\+Reversi (\begin{DoxyParamCaption}{
 {\footnotesize\ttfamily \label{class_reversi_a6686b05c2e5aa2437ffc27d209d0e622} 
 int Reversi\+::finalizar\+Jogo (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Avalia se o tabuleiro atingiu um estado de finalização. 
+
+O tabuleiro do Ligue 4, finaliza não há mais jogadas válidas e o vencedor é escolhido pela quantidade de peças no tabuleiro. \begin{DoxyReturn}{Retorna}
+Retorna 0 se o tabuleiro pode continuar a ser usado, retorna 1\texorpdfstring{$\vert$}{|}2 para o número do jogador vencedor ou retorna 3 para o empate. 
+\end{DoxyReturn}
 
 
 Reimplementado de \mbox{\hyperlink{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}{Tabuleiro}}.
@@ -106,6 +119,18 @@ Reimplementado de \mbox{\hyperlink{class_tabuleiro_a4ce5aa160c82779f953edd68b7b0
 {\footnotesize\ttfamily \label{class_reversi_a8107126533f957154e14319f0c0989f4} 
 bool Reversi\+::jogada\+Valida (\begin{DoxyParamCaption}\item[{int}]{}{, }\item[{int}]{}{, }\item[{\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}}}]{}{, }\item[{bool}]{}{}\end{DoxyParamCaption})}
 
+
+
+Checa se uma jogada é válida para um jogador. 
+
+Além disso como ela percorre as formações de linhas e colunas das peças, essa função pode atuar na reversão das peças do oponente. 
+\begin{DoxyParams}{Parâmetros}
+{\em x,y,Jogaor} & Coordenadas da posição e número correspondente ao jogador sendo checado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se a jogada é válida para o jogador; retorna false se não. 
+\end{DoxyReturn}
 \Hypertarget{class_reversi_a416afa7bcf2d53aeb4cd5c963fb1942a}\index{Reversi@{Reversi}!posicionarPeca@{posicionarPeca}}
 \index{posicionarPeca@{posicionarPeca}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{posicionarPeca()}{posicionarPeca()}}
@@ -114,19 +139,31 @@ bool Reversi\+::posicionar\+Peca (\begin{DoxyParamCaption}\item[{int}]{}{, }\ite
 
 
 
-Reimplementado de \mbox{\hyperlink{class_tabuleiro_ac988a22a2dc0a37d126d0a87cc69ee74}{Tabuleiro}}.
+Posiciona uma peça de um jogador. 
 
-\Hypertarget{class_reversi_a02d69d2ecdf17dd88670a7c97c2a684d}\index{Reversi@{Reversi}!temJogadaValida@{temJogadaValida}}
+Essa função chama o método de validação da jogada passando o parametro para posicionar e reverter as peças segunda as regras do tabuleiro. 
+\begin{DoxyParams}{Parâmetros}
+{\em x,y,Jogaor} & Coordenadas da posição e número correspondente ao jogador da jogada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se foi possível posicionar; retorna false se não. 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{class_tabuleiro_a97df3a84e52a6eedb1ecfe9ad3872811}{Tabuleiro}}.
+
+\Hypertarget{class_reversi_a39d396bdd5d03942e4a2b6142efe8bda}\index{Reversi@{Reversi}!temJogadaValida@{temJogadaValida}}
 \index{temJogadaValida@{temJogadaValida}!Reversi@{Reversi}}
 \doxysubsubsection{\texorpdfstring{temJogadaValida()}{temJogadaValida()}}
-{\footnotesize\ttfamily \label{class_reversi_a02d69d2ecdf17dd88670a7c97c2a684d} 
+{\footnotesize\ttfamily \label{class_reversi_a39d396bdd5d03942e4a2b6142efe8bda} 
 bool Reversi\+::tem\+Jogada\+Valida (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}}}]{jogador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
 Checa se o jogador ainda pode fazer alguma jogada válida. 
 
-Usado somente no \doxylink{class_reversi}{Reversi}; em todo outro jogo sempre há jogadas válidas. 
+Exclusivo dessa classe, pois o reversi tem regras específicas para o posicionamento de uma peça. 
 \begin{DoxyParams}{Parâmetros}
 {\em jogador} & Número correspondente ao jogador sendo checado. \\
 \hline

@@ -110,6 +110,9 @@ $(function(){initNavTree('class_tabuleiro.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>Classe genérica que representa um <a class="el" href="class_tabuleiro.html" title="Classe genérica que representa um Tabuleiro.">Tabuleiro</a>.  
+ <a href="#details">Mais...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_tabuleiro_8hpp_source.html">Tabuleiro.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de heranças da classe Tabuleiro</div>
@@ -117,23 +120,27 @@ Diagrama de heranças da classe Tabuleiro</div>
  <div class="center">
   <img src="class_tabuleiro.png" usemap="#Tabuleiro_map" alt=""/>
   <map id="Tabuleiro_map" name="Tabuleiro_map">
-<area href="class_lig4.html" alt="Lig4" shape="rect" coords="0,56,65,80"/>
-<area href="class_reversi.html" alt="Reversi" shape="rect" coords="75,56,140,80"/>
-<area href="class_velha.html" alt="Velha" shape="rect" coords="150,56,215,80"/>
+<area href="class_lig4.html" title="Classe que representa um tabuleiro de Ligue 4." alt="Lig4" shape="rect" coords="0,56,65,80"/>
+<area href="class_reversi.html" title="Classe que representa um tabuleiro de Reversi." alt="Reversi" shape="rect" coords="75,56,140,80"/>
+<area href="class_velha.html" title="Classe que representa um tabuleiro de Jogo da Velha." alt="Velha" shape="rect" coords="150,56,215,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros públicos</h2></td></tr>
 <tr class="memitem:a628b277f8595422d9b705bc66089e2c5" id="r_a628b277f8595422d9b705bc66089e2c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a628b277f8595422d9b705bc66089e2c5">Tabuleiro</a> (int x, int y, std::string string_player1, std::string string_player2)</td></tr>
+<tr class="memdesc:a628b277f8595422d9b705bc66089e2c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor base da classe <a class="el" href="class_tabuleiro.html" title="Classe genérica que representa um Tabuleiro.">Tabuleiro</a>.  <br /></td></tr>
 <tr class="separator:a628b277f8595422d9b705bc66089e2c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25dfc7efac326aff2cdb7dd8a3b8b084" id="r_a25dfc7efac326aff2cdb7dd8a3b8b084"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25dfc7efac326aff2cdb7dd8a3b8b084">~Tabuleiro</a> ()</td></tr>
+<tr class="memdesc:a25dfc7efac326aff2cdb7dd8a3b8b084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroi o objeto e libera a memória do quadro do tabuleiro.  <br /></td></tr>
 <tr class="separator:a25dfc7efac326aff2cdb7dd8a3b8b084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac988a22a2dc0a37d126d0a87cc69ee74" id="r_ac988a22a2dc0a37d126d0a87cc69ee74"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac988a22a2dc0a37d126d0a87cc69ee74">posicionarPeca</a> (int x, int y, int num_jogador=0)</td></tr>
-<tr class="separator:ac988a22a2dc0a37d126d0a87cc69ee74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97df3a84e52a6eedb1ecfe9ad3872811" id="r_a97df3a84e52a6eedb1ecfe9ad3872811"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97df3a84e52a6eedb1ecfe9ad3872811">posicionarPeca</a> (int x, int y, int num_jogador)</td></tr>
+<tr class="memdesc:a97df3a84e52a6eedb1ecfe9ad3872811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posiciona uma peça de um jogador.  <br /></td></tr>
+<tr class="separator:a97df3a84e52a6eedb1ecfe9ad3872811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9497c30dd9c74bc482768bc5c38c3592" id="r_a9497c30dd9c74bc482768bc5c38c3592"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9497c30dd9c74bc482768bc5c38c3592">finalizarJogo</a> ()</td></tr>
 <tr class="separator:a9497c30dd9c74bc482768bc5c38c3592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c318eba3a0287c654d2df36c68be5e" id="r_a59c318eba3a0287c654d2df36c68be5e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59c318eba3a0287c654d2df36c68be5e">localizarPeca</a> (int x, int y)</td></tr>
+<tr class="memdesc:a59c318eba3a0287c654d2df36c68be5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a casa correspondente à posição.  <br /></td></tr>
 <tr class="separator:a59c318eba3a0287c654d2df36c68be5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff726f46b3b2a22b58a82fa57edaa3e8" id="r_aff726f46b3b2a22b58a82fa57edaa3e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff726f46b3b2a22b58a82fa57edaa3e8">stringParaCasa</a> (const int num_jogador)</td></tr>
 <tr class="separator:aff726f46b3b2a22b58a82fa57edaa3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,7 +173,10 @@ Atributos Protegidos</h2></td></tr>
 <tr class="memitem:ac8ea89cfdf7b39bbeb04c52932394911" id="r_ac8ea89cfdf7b39bbeb04c52932394911"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8ea89cfdf7b39bbeb04c52932394911">_string_pecas</a> [3]</td></tr>
 <tr class="separator:ac8ea89cfdf7b39bbeb04c52932394911"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe genérica que representa um <a class="el" href="class_tabuleiro.html" title="Classe genérica que representa um Tabuleiro.">Tabuleiro</a>. </p>
+<p>Essa classe guarda o estado do tabuleiro, e performa ações de posiconar peça dos jogadores, avaliar condição de finalização e calcular vies da posição no tabuleiro. </p>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="a628b277f8595422d9b705bc66089e2c5" name="a628b277f8595422d9b705bc66089e2c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a628b277f8595422d9b705bc66089e2c5">&#9670;&#160;</a></span>Tabuleiro()</h2>
 
@@ -196,6 +206,14 @@ Atributos Protegidos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Construtor base da classe <a class="el" href="class_tabuleiro.html" title="Classe genérica que representa um Tabuleiro.">Tabuleiro</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y,string_player1,string_player2</td><td>largura e comprimeto do tabuleiro, e strings que representam os jogadores. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a25dfc7efac326aff2cdb7dd8a3b8b084" name="a25dfc7efac326aff2cdb7dd8a3b8b084"></a>
@@ -212,6 +230,8 @@ Atributos Protegidos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destroi o objeto e libera a memória do quadro do tabuleiro. </p>
 
 </div>
 </div>
@@ -374,10 +394,19 @@ Atributos Protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Retorna a casa correspondente à posição. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>Coordenadas da posição checada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O viés calculado, expressado como uma posição cartesiana. </dd></dl>
+
 </div>
 </div>
-<a id="ac988a22a2dc0a37d126d0a87cc69ee74" name="ac988a22a2dc0a37d126d0a87cc69ee74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac988a22a2dc0a37d126d0a87cc69ee74">&#9670;&#160;</a></span>posicionarPeca()</h2>
+<a id="a97df3a84e52a6eedb1ecfe9ad3872811" name="a97df3a84e52a6eedb1ecfe9ad3872811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97df3a84e52a6eedb1ecfe9ad3872811">&#9670;&#160;</a></span>posicionarPeca()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,7 +427,7 @@ Atributos Protegidos</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_jogador</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>num_jogador</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -407,6 +436,15 @@ Atributos Protegidos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Posiciona uma peça de um jogador. </p>
+<p>Essa função posiciona as peças se a casa do tabuleiro estiver vazia. </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y,Jogaor</td><td>Coordenadas da posição e número correspondente ao jogador da jogada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna true se foi possível posicionar; retorna false se não. </dd></dl>
 
 <p>Reimplementado em <a class="el" href="class_lig4.html#a28576441387a55d3b7f180df34782def">Lig4</a> e <a class="el" href="class_reversi.html#a416afa7bcf2d53aeb4cd5c963fb1942a">Reversi</a>.</p>
 
@@ -453,7 +491,7 @@ Atributos Protegidos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checa se o jogador ainda pode fazer alguma jogada válida. </p>
-<p>Usado somente no <a class="el" href="class_reversi.html">Reversi</a>; em todo outro jogo sempre há jogadas válidas. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Usado somente no <a class="el" href="class_reversi.html" title="Classe que representa um tabuleiro de Reversi.">Reversi</a>; em todo outro jogo sempre há jogadas válidas. </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">jogador</td><td>Número correspondente ao jogador sendo checado. </td></tr>
   </table>
@@ -461,7 +499,7 @@ Atributos Protegidos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>Retorna true se existe pelo menos uma jogada válida que o jogador possa fazer; retorna false se não. </dd></dl>
 
-<p>Reimplementado em <a class="el" href="class_reversi.html#a02d69d2ecdf17dd88670a7c97c2a684d">Reversi</a>.</p>
+<p>Reimplementado em <a class="el" href="class_reversi.html#a39d396bdd5d03942e4a2b6142efe8bda">Reversi</a>.</p>
 
 </div>
 </div>
