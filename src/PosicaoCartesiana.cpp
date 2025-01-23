@@ -1,27 +1,33 @@
 #include "PosicaoCartesiana.hpp"
 
-PosicaoCartesiana::PosicaoCartesiana(int x, int y) : _x(x), _y(y) {};
+PosicaoCartesiana::PosicaoCartesiana(double x, double y) : _x(x), _y(y) {};
 
 PosicaoCartesiana::PosicaoCartesiana() : _x(0), _y(0) {};
 
+PosicaoCartesiana::PosicaoCartesiana(const PosicaoCartesiana& pos) 
+{
+    this->_x = pos._x;
+    this->_y = pos._y;
+}
+
 PosicaoCartesiana::~PosicaoCartesiana() {};
 
-int PosicaoCartesiana::getX()
+double PosicaoCartesiana::getX()
 {
     return this->_x;
 }
 
-int PosicaoCartesiana::getY()
+double PosicaoCartesiana::getY()
 {
     return this->_y;
 }
 
-void PosicaoCartesiana::setX(int x)
+void PosicaoCartesiana::setX(double x)
 {
     this->_x = x;
 }
 
-void PosicaoCartesiana::setY(int y)
+void PosicaoCartesiana::setY(double y)
 {
     this->_y = y;
 }

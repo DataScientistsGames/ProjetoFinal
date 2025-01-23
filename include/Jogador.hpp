@@ -68,6 +68,17 @@ public:
      * @brief Retorna o valor de Derrotas no Jogo Lig4 desse jogador.
      */
     int getDerrotasL();
+
+    /**
+     * @brief Retorna o vies desse jogador.
+     */
+    PosicaoCartesiana getVies();
+
+    /**
+     * @brief Declara o valor do vies adquirido pelo jogador durante a partida.
+     * @param vies Valor de vies que será adicionado ao jogador
+     */
+    void setVies(PosicaoCartesiana vies);
 };
 
 #endif

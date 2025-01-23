@@ -80,7 +80,7 @@ void Controlador::cadastrarJogador()
     std::cin >> apelido_jogador;
     std::getline(std::cin, nome_jogador);
 
-    if (apelido_jogador.find(',') != std::string::npos)
+    if ((apelido_jogador.find(',') != std::string::npos) || (nome_jogador.find(',') != std::string::npos))
     {
         if (!std::cin.eof())
         {

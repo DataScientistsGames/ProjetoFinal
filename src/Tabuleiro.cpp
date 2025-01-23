@@ -30,7 +30,7 @@ bool Tabuleiro::posicionarPeca(int x, int y, int num_jogador)
 {
     if ((x >= 0 && x < this->_x) && (y >= 0 && y < this->_y) && (this->_board[x][y] == VAZIO))
     {
-        this->_board[x][y] = stringParaCasa(num_jogador);
+        this->_board[x][y] = intParaCasa(num_jogador);
         return true;
     }
 
@@ -42,7 +42,7 @@ Casa Tabuleiro::localizarPeca(int x, int y)
     return this->_board[x][y];
 }
 
-Casa Tabuleiro::stringParaCasa(const int num_jogador)
+Casa Tabuleiro::intParaCasa(const int num_jogador)
 {
     switch (num_jogador)
     {
@@ -60,9 +60,38 @@ Casa Tabuleiro::stringParaCasa(const int num_jogador)
     }
 }
 
+PosicaoCartesiana Tabuleiro::centralizaCoordenadas(int posX, int posY)
+{
+    return PosicaoCartesiana((double) posX - (this->_x-1) * 1.0/2, (double) ((this->_y-1) * 1.0/2) - posY);
+}
+
 PosicaoCartesiana Tabuleiro::calculaVies(int jogador)
 {
-    return PosicaoCartesiana(0, 0);
+    double somaX = 0, somaY = 0;
+    int numPercorridas = 0;
+
+    for (int i = 0; i < this->_x; i++) 
+    {
+        for (int j = 0; j < this->_y; j++) 
+        {
+            if (this->_board[i][j] == intParaCasa(jogador)) 
+            {
+                PosicaoCartesiana coordsCentralizadas(centralizaCoordenadas(i, j));
+
+                somaX += coordsCentralizadas.getX();
+                somaY += coordsCentralizadas.getY();
+
+                numPercorridas++;
+            }
+        }
+    }
+
+    somaX /= numPercorridas;
+    somaY /= numPercorridas;
+
+    std::cout << "Viés do jogador " << jogador << " calculado" << std::endl;
+
+    return PosicaoCartesiana(somaX, somaY);
 }
 
 int Tabuleiro::getTipo()

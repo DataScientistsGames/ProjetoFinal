@@ -64,7 +64,7 @@ void Partida::leitorJogada(int num_jogador)
     {
         CoutComuns::limparCmd();
         this->_tabuleiro->imprimeTabuleiro();
-        jogada_possivel = this->_tabuleiro->temJogadaValida(this->_tabuleiro->stringParaCasa(num_jogador));
+        jogada_possivel = this->_tabuleiro->temJogadaValida(this->_tabuleiro->intParaCasa(num_jogador));
 
         if (!jogada_possivel)
         {
@@ -102,6 +102,11 @@ void Partida::finalizarPartida(int vencedor)
 {
     CoutComuns::limparCmd();
     this->_tabuleiro->imprimeTabuleiro();
+
+    std::cout << "Calculando viés" << std::endl;
+    this->_player1->setVies(this->_tabuleiro->calculaVies(1));
+    this->_player2->setVies(this->_tabuleiro->calculaVies(2));
+    std::cout << "Viés Calculado" << std::endl;
 
     if (vencedor == 1)
     {
@@ -219,7 +224,7 @@ void Partida::atualizaDadosPartida(std::unique_ptr<Jogador> jogador_vencedor, st
             jogo = 'L';
         }
 
-        PosicaoCartesiana vies_ganhador = this->_tabuleiro->calculaVies(1);
+        PosicaoCartesiana vies_ganhador(jogador_vencedor->getVies());
 
         std::string adicionar_vitoria = "";
         adicionar_vitoria.append(jogador_vencedor->getApelido());
@@ -235,7 +240,8 @@ void Partida::atualizaDadosPartida(std::unique_ptr<Jogador> jogador_vencedor, st
 
         arquivo_partidas.escreverArquivo(adicionar_vitoria);
 
-        PosicaoCartesiana vies_perdedor = this->_tabuleiro->calculaVies(2);
+
+        PosicaoCartesiana vies_perdedor(jogador_perdedor->getVies());
 
         std::string adicionar_derrota = "";
         adicionar_derrota.append(jogador_perdedor->getApelido());
@@ -278,8 +284,8 @@ void Partida::atualizaDadosPartida()
             jogo = 'L';
         }
 
-        PosicaoCartesiana vies_1 = this->_tabuleiro->calculaVies(1);
-        PosicaoCartesiana vies_2 = this->_tabuleiro->calculaVies(2);
+        PosicaoCartesiana vies_1 = this->_player1->getVies();
+        PosicaoCartesiana vies_2 = this->_player2->getVies();
 
         std::string linha_1 = "";
         linha_1.append(this->_player1->getApelido());

@@ -75,3 +75,8 @@ int Jogador::getVitoriasR() { return this->_vitorias_reversi; };
 int Jogador::getDerrotasR() { return this->_derrotas_reversi; };
 int Jogador::getVitoriasL() { return this->_vitorias_lig; };
 int Jogador::getDerrotasL() { return this->_derrotas_lig; };
+PosicaoCartesiana Jogador::getVies() { return this->_vies; };
+void Jogador::setVies(PosicaoCartesiana vies)
+{
+    this->_vies = vies;
+}

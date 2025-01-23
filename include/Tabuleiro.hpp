@@ -49,7 +49,12 @@ public:
      */
     Casa virtual localizarPeca(int x, int y);
 
-    Casa stringParaCasa(const int num_jogador);
+    /**
+     * @brief Retorna a casa correspondente ao inteiro.
+     * @param num_jogador O jogador em inteiro.
+     * @return A casa respectiva.
+     */
+    Casa intParaCasa(const int num_jogador);
 
     /**
      * @brief Calcula o viés nas posições jogadas pelo jogador.
@@ -81,6 +86,14 @@ public:
      * @return Retorna true se existe pelo menos uma jogada válida que o jogador possa fazer; retorna false se não.
      */
     bool virtual temJogadaValida(Casa jogador);
+
+    /**
+     * @brief Converte as coordenadas pra uma base com origem no centro do tabuleiro.
+     * @param posX A coordenada X.
+     * @param posY A coordenada Y.
+     * @return As coordenadas sob a nova base.
+     */
+    PosicaoCartesiana virtual centralizaCoordenadas(int posX, int posY);
 };
 
 #endif
