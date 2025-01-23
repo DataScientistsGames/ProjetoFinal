@@ -35,8 +35,8 @@ virtual bool \mbox{\hyperlink{class_tabuleiro_a97df3a84e52a6eedb1ecfe9ad3872811}
 \begin{DoxyCompactList}\small\item\em Posiciona uma peça de um jogador. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizar\+Peca}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Retorna a casa correspondente à posição. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{string\+Para\+Casa}} (const int num\+\_\+jogador)
-\item 
+\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a62205be131cc2702d4b3c3d5454c2144}{int\+Para\+Casa}} (const int num\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Retorna a casa correspondente ao inteiro. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calcula\+Vies}} (int jogador)
 \begin{DoxyCompactList}\small\item\em Calcula o viés nas posições jogadas pelo jogador. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_tabuleiro_a2a6a0618a0885164995d4b99aca6c759}{get\+Tipo}} ()
@@ -44,7 +44,9 @@ int \mbox{\hyperlink{class_tabuleiro_a2a6a0618a0885164995d4b99aca6c759}{get\+Tip
 virtual void \mbox{\hyperlink{class_tabuleiro_a541651c7991ffa99680ca8439b34f350}{imprime\+Borda\+Vertical}} ()
 \begin{DoxyCompactList}\small\item\em Imprime uma linha de caracteres do comprimento do tabuleiro impresso. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_tabuleiro_a7e5ca9f37811bb47bdbb7e3860c1d70e}{tem\+Jogada\+Valida}} (\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} jogador)
-\begin{DoxyCompactList}\small\item\em Checa se o jogador ainda pode fazer alguma jogada válida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checa se o jogador ainda pode fazer alguma jogada válida. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a9c6367f0eb63fb057966e6e06ac3b800}{centraliza\+Coordenadas}} (int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Converte as coordenadas pra uma base com origem no centro do tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
 \doxysubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{class_tabuleiro}{Tabuleiro}}}
 \begin{DoxyCompactItemize}

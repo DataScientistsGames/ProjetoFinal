@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['setx_0',['setX',['../class_posicao_cartesiana.html#a82923ab56975ea10775d39166026cbfc',1,'PosicaoCartesiana']]],
-  ['sety_1',['setY',['../class_posicao_cartesiana.html#a14e4dc8bd85543127ba3a4bbd66ac4b7',1,'PosicaoCartesiana']]],
-  ['stringparacasa_2',['stringParaCasa',['../class_tabuleiro.html#aff726f46b3b2a22b58a82fa57edaa3e8',1,'Tabuleiro']]]
+  ['setvies_0',['setVies',['../class_jogador.html#a25a57c0378218a8445a360f4ac444c5f',1,'Jogador']]],
+  ['setx_1',['setX',['../class_posicao_cartesiana.html#a089d19c1646d1611310d19ceeac67f7f',1,'PosicaoCartesiana']]],
+  ['sety_2',['setY',['../class_posicao_cartesiana.html#afab79008fb0383393b490371acf094e0',1,'PosicaoCartesiana']]]
 ];

@@ -142,8 +142,9 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:a59c318eba3a0287c654d2df36c68be5e" id="r_a59c318eba3a0287c654d2df36c68be5e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59c318eba3a0287c654d2df36c68be5e">localizarPeca</a> (int x, int y)</td></tr>
 <tr class="memdesc:a59c318eba3a0287c654d2df36c68be5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a casa correspondente à posição.  <br /></td></tr>
 <tr class="separator:a59c318eba3a0287c654d2df36c68be5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff726f46b3b2a22b58a82fa57edaa3e8" id="r_aff726f46b3b2a22b58a82fa57edaa3e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff726f46b3b2a22b58a82fa57edaa3e8">stringParaCasa</a> (const int num_jogador)</td></tr>
-<tr class="separator:aff726f46b3b2a22b58a82fa57edaa3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62205be131cc2702d4b3c3d5454c2144" id="r_a62205be131cc2702d4b3c3d5454c2144"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62205be131cc2702d4b3c3d5454c2144">intParaCasa</a> (const int num_jogador)</td></tr>
+<tr class="memdesc:a62205be131cc2702d4b3c3d5454c2144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a casa correspondente ao inteiro.  <br /></td></tr>
+<tr class="separator:a62205be131cc2702d4b3c3d5454c2144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127e162d5581da2ff718d2fb9f32e434" id="r_a127e162d5581da2ff718d2fb9f32e434"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_posicao_cartesiana.html">PosicaoCartesiana</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a127e162d5581da2ff718d2fb9f32e434">calculaVies</a> (int jogador)</td></tr>
 <tr class="memdesc:a127e162d5581da2ff718d2fb9f32e434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o viés nas posições jogadas pelo jogador.  <br /></td></tr>
 <tr class="separator:a127e162d5581da2ff718d2fb9f32e434"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +160,9 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:a7e5ca9f37811bb47bdbb7e3860c1d70e" id="r_a7e5ca9f37811bb47bdbb7e3860c1d70e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e5ca9f37811bb47bdbb7e3860c1d70e">temJogadaValida</a> (<a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> jogador)</td></tr>
 <tr class="memdesc:a7e5ca9f37811bb47bdbb7e3860c1d70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checa se o jogador ainda pode fazer alguma jogada válida.  <br /></td></tr>
 <tr class="separator:a7e5ca9f37811bb47bdbb7e3860c1d70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6367f0eb63fb057966e6e06ac3b800" id="r_a9c6367f0eb63fb057966e6e06ac3b800"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_posicao_cartesiana.html">PosicaoCartesiana</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c6367f0eb63fb057966e6e06ac3b800">centralizaCoordenadas</a> (int posX, int posY)</td></tr>
+<tr class="memdesc:a9c6367f0eb63fb057966e6e06ac3b800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converte as coordenadas pra uma base com origem no centro do tabuleiro.  <br /></td></tr>
+<tr class="separator:a9c6367f0eb63fb057966e6e06ac3b800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
@@ -259,6 +263,45 @@ Atributos Protegidos</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Retorna</dt><dd>O viés calculado, expressado como uma posição cartesiana. </dd></dl>
+
+</div>
+</div>
+<a id="a9c6367f0eb63fb057966e6e06ac3b800" name="a9c6367f0eb63fb057966e6e06ac3b800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6367f0eb63fb057966e6e06ac3b800">&#9670;&#160;</a></span>centralizaCoordenadas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_posicao_cartesiana.html">PosicaoCartesiana</a> Tabuleiro::centralizaCoordenadas </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posX</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>posY</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converte as coordenadas pra uma base com origem no centro do tabuleiro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">posX</td><td>A coordenada X. </td></tr>
+    <tr><td class="paramname">posY</td><td>A coordenada Y. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>As coordenadas sob a nova base. </dd></dl>
 
 </div>
 </div>
@@ -367,6 +410,32 @@ Atributos Protegidos</h2></td></tr>
 
 </div>
 </div>
+<a id="a62205be131cc2702d4b3c3d5454c2144" name="a62205be131cc2702d4b3c3d5454c2144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62205be131cc2702d4b3c3d5454c2144">&#9670;&#160;</a></span>intParaCasa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> Tabuleiro::intParaCasa </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>num_jogador</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a casa correspondente ao inteiro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_jogador</td><td>O jogador em inteiro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>A casa respectiva. </dd></dl>
+
+</div>
+</div>
 <a id="a59c318eba3a0287c654d2df36c68be5e" name="a59c318eba3a0287c654d2df36c68be5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59c318eba3a0287c654d2df36c68be5e">&#9670;&#160;</a></span>localizarPeca()</h2>
 
@@ -447,23 +516,6 @@ Atributos Protegidos</h2></td></tr>
 <dl class="section return"><dt>Retorna</dt><dd>Retorna true se foi possível posicionar; retorna false se não. </dd></dl>
 
 <p>Reimplementado em <a class="el" href="class_lig4.html#a28576441387a55d3b7f180df34782def">Lig4</a> e <a class="el" href="class_reversi.html#a416afa7bcf2d53aeb4cd5c963fb1942a">Reversi</a>.</p>
-
-</div>
-</div>
-<a id="aff726f46b3b2a22b58a82fa57edaa3e8" name="aff726f46b3b2a22b58a82fa57edaa3e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff726f46b3b2a22b58a82fa57edaa3e8">&#9670;&#160;</a></span>stringParaCasa()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_casa_8hpp.html#a26612ebdee6afe7507bb02287b313752">Casa</a> Tabuleiro::stringParaCasa </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>num_jogador</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

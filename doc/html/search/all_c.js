@@ -7,7 +7,7 @@ var searchData=
   ['pegajogo_4',['pegaJogo',['../class_estatistica.html#a4f0b44d3cb0d9f5d5d900574c41836c2',1,'Estatistica']]],
   ['pegapalavralinha_5',['pegaPalavraLinha',['../class_cadastrador.html#a167f15151532c24cf69fd0e45eece15f',1,'Cadastrador']]],
   ['pegavies_6',['pegaVies',['../class_estatistica.html#ab9fadebdc6131f97b0ee32df63f09602',1,'Estatistica']]],
-  ['posicaocartesiana_7',['PosicaoCartesiana',['../class_posicao_cartesiana.html',1,'PosicaoCartesiana'],['../class_posicao_cartesiana.html#a7a13fd9d9d584ad29372d0532288b8dc',1,'PosicaoCartesiana::PosicaoCartesiana(int x, int y)'],['../class_posicao_cartesiana.html#a88027e3f9fee9b935513fd63b016ef7e',1,'PosicaoCartesiana::PosicaoCartesiana()']]],
+  ['posicaocartesiana_7',['PosicaoCartesiana',['../class_posicao_cartesiana.html',1,'PosicaoCartesiana'],['../class_posicao_cartesiana.html#a57ed9d5359eedfd6db7e53f809342ad7',1,'PosicaoCartesiana::PosicaoCartesiana(double x, double y)'],['../class_posicao_cartesiana.html#aa6742f0b5b9bbad062f4d4a741f0a040',1,'PosicaoCartesiana::PosicaoCartesiana(const PosicaoCartesiana &amp;pos)'],['../class_posicao_cartesiana.html#a88027e3f9fee9b935513fd63b016ef7e',1,'PosicaoCartesiana::PosicaoCartesiana()']]],
   ['posicaocartesiana_2ehpp_8',['PosicaoCartesiana.hpp',['../_posicao_cartesiana_8hpp.html',1,'']]],
   ['posicionarpeca_9',['posicionarPeca',['../class_lig4.html#a28576441387a55d3b7f180df34782def',1,'Lig4::posicionarPeca()'],['../class_reversi.html#a416afa7bcf2d53aeb4cd5c963fb1942a',1,'Reversi::posicionarPeca()'],['../class_tabuleiro.html#a97df3a84e52a6eedb1ecfe9ad3872811',1,'Tabuleiro::posicionarPeca()']]],
   ['pret_10',['PRET',['../_cores_8hpp.html#acc60625dcf1609552de3dc6351adb818',1,'Cores.hpp']]],

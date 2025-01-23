@@ -28,8 +28,8 @@ virtual int \mbox{\hyperlink{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}{
 \item 
 virtual \mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}{localizar\+Peca}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Retorna a casa correspondente à posição. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}{string\+Para\+Casa}} (const int num\+\_\+jogador)
-\item 
+\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} \mbox{\hyperlink{class_tabuleiro_a62205be131cc2702d4b3c3d5454c2144}{int\+Para\+Casa}} (const int num\+\_\+jogador)
+\begin{DoxyCompactList}\small\item\em Retorna a casa correspondente ao inteiro. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a127e162d5581da2ff718d2fb9f32e434}{calcula\+Vies}} (int jogador)
 \begin{DoxyCompactList}\small\item\em Calcula o viés nas posições jogadas pelo jogador. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_tabuleiro_a2a6a0618a0885164995d4b99aca6c759}{get\+Tipo}} ()
@@ -39,7 +39,9 @@ virtual void \mbox{\hyperlink{class_tabuleiro_a541651c7991ffa99680ca8439b34f350}
 virtual void \mbox{\hyperlink{class_tabuleiro_a4ce5aa160c82779f953edd68b7b06be6}{imprime\+Tabuleiro}} ()
 \begin{DoxyCompactList}\small\item\em Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas bordas verticais. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_tabuleiro_a7e5ca9f37811bb47bdbb7e3860c1d70e}{tem\+Jogada\+Valida}} (\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} jogador)
-\begin{DoxyCompactList}\small\item\em Checa se o jogador ainda pode fazer alguma jogada válida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checa se o jogador ainda pode fazer alguma jogada válida. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_tabuleiro_a9c6367f0eb63fb057966e6e06ac3b800}{centraliza\+Coordenadas}} (int posX, int posY)
+\begin{DoxyCompactList}\small\item\em Converte as coordenadas pra uma base com origem no centro do tabuleiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
@@ -107,6 +109,26 @@ Calcula o viés nas posições jogadas pelo jogador.
 \begin{DoxyReturn}{Retorna}
 O viés calculado, expressado como uma posição cartesiana. 
 \end{DoxyReturn}
+\Hypertarget{class_tabuleiro_a9c6367f0eb63fb057966e6e06ac3b800}\index{Tabuleiro@{Tabuleiro}!centralizaCoordenadas@{centralizaCoordenadas}}
+\index{centralizaCoordenadas@{centralizaCoordenadas}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{centralizaCoordenadas()}{centralizaCoordenadas()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a9c6367f0eb63fb057966e6e06ac3b800} 
+virtual \mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} Tabuleiro\+::centraliza\+Coordenadas (\begin{DoxyParamCaption}\item[{int}]{posX}{, }\item[{int}]{posY}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Converte as coordenadas pra uma base com origem no centro do tabuleiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posX} & A coordenada X. \\
+\hline
+{\em posY} & A coordenada Y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+As coordenadas sob a nova base. 
+\end{DoxyReturn}
 \Hypertarget{class_tabuleiro_a9497c30dd9c74bc482768bc5c38c3592}\index{Tabuleiro@{Tabuleiro}!finalizarJogo@{finalizarJogo}}
 \index{finalizarJogo@{finalizarJogo}!Tabuleiro@{Tabuleiro}}
 \doxysubsubsection{\texorpdfstring{finalizarJogo()}{finalizarJogo()}}
@@ -158,6 +180,24 @@ Imprime cada casa do tabuleiro com sua respectiva peça dentro, cercado por duas
 
 Reimplementado em \mbox{\hyperlink{class_lig4_abb9dc539eb010ece69226c6609639b16}{Lig4}}, \mbox{\hyperlink{class_reversi_a3fcdfa3aee73312ba92fbdfac70638f6}{Reversi}} e \mbox{\hyperlink{class_velha_aa4e8fc7f3c46103e53deab36221103e8}{Velha}}.
 
+\Hypertarget{class_tabuleiro_a62205be131cc2702d4b3c3d5454c2144}\index{Tabuleiro@{Tabuleiro}!intParaCasa@{intParaCasa}}
+\index{intParaCasa@{intParaCasa}!Tabuleiro@{Tabuleiro}}
+\doxysubsubsection{\texorpdfstring{intParaCasa()}{intParaCasa()}}
+{\footnotesize\ttfamily \label{class_tabuleiro_a62205be131cc2702d4b3c3d5454c2144} 
+\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} Tabuleiro\+::int\+Para\+Casa (\begin{DoxyParamCaption}\item[{const int}]{num\+\_\+jogador}{}\end{DoxyParamCaption})}
+
+
+
+Retorna a casa correspondente ao inteiro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em num\+\_\+jogador} & O jogador em inteiro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A casa respectiva. 
+\end{DoxyReturn}
 \Hypertarget{class_tabuleiro_a59c318eba3a0287c654d2df36c68be5e}\index{Tabuleiro@{Tabuleiro}!localizarPeca@{localizarPeca}}
 \index{localizarPeca@{localizarPeca}!Tabuleiro@{Tabuleiro}}
 \doxysubsubsection{\texorpdfstring{localizarPeca()}{localizarPeca()}}
@@ -197,12 +237,6 @@ Retorna true se foi possível posicionar; retorna false se não.
 
 
 Reimplementado em \mbox{\hyperlink{class_lig4_a28576441387a55d3b7f180df34782def}{Lig4}} e \mbox{\hyperlink{class_reversi_a416afa7bcf2d53aeb4cd5c963fb1942a}{Reversi}}.
-
-\Hypertarget{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8}\index{Tabuleiro@{Tabuleiro}!stringParaCasa@{stringParaCasa}}
-\index{stringParaCasa@{stringParaCasa}!Tabuleiro@{Tabuleiro}}
-\doxysubsubsection{\texorpdfstring{stringParaCasa()}{stringParaCasa()}}
-{\footnotesize\ttfamily \label{class_tabuleiro_aff726f46b3b2a22b58a82fa57edaa3e8} 
-\mbox{\hyperlink{_casa_8hpp_a26612ebdee6afe7507bb02287b313752}{Casa}} Tabuleiro\+::string\+Para\+Casa (\begin{DoxyParamCaption}\item[{const int}]{num\+\_\+jogador}{}\end{DoxyParamCaption})}
 
 \Hypertarget{class_tabuleiro_a7e5ca9f37811bb47bdbb7e3860c1d70e}\index{Tabuleiro@{Tabuleiro}!temJogadaValida@{temJogadaValida}}
 \index{temJogadaValida@{temJogadaValida}!Tabuleiro@{Tabuleiro}}

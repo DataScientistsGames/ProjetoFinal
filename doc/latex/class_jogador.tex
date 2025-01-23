@@ -31,7 +31,11 @@ int \mbox{\hyperlink{class_jogador_a6333b0d650ed23351d3a88dc4b9dbe86}{get\+Derro
 int \mbox{\hyperlink{class_jogador_a731242897a599f341493566e18327c36}{get\+VitoriasL}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o valor de Vitórias no Jogo \doxylink{class_lig4}{Lig4} desse jogador. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_jogador_ae203c58918d8ace2bb78b252fd011e64}{get\+DerrotasL}} ()
-\begin{DoxyCompactList}\small\item\em Retorna o valor de Derrotas no Jogo \doxylink{class_lig4}{Lig4} desse jogador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retorna o valor de Derrotas no Jogo \doxylink{class_lig4}{Lig4} desse jogador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} \mbox{\hyperlink{class_jogador_a8b9f13111e2f6405b99726b6f06d4303}{get\+Vies}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o vies desse jogador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jogador_a25a57c0378218a8445a360f4ac444c5f}{set\+Vies}} (\mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} vies)
+\begin{DoxyCompactList}\small\item\em Declara o valor do vies adquirido pelo jogador durante a partida. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -119,6 +123,16 @@ std\+::string Jogador\+::get\+Nome (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 Retorna o nome desse jogador. 
 
+\Hypertarget{class_jogador_a8b9f13111e2f6405b99726b6f06d4303}\index{Jogador@{Jogador}!getVies@{getVies}}
+\index{getVies@{getVies}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{getVies()}{getVies()}}
+{\footnotesize\ttfamily \label{class_jogador_a8b9f13111e2f6405b99726b6f06d4303} 
+\mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}} Jogador\+::get\+Vies (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retorna o vies desse jogador. 
+
 \Hypertarget{class_jogador_a731242897a599f341493566e18327c36}\index{Jogador@{Jogador}!getVitoriasL@{getVitoriasL}}
 \index{getVitoriasL@{getVitoriasL}!Jogador@{Jogador}}
 \doxysubsubsection{\texorpdfstring{getVitoriasL()}{getVitoriasL()}}
@@ -149,6 +163,21 @@ int Jogador\+::get\+VitoriasV (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption
 
 Retorna o valor de Vitórias no Jogo \doxylink{class_velha}{Velha} desse jogador. 
 
+\Hypertarget{class_jogador_a25a57c0378218a8445a360f4ac444c5f}\index{Jogador@{Jogador}!setVies@{setVies}}
+\index{setVies@{setVies}!Jogador@{Jogador}}
+\doxysubsubsection{\texorpdfstring{setVies()}{setVies()}}
+{\footnotesize\ttfamily \label{class_jogador_a25a57c0378218a8445a360f4ac444c5f} 
+void Jogador\+::set\+Vies (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_posicao_cartesiana}{Posicao\+Cartesiana}}}]{vies}{}\end{DoxyParamCaption})}
+
+
+
+Declara o valor do vies adquirido pelo jogador durante a partida. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em vies} & Valor de vies que será adicionado ao jogador \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
