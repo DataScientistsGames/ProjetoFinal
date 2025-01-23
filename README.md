@@ -70,7 +70,13 @@ Este projeto utiliza um **Makefile** para facilitar a compilação. Certifique-s
 Os executáveis estão localizados na pasta `bin/`. A execução do sistema segue o seguinte formato:
 
 ```bash
-./bin/sistema
+cd bin
+```
+
+Então, de dentro da pasta `bin/` execute o programa `sistema`
+
+```bash
+./sistema
 ```
 
 ### Comandos Disponíveis no Sistema
