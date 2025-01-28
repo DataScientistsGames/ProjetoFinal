@@ -140,4 +140,10 @@ Este projeto utiliza o **Doxygen** para documentar o código.
 
 ---
 
+## Cartões CRC
+ Outra maneira de documentar nosso projeto foi a adição dos cartões CRC. Os quais se encontram 
+ na imagem abaixo e no pdf intitulado "CRC_Projeto.pdf".  
+
+ ![CRC_Projeto](/CRC_Projeto.png)
+
 ## Obrigado por explorar nosso projeto!
